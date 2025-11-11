@@ -16,7 +16,7 @@ import pandas as pd
 
 # === 1️⃣ Načítanie známych firiem a standortov ==========================
 
-def load_known_entities(json_path="companies_locations_v2.json"):
+def load_known_entities(json_path="shared/config/companies_locations.json"):
     path = Path(json_path)
     if not path.exists():
         print(f"⚠️ Súbor {json_path} neexistuje – vytváram prázdny template.")
