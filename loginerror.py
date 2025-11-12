@@ -28,11 +28,15 @@ ERROR_PATTERNS = [
 ]
 
 SKIP_HAS_PROCESSES_PATTERN = r"DEBUG\s*-\s*starting with process"
-IGNORE_ZERO_NO_TASKS_PATTERN = r"couldn't find any potential processes"
+IGNORE_ZERO_NO_TASKS_PATTERN = r"couldn.?t\s+find any potential processes"
 
 # === 1) Načítanie známych firiem a lokalít ===============================
 
 def load_known_entities(json_path: str = None) -> dict:
+        # po 'data = json.load(f)'
+        # Debug pomocník:
+        # print(f"[DEBUG] Loaded {len(data.get('companies', []))} companies and {len(data.get('locations', []))} locations from {path}")
+
     """
     Očakávaný formát:
       {
@@ -164,11 +168,12 @@ def analyze_logs_in_folder(
     folder: str | Path,
     only_today: bool,
     known: dict,
-    processed_files: set
+    processed_files: set,
+    debug: bool = False
 ) -> tuple[list[dict], set]:
     """
     Prejde .txt logy v danom priečinku.
-    - only_today=True → berie len logy, ktorých názov obsahuje dnešný YYYY-MM-DD
+    - only_today=True → berie len logy, ktorých názov obsahuje dnešný YYYYMMDD
     - spracované súbory sa berú z processed_files
     Vráti (results_list, newly_processed_set)
     """
@@ -182,37 +187,55 @@ def analyze_logs_in_folder(
 
     for file in sorted(folder.glob("*.txt")):
         name = file.name
+        
+                # --- Debug výpisy: pre každý súbor ukáž, čo sa deje ---
+        if debug and only_today:
+            print(f"[DEBUG] consider {name} | today_filter={'PASS' if today_str in name else 'FAIL'}")
 
-        # filter: dnešný deň v názve
         if only_today and today_str not in name:
+            if debug:
+                print(f"[DEBUG] skip {name}: not today")
             continue
 
-        # preskočiť už spracované
         if name in processed_files:
+            if debug:
+                print(f"[DEBUG] skip {name}: already processed")
             continue
 
-        # analyzuj
-        finding = analyze_log(file, known)
-        if finding:
-            results.append(finding)
+        if debug:
+            meta_preview = parse_filename(file.stem, known)
+            print(f"[DEBUG] meta {name} -> {meta_preview}")
+        # ---------------------------------------------------------
 
-        # zapíš ako spracované (aj keď bez nálezu – aby sme to nerobili dokola)
+        finding = analyze_log(file, known)
+
+        if finding:
+            if debug:
+                print(f"[DEBUG] FOUND {name}: {finding}")
+            results.append(finding)
+        else:
+            if debug:
+                print(f"[DEBUG] no finding in {name}")
+
         newly.add(name)
+
 
     return results, newly
 
 # === 6) CLI / modulové API ===============================================
 
-def main(standalone: bool = True, folder: str | Path = "logs", only_today: bool = True):
+def main(standalone: bool = True, folder: str | Path = "logs", only_today: bool = True, debug: bool = False):
+
     """
     - standalone=True  -> vypíše výsledky do konzoly vo formáte: "Firma, Standort, Uhrzeit, Link"
     - standalone=False -> vráti list dictov s rovnakými informáciami (bez printu)
     """
     base_dir = Path(__file__).parent
-    known = load_known_entities(base_dir / "companies_locations.json")
+    known = load_known_entities(base_dir / "shared" / "config" / "companies_locations.json")
 
     processed = load_processed_list()
-    results, newly = analyze_logs_in_folder(folder, only_today, known, processed)
+    results, newly = analyze_logs_in_folder(folder, only_today, known, processed, debug=debug)
+
 
     # aktualizuj processed_files.txt hneď po prebehnutí
     if newly:
@@ -234,6 +257,11 @@ def main(standalone: bool = True, folder: str | Path = "logs", only_today: bool 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Analýza BMW ISPA login chýb v logoch.")
     parser.add_argument(
+    "--debug",
+    action="store_true",
+    help="Ladiaci výpis: pre každý súbor ukáže dôvod preskočenia a parsované meta."
+)
+    parser.add_argument(
         "-f", "--folder",
         default="logs",
         help="Priečinok s logmi (predvolene: ./logs)"
@@ -246,4 +274,9 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     # only_today = True, ak nepoužijeme --all-dates
-    main(standalone=True, folder=args.folder, only_today=not args.all_dates)
+    main(
+    standalone=True,
+    folder=args.folder,
+    only_today=not args.all_dates,
+    debug=args.debug
+)
