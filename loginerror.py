@@ -1,165 +1,249 @@
 #!/usr/bin/env python3
-# monitoring_bmw_loginerror.py
+# loginerror.py
 # ------------------------------------------------------------
-# Analýza denníkov ISPA logov – hľadá logy s total_processes = 0
-# a prípadne chybou "Unknown error during authentication" na konci súboru.
-# Výstup: Excelová tabuľka (.xlsx)
+# Analýza ISPA logov na prípady login chýb.
+# - Preskočí logy s "DEBUG - starting with process" (teda s procesmi)
+# - Ignoruje "couldn't find any potential processes"
+# - Vyhľadá vybrané "Exception occurred: ..." chyby
+# - Nepíše Excel; vracia list dictov alebo vypíše do konzoly
+# - Eviduje spracované logy v processed_files.txt (v tomto priečinku)
+# - Voliteľne filtruje len dnešné logy (predvolené)
 # ------------------------------------------------------------
 
-import re
 import json
+import re
+import sys
+import argparse
 from pathlib import Path
 from datetime import datetime
 import urllib.parse
-import pandas as pd
 
+# === Konštanty / vzory chýb ==============================================
 
-# === 1️⃣ Načítanie známych firiem a standortov ==========================
+ERROR_PATTERNS = [
+    # tolerantné tvary: occured/occurred + authentication/authentification
+    r"Exception\s+occurr?ed:\s*Unknown error during authenti[cf]ation",
+    r"Exception\s+occurr?ed:\s*find_by_image didn't return an Element pointer",
+    r"Exception\s+occurr?ed:\s*wait_for_condition failed with search_condition",
+]
 
-def load_known_entities(json_path="shared/config/companies_locations.json"):
+SKIP_HAS_PROCESSES_PATTERN = r"DEBUG\s*-\s*starting with process"
+IGNORE_ZERO_NO_TASKS_PATTERN = r"couldn't find any potential processes"
+
+# === 1) Načítanie známych firiem a lokalít ===============================
+
+def load_known_entities(json_path: str = None) -> dict:
+    """
+    Očakávaný formát:
+      {
+        "companies": ["Reisacher", ...] alebo [{"name": "Reisacher"}, ...],
+        "locations": ["Ulm", ...] alebo [{"name": "Ulm"}, ...]
+      }
+    """
+    
+    # Ak cesta nebola zadaná, použijeme JSON v rovnakom priečinku ako loginerror.py
+    if json_path is None:
+        base_dir = Path(__file__).parent
+        json_path = base_dir / "shared" / "config" / "companies_locations.json"
     path = Path(json_path)
+    
     if not path.exists():
-        print(f"⚠️ Súbor {json_path} neexistuje – vytváram prázdny template.")
+        # prázdna šablóna – ale analyzátor bude fungovať s "Unknown"
         template = {"companies": [], "locations": []}
-        path.write_text(json.dumps(template, indent=2, ensure_ascii=False), encoding="utf-8")
         return template
 
     with open(path, "r", encoding="utf-8") as f:
         data = json.load(f)
 
-    if data.get("locations") and isinstance(data["locations"][0], dict):
-        data["location_map"] = {l["name"]: l for l in data["locations"]}
+    # Normalizačné mapy
+    def get_name(x):
+        return x.get("name") if isinstance(x, dict) else x
+
+    data["companies"] = [get_name(x) for x in data.get("companies", []) if get_name(x)]
+    data["locations"] = [get_name(x) for x in data.get("locations", []) if get_name(x)]
     return data
 
+# === 2) Parsovanie názvu logu ============================================
 
-# === 2️⃣ Parsovanie názvu súboru =======================================
-
-def parse_filename(filename, known):
-    filename = urllib.parse.unquote(filename)
-    filename = filename.replace("-order-bot-ispa-log", "")
-    parts = filename.split("-")
+def parse_filename(filename_stem: str, known: dict) -> dict:
+    """
+    filename_stem = meno súboru bez prípony (percent-decode, ostrániť prípony)
+    Očakávame niečo ako: 2025-11-11-0515-<company>-<location>-order-bot-ispa-log
+    - dátum = prvý token
+    - čas   = druhý token
+    - zvyšok využijeme na mapovanie firmy a lokality
+    """
+    decoded = urllib.parse.unquote(filename_stem)
+    cleaned = decoded.replace("-order-bot-ispa-log", "")
+    parts = cleaned.split("-")
 
     if len(parts) < 3:
-        print(f"⚠️ Súbor {filename} nemá očakávaný formát názvu.")
         return {"date": "Unknown", "time": "Unknown", "company": "Unknown", "location": "Unknown"}
 
     date_str, time_str = parts[0], parts[1]
     remaining = " ".join(parts[2:])
 
-    def normalize(s):
-        return str(s).lower().replace(" ", "").replace("-", "")
+    def norm(s: str) -> str:
+        return str(s).lower().replace(" ", "").replace("-", "").replace("_", "")
 
-    company = next((c for c in known["companies"] if normalize(c) in normalize(remaining)), None)
+    # Company
+    company = next((c for c in known.get("companies", []) if norm(c) in norm(remaining)), None)
+    # Location
+    location = next((l for l in known.get("locations", []) if norm(l) in norm(remaining)), None)
 
-    locations = known.get("locations", [])
-    location = None
-    for loc in locations:
-        name = loc["name"] if isinstance(loc, dict) else loc
-        if normalize(name) in normalize(remaining):
-            location = name
-            break
+    # Formát času: necháme ako v názve (napr. 0515 → 05:15)
+    def format_time(s: str) -> str:
+        s = s.strip()
+        if len(s) == 4 and s.isdigit():
+            return f"{s[:2]}:{s[2:]}"
+        return s
 
     return {
         "date": date_str,
-        "time": time_str,
+        "time": format_time(time_str),
         "company": company or "Unknown",
-        "location": location or "Unknown"
+        "location": location or "Unknown",
     }
 
+# === 3) Práca so zoznamom spracovaných ==================================
 
-# === 3️⃣ Hlavná analýza logu ===========================================
+def _processed_file_path() -> Path:
+    return Path(__file__).parent / "processed_files.txt"
 
-def analyze_log(file_path, known):
-    """Analyzuje jeden log a vráti dictionary pre Excel ak total=0."""
-    file_path = Path(file_path)
-    filename = file_path.stem
-    meta = parse_filename(filename, known)
-
-    with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
-        text = f.read()
-
-    # === Zisti počet procesov ===
-    total_match = re.findall(r"starting with process", text, re.IGNORECASE)
-    total_processes = len(total_match)
-
-    # === Podmienka: total = 0 ===
-    if total_processes != 0:
-        return None
-
-    # === Over, či je "Unknown error during authentication" na konci ===
-    end_lines = "\n".join(text.strip().splitlines()[-5:])  # posledných 5 riadkov
-    if "Unknown error during authentication" in end_lines:
-        error_type = "authentification"
-    else:
-        error_type = "unknown"
-
-    return {
-        "date": meta["date"],
-        "time": meta["time"],
-        "company": meta["company"],
-        "location": meta["location"],
-        "total": total_processes,
-        "error type": error_type
-    }
-
-
-# === 4️⃣ Uloženie spracovaných súborov ================================
-
-def load_processed_list(path="processed_files.txt"):
-    p = Path(path)
+def load_processed_list() -> set:
+    p = _processed_file_path()
     if not p.exists():
         return set()
     return set(p.read_text(encoding="utf-8").splitlines())
 
-
-def save_processed_list(processed, path="processed_files.txt"):
-    p = Path(path)
+def save_processed_list(processed: set) -> None:
+    p = _processed_file_path()
     p.write_text("\n".join(sorted(processed)), encoding="utf-8")
 
+# === 4) Analýza jedného logu =============================================
 
-# === 5️⃣ Hlavná funkcia ================================================
+def _contains_any(patterns, text: str) -> bool:
+    return any(re.search(p, text, flags=re.IGNORECASE) for p in patterns)
 
-def main():
-    base_folder = Path(__file__).parent
-    logs_folder = base_folder / "logs"
-    known = load_known_entities()
+def analyze_log(file_path: Path, known: dict) -> dict | None:
+    """
+    Vráti dict s nálezom, ak ide o login error. Inak None.
+    - Preskočí logy s "starting with process"
+    - Ignoruje logy s "couldn't find any potential processes"
+    - Hľadá vybrané "Exception occurred: ..." chyby
+    """
+    try:
+        text = file_path.read_text(encoding="utf-8", errors="ignore")
+    except Exception:
+        return None
 
-    today = datetime.now().strftime("%Y-%m-%d")
-    processed_files = load_processed_list()
+    # 1) logy s procesmi preskočiť
+    if re.search(SKIP_HAS_PROCESSES_PATTERN, text, re.IGNORECASE):
+        return None
 
-    results = []
-    newly_processed = set()
+    # 2) ak výslovne hovorí, že nenašiel žiadne procesy -> nie je login error
+    if re.search(IGNORE_ZERO_NO_TASKS_PATTERN, text, re.IGNORECASE):
+        return None
 
-    for file in logs_folder.glob("*.txt"):
-        if today not in file.name:
+    # 3) hľadaj chyby
+    if not _contains_any(ERROR_PATTERNS, text):
+        return None
+
+    meta = parse_filename(file_path.stem, known)
+    return {
+        "company": meta["company"],
+        "location": meta["location"],
+        "time": meta["time"],
+        "link": "",  # zatiaľ prázdne – doplní sa neskôr, keď budú dáta v názve/JSON
+        # "date": meta["date"],  # ak by si potreboval neskôr
+    }
+
+# === 5) Analýza priečinka s logmi =======================================
+
+def analyze_logs_in_folder(
+    folder: str | Path,
+    only_today: bool,
+    known: dict,
+    processed_files: set
+) -> tuple[list[dict], set]:
+    """
+    Prejde .txt logy v danom priečinku.
+    - only_today=True → berie len logy, ktorých názov obsahuje dnešný YYYY-MM-DD
+    - spracované súbory sa berú z processed_files
+    Vráti (results_list, newly_processed_set)
+    """
+    folder = Path(folder)
+    if not folder.exists():
+        return [], set()
+
+    today_str = datetime.now().strftime("%Y%m%d")
+    results: list[dict] = []
+    newly: set[str] = set()
+
+    for file in sorted(folder.glob("*.txt")):
+        name = file.name
+
+        # filter: dnešný deň v názve
+        if only_today and today_str not in name:
             continue
-        if file.name in processed_files:
+
+        # preskočiť už spracované
+        if name in processed_files:
             continue
 
-        result = analyze_log(file, known)
-        if result:
-            results.append(result)
+        # analyzuj
+        finding = analyze_log(file, known)
+        if finding:
+            results.append(finding)
 
-        newly_processed.add(file.name)
+        # zapíš ako spracované (aj keď bez nálezu – aby sme to nerobili dokola)
+        newly.add(name)
 
-    # Aktualizuj zoznam spracovaných logov
-    save_processed_list(processed_files.union(newly_processed))
+    return results, newly
 
-    if not results:
-        print("✅ Žiadne nové logy s total=0 pre dnešný deň.")
-        return
+# === 6) CLI / modulové API ===============================================
 
-    # === Vytvor Excel tabuľku ===
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    xlsx_name = f"summary_loginerror_{timestamp}.xlsx"
-    xlsx_path = base_folder / xlsx_name
+def main(standalone: bool = True, folder: str | Path = "logs", only_today: bool = True):
+    """
+    - standalone=True  -> vypíše výsledky do konzoly vo formáte: "Firma, Standort, Uhrzeit, Link"
+    - standalone=False -> vráti list dictov s rovnakými informáciami (bez printu)
+    """
+    base_dir = Path(__file__).parent
+    known = load_known_entities(base_dir / "companies_locations.json")
 
-    df = pd.DataFrame(results, columns=["date", "time", "company", "location", "total", "error type"])
-    df.to_excel(xlsx_path, index=False)
-    print(f"📊 Excel tabuľka vytvorená: {xlsx_path}")
+    processed = load_processed_list()
+    results, newly = analyze_logs_in_folder(folder, only_today, known, processed)
 
+    # aktualizuj processed_files.txt hneď po prebehnutí
+    if newly:
+        save_processed_list(processed.union(newly))
 
-# === 6️⃣ Spustenie =====================================================
+    if standalone:
+        if results:
+            for r in results:
+                # Firma, Standort, Uhrzeit, Link
+                print(f"{r['company']}, {r['location']}, {r['time']}, {r['link']}")
+        else:
+            print("✅ Žiadne nové login chyby pre dnešný deň.")
+        return None
+    else:
+        return results
+
+# === 7) Spúšťanie cez CLI ===============================================
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description="Analýza BMW ISPA login chýb v logoch.")
+    parser.add_argument(
+        "-f", "--folder",
+        default="logs",
+        help="Priečinok s logmi (predvolene: ./logs)"
+    )
+    parser.add_argument(
+        "--all-dates",
+        action="store_true",
+        help="Analyzovať aj logy mimo dnešného dňa (inak iba dnešné)."
+    )
+    args = parser.parse_args()
+
+    # only_today = True, ak nepoužijeme --all-dates
+    main(standalone=True, folder=args.folder, only_today=not args.all_dates)

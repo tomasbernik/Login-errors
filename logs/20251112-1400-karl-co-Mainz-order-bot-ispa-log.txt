@@ -1,0 +1,313 @@
+2025-11-12 14:00:35,548 - ispa_next.main - DEBUG - ISPA Next attempt (1 / 5)
+2025-11-12 14:00:35,555 - overlays.client - INFO - Connected to overlay manager pipe
+2025-11-12 14:00:47,903 - ispa_next.app_start.functions - DEBUG - handle_update_available
+2025-11-12 14:00:58,603 - ispa_next.app_start.functions - DEBUG - has_ispa_errors
+2025-11-12 14:01:14,257 - ispa_next.app_start.functions - DEBUG - authenticate_user
+2025-11-12 14:03:12,291 - ispa_next.app_start.main - DEBUG - Operation already took 106.78 seconds (more than 80 seconds)
+2025-11-12 14:03:14,375 - pytesseract - DEBUG - ['tesseract', 'C:\\Users\\Bot\\AppData\\Local\\robocorp\\temp\\0d7279195d3a2945\\tess_rvwl5hms_input.PNG', 'C:\\Users\\Bot\\AppData\\Local\\robocorp\\temp\\0d7279195d3a2945\\tess_rvwl5hms', 'txt']
+2025-11-12 14:03:14,737 - ispa_next.app_start.main - DEBUG - Unknown error
+2025-11-12 14:03:14,742 - ispa_next.app_start.main - DEBUG - Exception occurred: Unknown error during authentication
+2025-11-12 14:03:14,743 - ispa_next.app_start.functions - DEBUG - authenticate_user
+2025-11-12 14:03:40,095 - ispa_next.app_start.main - DEBUG - Login successful
+2025-11-12 14:03:51,757 - ispa_next.appointments.functions - DEBUG - order_appointments_grid_by_created_at
+2025-11-12 14:03:55,223 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-12 14:03:56,481 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 1649
+2025-11-12 14:03:56,483 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 440
+2025-11-12 14:03:59,085 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 202
+2025-11-12 14:03:59,086 - ispa_next.appointments.functions - DEBUG - recover_or_exit_IPS_error
+2025-11-12 14:03:59,087 - ispa_next.appointments.functions - DEBUG - check_appointments_grid_for_IPS_error
+2025-11-12 14:04:00,198 - ispa_next.appointments.functions - DEBUG - check_appointments_grid_for_IPS_error
+2025-11-12 14:04:01,134 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-12 14:04:31,545 - ispa_next.appointments.models - DEBUG - Skipping appointment without VIN
+2025-11-12 14:04:31,628 - ispa_next.appointments.models - DEBUG - Appointment Hatidzhe Dhevdzhet Chaylyak GG-HI 889 WBAVJ11040LF60481 ohne Termin.
+2025-11-12 14:04:31,676 - ispa_next.appointments.models - DEBUG - Appointment Ulas Korkmaz  WBAJM710X0B068176 ohne Termin.
+2025-11-12 14:04:31,692 - ispa_next.appointments.models - DEBUG - Appointment Florian Goertz RPL 11-3 WBA2D310505C65769 ohne Termin.
+2025-11-12 14:04:31,742 - ispa_next.main - DEBUG - Found 11 out of 96 appointments to process (configured limit: 15).
+2025-11-12 14:04:31,742 - ispa_next.main - DEBUG - Processing 11 fresh appointments.
+2025-11-12 14:04:31,742 - ispa_next.main - DEBUG - All appointments: KI-KI 0815, MZ-AT607, MZ-JM 217, MZ - AW 77E, KI-KI 0815, KI-KI 0815, KI-KI 0815, BN E 596, MZ-ME 141E, RÜD CS 677, MZ MV 279
+2025-11-12 14:04:31,745 - ispa_next.main - DEBUG - 
+
+
+
+2025-11-12 14:04:31,745 - ispa_next.main - DEBUG - starting with process 1 (KI-KI 0815) of 11
+2025-11-12 14:04:31,750 - ispa_next.appointment_loop.helpers - DEBUG - Checking for potential OIDC Login dialog
+2025-11-12 14:04:32,945 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-12 14:04:34,063 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 1649
+2025-11-12 14:04:34,065 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 202
+2025-11-12 14:04:35,323 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 1
+2025-11-12 14:04:35,324 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-12 14:04:58,680 - ispa_next.appointment_loop.main - DEBUG - Appointment failed: Traceback (most recent call last):
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointment_loop\main.py", line 43, in process_appointment
+    handle_briefing_screen(element=app)
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointments\functions.py", line 179, in handle_briefing_screen
+    raise ViewTransitionError("Couldn't open 'Terminvereinbarung', proceed with next appointment")
+ispa_next.exceptions.ViewTransitionError: Couldn't open 'Terminvereinbarung', proceed with next appointment
+
+2025-11-12 14:04:58,768 - ispa_next.appointment_loop.main - DEBUG - Closing appointment 1.
+2025-11-12 14:04:58,772 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-12 14:04:59,322 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 1649
+2025-11-12 14:04:59,324 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 1
+2025-11-12 14:05:01,752 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 440
+2025-11-12 14:05:01,753 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-12 14:05:02,618 - ispa_next.appointments.models - DEBUG - Appointment Firma Mehmet Önal, J.Zich MZ-ZS 333 WBA25DP020N200336 ohne Termin.
+2025-11-12 14:05:02,640 - ispa_next.appointments.models - DEBUG - Appointment Jan Friedrich Krebs BC-JK 1407 WBA1V710507B55566 ohne Termin.
+2025-11-12 14:05:02,648 - ispa_next.main - DEBUG - 
+
+
+
+2025-11-12 14:05:02,648 - ispa_next.main - DEBUG - starting with process 2 (MZ-AT607) of 11
+2025-11-12 14:05:02,665 - ispa_next.appointment_loop.helpers - DEBUG - Checking for potential OIDC Login dialog
+2025-11-12 14:05:04,016 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-12 14:05:05,389 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 1649
+2025-11-12 14:05:05,390 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 440
+2025-11-12 14:05:07,079 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 1
+2025-11-12 14:05:07,080 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-12 14:05:41,968 - ispa_next.appointment_loop.main - DEBUG - Appointment failed: Traceback (most recent call last):
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointment_loop\main.py", line 43, in process_appointment
+    handle_briefing_screen(element=app)
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointments\functions.py", line 160, in handle_briefing_screen
+    raise AppointmentNotSynchronized(
+ispa_next.exceptions.AppointmentNotSynchronized: Appointment is not properly synchronized with DMS, proceed with the next one.
+
+2025-11-12 14:05:41,977 - ispa_next.appointment_loop.main - DEBUG - Closing appointment 2.
+2025-11-12 14:05:41,980 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-12 14:05:42,410 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 1649
+2025-11-12 14:05:42,412 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 1
+2025-11-12 14:05:44,876 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 440
+2025-11-12 14:05:44,877 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-12 14:05:45,572 - ispa_next.appointments.models - DEBUG - Appointment Firma Mehmet Önal, J.Zich MZ-ZS 333 WBA25DP020N200336 ohne Termin.
+2025-11-12 14:05:45,584 - ispa_next.appointments.models - DEBUG - Appointment Jan Friedrich Krebs BC-JK 1407 WBA1V710507B55566 ohne Termin.
+2025-11-12 14:05:45,589 - ispa_next.main - DEBUG - 
+
+
+
+2025-11-12 14:05:45,589 - ispa_next.main - DEBUG - starting with process 3 (MZ-JM 217) of 11
+2025-11-12 14:05:45,592 - ispa_next.appointment_loop.helpers - DEBUG - Checking for potential OIDC Login dialog
+2025-11-12 14:05:46,513 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-12 14:05:47,544 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 1649
+2025-11-12 14:05:47,545 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 440
+2025-11-12 14:05:49,170 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 1
+2025-11-12 14:05:49,171 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-12 14:06:21,305 - ispa_next.appointment_loop.main - DEBUG - Appointment failed: Traceback (most recent call last):
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointment_loop\main.py", line 43, in process_appointment
+    handle_briefing_screen(element=app)
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointments\functions.py", line 160, in handle_briefing_screen
+    raise AppointmentNotSynchronized(
+ispa_next.exceptions.AppointmentNotSynchronized: Appointment is not properly synchronized with DMS, proceed with the next one.
+
+2025-11-12 14:06:21,314 - ispa_next.appointment_loop.main - DEBUG - Closing appointment 3.
+2025-11-12 14:06:21,318 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-12 14:06:21,892 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 1649
+2025-11-12 14:06:21,893 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 1
+2025-11-12 14:06:24,721 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 440
+2025-11-12 14:06:24,721 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-12 14:06:25,575 - ispa_next.appointments.models - DEBUG - Appointment Firma Mehmet Önal, J.Zich MZ-ZS 333 WBA25DP020N200336 ohne Termin.
+2025-11-12 14:06:25,591 - ispa_next.appointments.models - DEBUG - Appointment Jan Friedrich Krebs BC-JK 1407 WBA1V710507B55566 ohne Termin.
+2025-11-12 14:06:25,600 - ispa_next.main - DEBUG - 
+
+
+
+2025-11-12 14:06:25,600 - ispa_next.main - DEBUG - starting with process 4 (MZ - AW 77E) of 11
+2025-11-12 14:06:25,604 - ispa_next.appointment_loop.helpers - DEBUG - Checking for potential OIDC Login dialog
+2025-11-12 14:06:26,796 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-12 14:06:28,058 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 1649
+2025-11-12 14:06:28,060 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 440
+2025-11-12 14:06:29,659 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 1
+2025-11-12 14:06:29,660 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-12 14:07:01,369 - ispa_next.appointment_loop.main - DEBUG - Appointment failed: Traceback (most recent call last):
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointment_loop\main.py", line 43, in process_appointment
+    handle_briefing_screen(element=app)
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointments\functions.py", line 160, in handle_briefing_screen
+    raise AppointmentNotSynchronized(
+ispa_next.exceptions.AppointmentNotSynchronized: Appointment is not properly synchronized with DMS, proceed with the next one.
+
+2025-11-12 14:07:01,378 - ispa_next.appointment_loop.main - DEBUG - Closing appointment 4.
+2025-11-12 14:07:01,382 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-12 14:07:01,930 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 1649
+2025-11-12 14:07:01,931 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 1
+2025-11-12 14:07:04,674 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 440
+2025-11-12 14:07:04,675 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-12 14:07:05,463 - ispa_next.appointments.models - DEBUG - Appointment Firma Mehmet Önal, J.Zich MZ-ZS 333 WBA25DP020N200336 ohne Termin.
+2025-11-12 14:07:05,472 - ispa_next.appointments.models - DEBUG - Appointment Jan Friedrich Krebs BC-JK 1407 WBA1V710507B55566 ohne Termin.
+2025-11-12 14:07:05,477 - ispa_next.main - DEBUG - 
+
+
+
+2025-11-12 14:07:05,477 - ispa_next.main - DEBUG - starting with process 5 (KI-KI 0815) of 11
+2025-11-12 14:07:05,481 - ispa_next.appointment_loop.helpers - DEBUG - Checking for potential OIDC Login dialog
+2025-11-12 14:07:06,410 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-12 14:07:07,401 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 1649
+2025-11-12 14:07:07,402 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 440
+2025-11-12 14:07:08,609 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 1
+2025-11-12 14:07:08,610 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-12 14:07:28,031 - ispa_next.appointment_loop.main - DEBUG - Appointment failed: Traceback (most recent call last):
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointment_loop\main.py", line 43, in process_appointment
+    handle_briefing_screen(element=app)
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointments\functions.py", line 179, in handle_briefing_screen
+    raise ViewTransitionError("Couldn't open 'Terminvereinbarung', proceed with next appointment")
+ispa_next.exceptions.ViewTransitionError: Couldn't open 'Terminvereinbarung', proceed with next appointment
+
+2025-11-12 14:07:28,039 - ispa_next.appointment_loop.main - DEBUG - Closing appointment 5.
+2025-11-12 14:07:28,043 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-12 14:07:28,564 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 1649
+2025-11-12 14:07:28,565 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 1
+2025-11-12 14:07:31,042 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 440
+2025-11-12 14:07:31,043 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-12 14:07:31,881 - ispa_next.appointments.models - DEBUG - Appointment Firma Mehmet Önal, J.Zich MZ-ZS 333 WBA25DP020N200336 ohne Termin.
+2025-11-12 14:07:31,893 - ispa_next.appointments.models - DEBUG - Appointment Jan Friedrich Krebs BC-JK 1407 WBA1V710507B55566 ohne Termin.
+2025-11-12 14:07:31,898 - ispa_next.main - DEBUG - 
+
+
+
+2025-11-12 14:07:31,898 - ispa_next.main - DEBUG - starting with process 6 (KI-KI 0815) of 11
+2025-11-12 14:07:31,902 - ispa_next.appointment_loop.helpers - DEBUG - Checking for potential OIDC Login dialog
+2025-11-12 14:07:33,187 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-12 14:07:34,355 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 1649
+2025-11-12 14:07:34,356 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 440
+2025-11-12 14:07:35,785 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 1
+2025-11-12 14:07:35,786 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-12 14:07:57,071 - ispa_next.appointment_loop.main - DEBUG - Appointment failed: Traceback (most recent call last):
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointment_loop\main.py", line 43, in process_appointment
+    handle_briefing_screen(element=app)
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointments\functions.py", line 179, in handle_briefing_screen
+    raise ViewTransitionError("Couldn't open 'Terminvereinbarung', proceed with next appointment")
+ispa_next.exceptions.ViewTransitionError: Couldn't open 'Terminvereinbarung', proceed with next appointment
+
+2025-11-12 14:07:57,082 - ispa_next.appointment_loop.main - DEBUG - Closing appointment 6.
+2025-11-12 14:07:57,086 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-12 14:07:57,655 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 1649
+2025-11-12 14:07:57,656 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 1
+2025-11-12 14:07:59,973 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 440
+2025-11-12 14:07:59,973 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-12 14:08:00,684 - ispa_next.appointments.models - DEBUG - Appointment Firma Mehmet Önal, J.Zich MZ-ZS 333 WBA25DP020N200336 ohne Termin.
+2025-11-12 14:08:00,695 - ispa_next.appointments.models - DEBUG - Appointment Jan Friedrich Krebs BC-JK 1407 WBA1V710507B55566 ohne Termin.
+2025-11-12 14:08:00,704 - ispa_next.main - DEBUG - 
+
+
+
+2025-11-12 14:08:00,704 - ispa_next.main - DEBUG - starting with process 7 (KI-KI 0815) of 11
+2025-11-12 14:08:00,708 - ispa_next.appointment_loop.helpers - DEBUG - Checking for potential OIDC Login dialog
+2025-11-12 14:08:01,624 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-12 14:08:02,812 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 1649
+2025-11-12 14:08:02,813 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 440
+2025-11-12 14:08:04,340 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 1
+2025-11-12 14:08:04,342 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-12 14:08:27,039 - ispa_next.appointment_loop.main - DEBUG - Appointment failed: Traceback (most recent call last):
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointment_loop\main.py", line 43, in process_appointment
+    handle_briefing_screen(element=app)
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointments\functions.py", line 179, in handle_briefing_screen
+    raise ViewTransitionError("Couldn't open 'Terminvereinbarung', proceed with next appointment")
+ispa_next.exceptions.ViewTransitionError: Couldn't open 'Terminvereinbarung', proceed with next appointment
+
+2025-11-12 14:08:27,049 - ispa_next.appointment_loop.main - DEBUG - Closing appointment 7.
+2025-11-12 14:08:27,054 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-12 14:08:27,642 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 1649
+2025-11-12 14:08:27,643 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 1
+2025-11-12 14:08:30,163 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 440
+2025-11-12 14:08:30,164 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-12 14:08:30,867 - ispa_next.appointments.models - DEBUG - Appointment Firma Mehmet Önal, J.Zich MZ-ZS 333 WBA25DP020N200336 ohne Termin.
+2025-11-12 14:08:30,878 - ispa_next.appointments.models - DEBUG - Appointment Jan Friedrich Krebs BC-JK 1407 WBA1V710507B55566 ohne Termin.
+2025-11-12 14:08:30,886 - ispa_next.main - DEBUG - 
+
+
+
+2025-11-12 14:08:30,887 - ispa_next.main - DEBUG - starting with process 8 (BN E 596) of 11
+2025-11-12 14:08:30,891 - ispa_next.appointment_loop.helpers - DEBUG - Checking for potential OIDC Login dialog
+2025-11-12 14:08:31,776 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-12 14:08:32,823 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 1649
+2025-11-12 14:08:32,824 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 440
+2025-11-12 14:08:34,116 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 1
+2025-11-12 14:08:34,117 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-12 14:09:11,930 - ispa_next.appointment_loop.main - DEBUG - Appointment failed: Traceback (most recent call last):
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointment_loop\main.py", line 43, in process_appointment
+    handle_briefing_screen(element=app)
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointments\functions.py", line 160, in handle_briefing_screen
+    raise AppointmentNotSynchronized(
+ispa_next.exceptions.AppointmentNotSynchronized: Appointment is not properly synchronized with DMS, proceed with the next one.
+
+2025-11-12 14:09:11,941 - ispa_next.appointment_loop.main - DEBUG - Closing appointment 8.
+2025-11-12 14:09:11,945 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-12 14:09:12,588 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 1649
+2025-11-12 14:09:12,589 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 1
+2025-11-12 14:09:15,272 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 440
+2025-11-12 14:09:15,273 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-12 14:09:16,160 - ispa_next.appointments.models - DEBUG - Appointment Firma Mehmet Önal, J.Zich MZ-ZS 333 WBA25DP020N200336 ohne Termin.
+2025-11-12 14:09:16,171 - ispa_next.appointments.models - DEBUG - Appointment Jan Friedrich Krebs BC-JK 1407 WBA1V710507B55566 ohne Termin.
+2025-11-12 14:09:16,178 - ispa_next.main - DEBUG - 
+
+
+
+2025-11-12 14:09:16,178 - ispa_next.main - DEBUG - starting with process 9 (MZ-ME 141E) of 11
+2025-11-12 14:09:16,182 - ispa_next.appointment_loop.helpers - DEBUG - Checking for potential OIDC Login dialog
+2025-11-12 14:09:17,395 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-12 14:09:18,590 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 1649
+2025-11-12 14:09:18,591 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 440
+2025-11-12 14:09:20,042 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 1
+2025-11-12 14:09:20,043 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-12 14:09:50,929 - ispa_next.appointment_loop.main - DEBUG - Appointment failed: Traceback (most recent call last):
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointment_loop\main.py", line 43, in process_appointment
+    handle_briefing_screen(element=app)
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointments\functions.py", line 160, in handle_briefing_screen
+    raise AppointmentNotSynchronized(
+ispa_next.exceptions.AppointmentNotSynchronized: Appointment is not properly synchronized with DMS, proceed with the next one.
+
+2025-11-12 14:09:50,938 - ispa_next.appointment_loop.main - DEBUG - Closing appointment 9.
+2025-11-12 14:09:50,940 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-12 14:09:51,387 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 1649
+2025-11-12 14:09:51,387 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 1
+2025-11-12 14:09:53,555 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 440
+2025-11-12 14:09:53,556 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-12 14:09:54,249 - ispa_next.appointments.models - DEBUG - Appointment Firma Mehmet Önal, J.Zich MZ-ZS 333 WBA25DP020N200336 ohne Termin.
+2025-11-12 14:09:54,261 - ispa_next.appointments.models - DEBUG - Appointment Jan Friedrich Krebs BC-JK 1407 WBA1V710507B55566 ohne Termin.
+2025-11-12 14:09:54,266 - ispa_next.main - DEBUG - 
+
+
+
+2025-11-12 14:09:54,266 - ispa_next.main - DEBUG - starting with process 10 (RÜD CS 677) of 11
+2025-11-12 14:09:54,270 - ispa_next.appointment_loop.helpers - DEBUG - Checking for potential OIDC Login dialog
+2025-11-12 14:09:55,188 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-12 14:09:56,156 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 1649
+2025-11-12 14:09:56,157 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 440
+2025-11-12 14:09:57,458 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 1
+2025-11-12 14:09:57,459 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-12 14:10:27,853 - ispa_next.appointment_loop.main - DEBUG - Appointment failed: Traceback (most recent call last):
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointment_loop\main.py", line 43, in process_appointment
+    handle_briefing_screen(element=app)
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointments\functions.py", line 160, in handle_briefing_screen
+    raise AppointmentNotSynchronized(
+ispa_next.exceptions.AppointmentNotSynchronized: Appointment is not properly synchronized with DMS, proceed with the next one.
+
+2025-11-12 14:10:27,862 - ispa_next.appointment_loop.main - DEBUG - Closing appointment 10.
+2025-11-12 14:10:27,865 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-12 14:10:28,319 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 1649
+2025-11-12 14:10:28,320 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 1
+2025-11-12 14:10:30,917 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 440
+2025-11-12 14:10:30,918 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-12 14:10:31,792 - ispa_next.appointments.models - DEBUG - Appointment Firma Mehmet Önal, J.Zich MZ-ZS 333 WBA25DP020N200336 ohne Termin.
+2025-11-12 14:10:31,805 - ispa_next.appointments.models - DEBUG - Appointment Jan Friedrich Krebs BC-JK 1407 WBA1V710507B55566 ohne Termin.
+2025-11-12 14:10:31,813 - ispa_next.main - DEBUG - 
+
+
+
+2025-11-12 14:10:31,813 - ispa_next.main - DEBUG - starting with process 11 (MZ MV 279) of 11
+2025-11-12 14:10:31,826 - ispa_next.appointment_loop.helpers - DEBUG - Checking for potential OIDC Login dialog
+2025-11-12 14:10:32,980 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-12 14:10:34,284 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 1649
+2025-11-12 14:10:34,286 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 440
+2025-11-12 14:10:35,841 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 1
+2025-11-12 14:10:35,843 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-12 14:11:08,782 - ispa_next.appointment_loop.main - DEBUG - Appointment failed: Traceback (most recent call last):
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointment_loop\main.py", line 43, in process_appointment
+    handle_briefing_screen(element=app)
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointments\functions.py", line 160, in handle_briefing_screen
+    raise AppointmentNotSynchronized(
+ispa_next.exceptions.AppointmentNotSynchronized: Appointment is not properly synchronized with DMS, proceed with the next one.
+
+2025-11-12 14:11:08,793 - ispa_next.appointment_loop.main - DEBUG - Closing appointment 11.
+2025-11-12 14:11:08,798 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-12 14:11:09,528 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 1649
+2025-11-12 14:11:09,530 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 1
+2025-11-12 14:11:12,131 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 440
+2025-11-12 14:11:12,132 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-12 14:11:12,995 - ispa_next.appointments.models - DEBUG - Appointment Firma Mehmet Önal, J.Zich MZ-ZS 333 WBA25DP020N200336 ohne Termin.
+2025-11-12 14:11:13,005 - ispa_next.appointments.models - DEBUG - Appointment Jan Friedrich Krebs BC-JK 1407 WBA1V710507B55566 ohne Termin.
