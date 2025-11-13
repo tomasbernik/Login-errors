@@ -154,10 +154,11 @@ def main():
     print("🚀 Pipeline štartuje")
 
     # 1) Stiahnuť logy
+    processed = read_processed()
     download_todays_logs(processed)
 
     # 2) Analyzovať všetky dnešné lokálne logy
-    processed = read_processed()
+    
     known = load_known_entities(COMP_JSON)
 
     results = []
