@@ -12,7 +12,8 @@ from email.message import EmailMessage
 import requests
 from requests.auth import HTTPBasicAuth
 
-from loginerror import load_known_entities, parse_filename
+from loginerror import load_known_entities, parse_filename, analyze_log
+
 
 
 # =============================
@@ -189,6 +190,13 @@ def main():
             })
         else:
             print("      ✅ Bez chyby")
+    # 🔥 Zapíš processed_files.txt
+    write_processed(processed.union(newly))
+    # 🔥 Ak nie sú žiadne chyby → neodosielať email
+    if not results:
+        print("✅ Žiadne login chyby")
+        return
+
 
     # 3) zostavenie emailu
     lines = []
