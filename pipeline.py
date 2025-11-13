@@ -68,7 +68,7 @@ def write_processed(s):
 # =============================
 
 def download_todays_logs():
-    today = now_local().strftime("%Y-%m-%d")
+    today = now_local().strftime("%Y%m%d")
     auth = HTTPBasicAuth(NEXTCLOUD_PUBLIC_TOKEN, NEXTCLOUD_PUBLIC_PASS)
 
     print("PROPFIND → Nextcloud…")
@@ -190,7 +190,7 @@ def main():
             line += f" | {r['link']}"
         lines.append(line)
 
-    subject = f"BMW RPA Loginfehler — {now_local():%Y-%m-%d %H:%M}"
+    subject = f"BMW RPA Loginfehler — {now_local():%Y%m%d %H:%M}"
     body = "Gefundene Fälle (total=0):\n" + "\n".join(lines)
 
     send_email(subject, body)
