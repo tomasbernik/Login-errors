@@ -157,15 +157,23 @@ def main():
     results = []
     newly = set()
 
+    print("🔍 Kontrola lokálnych logov:")
+
     for f in sorted(LOGS_DIR.glob("*.txt")):
+
         if f.name in processed:
+            print(f"   ➖ Preskakujem (už spracovaný): {f.name}")
             continue
 
+        print(f"   🔎 Analyzujem: {f.name}")
         res = analyze_log_file(f, companies)
         newly.add(f.name)
 
         if res:
+            print(f"      ❗ Nájdená chyba → {res['company']} | {res['location']} | {res['time']}")
             results.append(res)
+        else:
+            print(f"      ✅ Bez chyby")
 
     # zapíš processed_files.txt
     write_processed(processed.union(newly))
