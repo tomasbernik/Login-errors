@@ -31,6 +31,22 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Restore processed_files.txt artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: processed-files
+        continue-on-error: true
+
+      - name: Move restored processed_files.txt
+        run: |
+          if [ -f processed_files.txt ]; then
+            echo "Restoring processed_files.txt from artifact"
+            mv processed_files.txt ./processed_files.txt
+          else
+            echo "No previous processed_files.txt found (first run or no changes)"
+          fi
+
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -45,3 +61,11 @@ jobs:
         run: |
           echo "=== Spúšťam pipeline.py ==="
           python pipeline.py
+          
+      - name: Upload processed_files.txt artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: processed-files
+          path: processed_files.txt
+        if: always()
+
