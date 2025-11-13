@@ -29,13 +29,13 @@ SMTP_USER   = os.environ["SMTP_USER"]
 SMTP_PASS   = os.environ["SMTP_PASS"]
 MAIL_TO = ["21a847ec.aubexGmbH.onmicrosoft.com@emea.teams.ms"]
 
-START_HOUR  = int(os.environ.get("START_HOUR", "0"))
-END_HOUR    = int(os.environ.get("END_HOUR", "23"))
+START_HOUR  = int(os.environ.get("START_HOUR", "5"))
+END_HOUR    = int(os.environ.get("END_HOUR", "22"))
 
 BASE_DIR    = Path(__file__).parent
 LOGS_DIR    = BASE_DIR / "logs"
 PROCESSED   = BASE_DIR / "processed_files.txt"
-COMP_JSON   = BASE_DIR / "companies_locations.json"
+COMP_JSON   = BASE_DIR / "shared" / "config" / "companies_locations.json"
 
 LOGS_DIR.mkdir(exist_ok=True)
 
