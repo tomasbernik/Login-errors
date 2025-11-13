@@ -29,8 +29,8 @@ SMTP_USER   = os.environ["SMTP_USER"]
 SMTP_PASS   = os.environ["SMTP_PASS"]
 MAIL_TO = ["21a847ec.aubexGmbH.onmicrosoft.com@emea.teams.ms"]
 
-START_HOUR  = int(os.environ.get("START_HOUR", "5"))
-END_HOUR    = int(os.environ.get("END_HOUR", "22"))
+START_HOUR = 5
+END_HOUR = 22
 
 BASE_DIR    = Path(__file__).parent
 LOGS_DIR    = BASE_DIR / "logs"
