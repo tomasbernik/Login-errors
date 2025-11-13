@@ -24,7 +24,7 @@ NEXTCLOUD_PUBLIC_PASS  = os.environ.get("NEXTCLOUD_PUBLIC_PASSWORD", "")
 VERIFY_SSL             = os.environ.get("NEXTCLOUD_VERIFY_SSL", "true").lower() == "true"
 
 SMTP_SERVER = os.environ["SMTP_SERVER"]
-SMTP_PORT   = int(os.environ.get("SMTP_PORT", "587"))
+SMTP_PORT = int(os.environ.get("SMTP_PORT") or 587)
 SMTP_USER   = os.environ["SMTP_USER"]
 SMTP_PASS   = os.environ["SMTP_PASS"]
 MAIL_TO = ["21a847ec.aubexGmbH.onmicrosoft.com@emea.teams.ms"]
