@@ -21,10 +21,10 @@ import urllib.parse
 # === Konštanty / vzory chýb ==============================================
 
 ERROR_PATTERNS = [
-    # tolerantné tvary: occured/occurred + authentication/authentification
-    r"Exception\s+occurr?ed:\s*Unknown error during authenti[cf]ation",
-    r"Exception\s+occurr?ed:\s*find_by_image didn't return an Element pointer",
-    r"Exception\s+occurr?ed:\s*wait_for_condition failed with search_condition",
+    # (regex, label)
+    (re.compile(r"Exception occurred:\s*Unknown error during authentication", re.I), "auth?"),
+    (re.compile(r"Exception occurred:\s*find_by_image.*Element pointer", re.I), "auth?"),
+    (re.compile(r"Exception occurred:\s*wait_for_condition.*automation_id", re.I), "Registrierung?"),
 ]
 
 SKIP_HAS_PROCESSES_PATTERN = r"DEBUG\s*-\s*starting with process"
@@ -150,17 +150,24 @@ def analyze_log(file_path: Path, known: dict) -> dict | None:
         return None
 
     # 3) hľadaj chyby
-    if not _contains_any(ERROR_PATTERNS, text):
-        return None
+    label = None
+    for pattern, lbl in ERROR_PATTERNS:
+        if pattern.search(text):
+            label = lbl
+            break
 
+    if not label:
+        return None
+    
     meta = parse_filename(file_path.stem, known)
     return {
         "company": meta["company"],
         "location": meta["location"],
         "time": meta["time"],
-        "link": "",  # zatiaľ prázdne – doplní sa neskôr, keď budú dáta v názve/JSON
-        # "date": meta["date"],  # ak by si potreboval neskôr
+        "label": label,
+        "link": "",
     }
+
 
 # === 5) Analýza priečinka s logmi =======================================
 
