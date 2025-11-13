@@ -31,24 +31,24 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Restore processed_files.txt artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: processed-files
-        continue-on-error: true
+      #- name: Restore processed_files.txt artifact
+       # uses: actions/download-artifact@v4
+        #with:
+         # name: processed-files
+        #continue-on-error: true
 
-      - name: Move restored processed_files.txt
-        run: |
+      #- name: Move restored processed_files.txt
+       # run: |
           # Ak existuje priečinok 'processed-files' (nové správanie v4)
-          if [ -d processed-files ]; then
-            echo "Restoring processed_files.txt from artifact directory"
-            mv processed-files/processed_files.txt ./processed_files.txt
+      #    if [ -d processed-files ]; then
+       #     echo "Restoring processed_files.txt from artifact directory"
+       #     mv processed-files/processed_files.txt ./processed_files.txt
           # Ak existuje súbor priamo v root (staré správanie alebo fallback)
-          elif [ -f processed_files.txt ]; then
-            echo "processed_files.txt is already in place"
-          else
-            echo "No previous processed_files.txt found"
-          fi
+      #    elif [ -f processed_files.txt ]; then
+       #     echo "processed_files.txt is already in place"
+      #    else
+       #     echo "No previous processed_files.txt found"
+      #    fi
 
 
       - name: Set up Python
@@ -68,10 +68,10 @@ jobs:
           echo "=== Spúšťam pipeline.py ==="
           python pipeline.py
 
-      - name: Upload processed_files.txt artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: processed-files
-          path: processed_files.txt
-        if: always()
+     # - name: Upload processed_files.txt artifact
+     #   uses: actions/upload-artifact@v4
+     #   with:
+     #     name: processed-files
+     #     path: processed_files.txt
+     #   if: always()
 
