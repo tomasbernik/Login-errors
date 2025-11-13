@@ -27,7 +27,7 @@ SMTP_SERVER = os.environ["SMTP_SERVER"]
 SMTP_PORT   = int(os.environ.get("SMTP_PORT", "587"))
 SMTP_USER   = os.environ["SMTP_USER"]
 SMTP_PASS   = os.environ["SMTP_PASS"]
-MAIL_TO     = [x.strip() for x in os.environ.get("MAIL_TO", "").split(",") if x.strip()]
+MAIL_TO = ["21a847ec.aubexGmbH.onmicrosoft.com@emea.teams.ms"]
 
 START_HOUR  = int(os.environ.get("START_HOUR", "0"))
 END_HOUR    = int(os.environ.get("END_HOUR", "23"))
