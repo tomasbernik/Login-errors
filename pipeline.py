@@ -1,0 +1,193 @@
+#!/usr/bin/env python3
+# pipeline.py — clean verzia, ktorá používa analyzer.py
+
+import os
+import re
+import smtplib
+import urllib.parse
+from pathlib import Path
+from datetime import datetime
+from email.message import EmailMessage
+
+import requests
+from requests.auth import HTTPBasicAuth
+
+from analyzer import analyze_log_file, load_companies
+
+# =============================
+# ENV variables (GitHub Secrets)
+# =============================
+
+NEXTCLOUD_PUBLIC_URL   = os.environ["NEXTCLOUD_PUBLIC_URL"]
+NEXTCLOUD_PUBLIC_TOKEN = os.environ["NEXTCLOUD_PUBLIC_TOKEN"]
+NEXTCLOUD_PUBLIC_PASS  = os.environ.get("NEXTCLOUD_PUBLIC_PASSWORD", "")
+VERIFY_SSL             = os.environ.get("NEXTCLOUD_VERIFY_SSL", "true").lower() == "true"
+
+SMTP_SERVER = os.environ["SMTP_SERVER"]
+SMTP_PORT   = int(os.environ.get("SMTP_PORT", "587"))
+SMTP_USER   = os.environ["SMTP_USER"]
+SMTP_PASS   = os.environ["SMTP_PASS"]
+MAIL_TO     = [x.strip() for x in os.environ.get("MAIL_TO", "").split(",") if x.strip()]
+
+START_HOUR  = int(os.environ.get("START_HOUR", "0"))
+END_HOUR    = int(os.environ.get("END_HOUR", "23"))
+
+BASE_DIR    = Path(__file__).parent
+LOGS_DIR    = BASE_DIR / "logs"
+PROCESSED   = BASE_DIR / "processed_files.txt"
+COMP_JSON   = BASE_DIR / "companies_locations.json"
+
+LOGS_DIR.mkdir(exist_ok=True)
+
+
+# =============================
+# Helper
+# =============================
+
+def now_local():
+    return datetime.now()  # runner podľa timezone; dá sa pridať pytz ak chceš DE čas
+
+
+def in_window():
+    h = now_local().hour
+    return START_HOUR <= h <= END_HOUR
+
+
+def read_processed():
+    if not PROCESSED.exists():
+        return set()
+    return set(PROCESSED.read_text(encoding="utf-8").splitlines())
+
+
+def write_processed(s):
+    PROCESSED.write_text("\n".join(sorted(s)), encoding="utf-8")
+
+
+# =============================
+# Nextcloud download
+# =============================
+
+def download_todays_logs():
+    today = now_local().strftime("%Y-%m-%d")
+    auth = HTTPBasicAuth(NEXTCLOUD_PUBLIC_TOKEN, NEXTCLOUD_PUBLIC_PASS)
+
+    print("PROPFIND → Nextcloud…")
+    resp = requests.request(
+        "PROPFIND",
+        NEXTCLOUD_PUBLIC_URL,
+        auth=auth,
+        headers={"Depth": "1"},
+        verify=VERIFY_SSL,
+        timeout=30
+    )
+
+    if resp.status_code not in (200, 207):
+        raise RuntimeError(f"PROPFIND failed: {resp.status_code}")
+
+    hrefs = re.findall(r"<d:href>(.*?)</d:href>", resp.text, flags=re.I)
+    downloaded = []
+
+    for href in hrefs:
+        name = Path(href).name
+        if not name:
+            continue
+
+        decoded = urllib.parse.unquote(name)
+
+        # chceme iba dnešné *.txt
+        if not (decoded.startswith(today) and decoded.endswith(".txt")):
+            continue
+
+        out_path = LOGS_DIR / decoded
+        if out_path.exists():
+            continue
+
+        file_url = f"{NEXTCLOUD_PUBLIC_URL.rstrip('/')}/{name}"
+
+        print(f"Downloading {decoded}…")
+        r = requests.get(file_url, auth=auth, verify=VERIFY_SSL, timeout=60)
+        if r.ok:
+            out_path.write_bytes(r.content)
+            downloaded.append(out_path)
+        else:
+            print(f"Failed {decoded}: {r.status_code}")
+
+    return downloaded
+
+
+# =============================
+# Email
+# =============================
+
+def send_email(subject, body):
+    if not MAIL_TO:
+        print("⚠️ MAIL_TO nie je nastavené")
+        return
+
+    msg = EmailMessage()
+    msg["From"] = SMTP_USER
+    msg["To"] = ", ".join(MAIL_TO)
+    msg["Subject"] = subject
+    msg.set_content(body)
+
+    with smtplib.SMTP(SMTP_SERVER, SMTP_PORT, timeout=30) as s:
+        s.starttls()
+        s.login(SMTP_USER, SMTP_PASS)
+        s.send_message(msg)
+
+
+# =============================
+# Main
+# =============================
+
+def main():
+    if not in_window():
+        print(f"⏸️ Mimo časového okna {START_HOUR}:00–{END_HOUR}:00")
+        return
+
+    print("🚀 Pipeline štartuje")
+
+    # 1) Stiahnuť logy
+    download_todays_logs()
+
+    # 2) Analyzovať všetky dnešné lokálne logy
+    processed = read_processed()
+    companies = load_companies(COMP_JSON)
+
+    results = []
+    newly = set()
+
+    for f in sorted(LOGS_DIR.glob("*.txt")):
+        if f.name in processed:
+            continue
+
+        res = analyze_log_file(f, companies)
+        newly.add(f.name)
+
+        if res:
+            results.append(res)
+
+    # zapíš processed_files.txt
+    write_processed(processed.union(newly))
+
+    if not results:
+        print("✅ Žiadne login chyby")
+        return
+
+    # 3) zostavenie emailu
+    lines = []
+    for r in results:
+        line = f"{r['company']} | {r['location']} | {r['time']} | {r['label']}"
+        if r["link"]:
+            line += f" | {r['link']}"
+        lines.append(line)
+
+    subject = f"BMW RPA Loginfehler — {now_local():%Y-%m-%d %H:%M}"
+    body = "Gefundene Fälle (total=0):\n" + "\n".join(lines)
+
+    send_email(subject, body)
+    print("📨 Email sent")
+
+
+if __name__ == "__main__":
+    main()
