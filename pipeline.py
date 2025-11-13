@@ -12,7 +12,8 @@ from email.message import EmailMessage
 import requests
 from requests.auth import HTTPBasicAuth
 
-from analyzer import analyze_log_file, load_companies
+from loginerror import load_known_entities, parse_filename
+
 
 # =============================
 # ENV variables (GitHub Secrets)
@@ -152,7 +153,7 @@ def main():
 
     # 2) Analyzovať všetky dnešné lokálne logy
     processed = read_processed()
-    companies = load_companies(COMP_JSON)
+    known = load_known_entities(COMP_JSON)
 
     results = []
     newly = set()
@@ -166,21 +167,28 @@ def main():
             continue
 
         print(f"   🔎 Analyzujem: {f.name}")
-        res = analyze_log_file(f, companies)
+
+        # Najprv analyzuj log, či obsahuje chybu
+        finding = analyze_log(f, known)
+
+        # Potom spracuj názov súboru → firma, lokalita, čas
+        meta = parse_filename(f.stem, known)
+
         newly.add(f.name)
 
-        if res:
-            print(f"      ❗ Nájdená chyba → {res['company']} | {res['location']} | {res['time']}")
-            results.append(res)
+        if finding:
+            print(f"      ❗ Nájdená chyba → {meta['company']} | {meta['location']} | {meta['time']}")
+            
+            # pridaj nález do výsledkov
+            results.append({
+                "company": meta["company"],
+                "location": meta["location"],
+                "time": meta["time"],
+                "label": finding.get("label", "unknown"),
+                "link": finding.get("link", "")
+            })
         else:
-            print(f"      ✅ Bez chyby")
-
-    # zapíš processed_files.txt
-    write_processed(processed.union(newly))
-
-    if not results:
-        print("✅ Žiadne login chyby")
-        return
+            print("      ✅ Bez chyby")
 
     # 3) zostavenie emailu
     lines = []
@@ -191,7 +199,7 @@ def main():
         lines.append(line)
 
     subject = f"BMW RPA Loginfehler — {now_local():%Y-%m-%d %H:%M}"
-    body = "Gefundene Fälle (total=0):\n" + "\n".join(lines)
+    body = "Gefundene Loginfehler:\n" + "\n".join(lines)
 
     send_email(subject, body)
     print("📨 Email sent")
