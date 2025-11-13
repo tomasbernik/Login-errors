@@ -190,7 +190,7 @@ def main():
             line += f" | {r['link']}"
         lines.append(line)
 
-    subject = f"BMW RPA Loginfehler — {now_local():%Y%m%d %H:%M}"
+    subject = f"BMW RPA Loginfehler — {now_local():%Y-%m-%d %H:%M}"
     body = "Gefundene Fälle (total=0):\n" + "\n".join(lines)
 
     send_email(subject, body)
