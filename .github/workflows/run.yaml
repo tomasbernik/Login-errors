@@ -1,14 +1,31 @@
-name: Run loginerror analyzer
+name: Run BMW Loginfehler Pipeline
 
 on:
   schedule:
-    # Každých 5 minút
+    # každých 5 minút
     - cron: "*/5 * * * *"
   workflow_dispatch:  # manuálne spustenie
 
 jobs:
-  analyze-logs:
+  pipeline:
     runs-on: ubuntu-latest
+    env:
+      TZ: "Europe/Berlin"
+      PYTHONUNBUFFERED: "1"
+
+      # environment variables z GitHub Secrets
+      NEXTCLOUD_PUBLIC_URL: ${{ secrets.NEXTCLOUD_PUBLIC_URL }}
+      NEXTCLOUD_PUBLIC_TOKEN: ${{ secrets.NEXTCLOUD_PUBLIC_TOKEN }}
+      NEXTCLOUD_PUBLIC_PASSWORD: ${{ secrets.NEXTCLOUD_PUBLIC_PASSWORD }}
+      NEXTCLOUD_VERIFY_SSL: ${{ secrets.NEXTCLOUD_VERIFY_SSL }}
+
+      SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
+      SMTP_PORT: ${{ secrets.SMTP_PORT }}
+      SMTP_USER: ${{ secrets.SMTP_USER }}
+      SMTP_PASS: ${{ secrets.SMTP_PASS }}
+
+      START_HOUR: ${{ secrets.START_HOUR }}
+      END_HOUR: ${{ secrets.END_HOUR }}
 
     steps:
       - name: Checkout repository
@@ -22,8 +39,9 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
+          pip install requests
 
-      - name: Run loginerror.py
+      - name: Run pipeline
         run: |
-          echo "=== Spúšťam loginerror.py ==="
-          python loginerror.py --folder logs --debug
+          echo "=== Spúšťam pipeline.py ==="
+          python pipeline.py
