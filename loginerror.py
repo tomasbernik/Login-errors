@@ -22,8 +22,8 @@ import urllib.parse
 
 ERROR_PATTERNS = [
     # (regex, label)
-    (re.compile(r"Exception occurred:\s*Unknown error during authentication", re.I), "auth?"),
-    (re.compile(r"Exception occurred:\s*find_by_image.*Element pointer", re.I), "auth?"),
+    (re.compile(r"Exception occurred:\s*Unknown error during authentication", re.I), "auth"),
+    (re.compile(r"Exception occurred:\s*find_by_image.*Element pointer", re.I), "auth"),
     (re.compile(r"Exception occurred:\s*wait_for_condition.*automation_id\s*=\s*'PART_image'", re.I | re.S), "Registrierung?"),
 ]
 
