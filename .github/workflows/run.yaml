@@ -59,9 +59,11 @@ jobs:
 
       - name: Run pipeline
         run: |
+          # echo "=== RESETUJEM processed_files.txt ==="
+          # python -c "open('processed_files.txt', 'w').close()"
           echo "=== Spúšťam pipeline.py ==="
           python pipeline.py
-          
+
       - name: Upload processed_files.txt artifact
         uses: actions/upload-artifact@v3
         with:
