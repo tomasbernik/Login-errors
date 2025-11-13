@@ -207,7 +207,7 @@ def main():
         lines.append(line)
 
     subject = f"BMW RPA Loginfehler — {now_local():%Y-%m-%d %H:%M}"
-    body = "Gefundene Loginfehler:\n" + "\n".join(lines)
+    body = "Alarm!!\n" + "\n".join(lines)
 
     send_email(subject, body)
     print("📨 Email sent")
