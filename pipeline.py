@@ -69,7 +69,7 @@ def write_processed(s):
 # Nextcloud download
 # =============================
 
-def download_todays_logs():
+def download_todays_logs(processed):
     today = now_local().strftime("%Y%m%d")
     auth = HTTPBasicAuth(NEXTCLOUD_PUBLIC_TOKEN, NEXTCLOUD_PUBLIC_PASS)
 
@@ -98,6 +98,10 @@ def download_todays_logs():
 
         # chceme iba dnešné *.txt
         if not (decoded.startswith(today) and decoded.endswith(".txt")):
+            continue
+        
+        if decoded in processed:
+            print(f"Skipping already processed: {decoded}")
             continue
 
         out_path = LOGS_DIR / decoded
@@ -150,7 +154,7 @@ def main():
     print("🚀 Pipeline štartuje")
 
     # 1) Stiahnuť logy
-    download_todays_logs()
+    download_todays_logs(processed)
 
     # 2) Analyzovať všetky dnešné lokálne logy
     processed = read_processed()
