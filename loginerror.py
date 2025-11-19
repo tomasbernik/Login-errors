@@ -24,7 +24,7 @@ ERROR_PATTERNS = [
     # (regex, label)
     (re.compile(r"Exception occurred:\s*Unknown error during authentication", re.I), "Authentifizierung"),
     (re.compile(r"Exception occurred:\s*find_by_image.*Element pointer", re.I), "Authentifizierung"),
-    (re.compile(r"Exception occurred:\s*wait_for_condition.*automation_id\s*=\s*'PART_image'", re.I | re.S), "Registrierung?"),
+    (re.compile(r"wait_for_condition.*'PART_image'", re.I | re.S), "Registrierung?"),
 ]
 
 SKIP_HAS_PROCESSES_PATTERN = r"DEBUG\s*-\s*starting with process"
@@ -131,35 +131,31 @@ def _contains_any(patterns, text: str) -> bool:
 
 def analyze_log(file_path: Path, known: dict) -> dict | None:
     """
-    Vráti dict s nálezom, ak ide o login error. Inak None.
-    - Preskočí logy s "starting with process"
-    - Ignoruje logy s "couldn't find any potential processes"
-    - Hľadá vybrané "Exception occurred: ..." chyby
+    Upravená verzia:
+    - preskočí logy obsahujúce "Login successful"
+    - NEpreskakuje logy bez chyby
+    - ak sa nenájde ERROR_PATTERN, label zostane prázdny
     """
     try:
         text = file_path.read_text(encoding="utf-8", errors="ignore")
     except Exception:
         return None
 
-    # 1) logy s procesmi preskočiť
-    if re.search(SKIP_HAS_PROCESSES_PATTERN, text, re.IGNORECASE):
+    # 1) preskočiť úspešné logy
+    if "Login successful" in text:
         return None
 
-    # 2) ak výslovne hovorí, že nenašiel žiadne procesy -> nie je login error
-    if re.search(IGNORE_ZERO_NO_TASKS_PATTERN, text, re.IGNORECASE):
-        return None
-
-    # 3) hľadaj chyby
-    label = None
+    # 2) nájsť chybu (ak nie je → label="")
+    label = ""
     for pattern, lbl in ERROR_PATTERNS:
         if pattern.search(text):
             label = lbl
             break
 
-    if not label:
-        return None
-    
+    # 3) meta informácie z názvu súboru
     meta = parse_filename(file_path.stem, known)
+
+    # 4) vrátiť výsledok – label môže byť prázdny
     return {
         "company": meta["company"],
         "location": meta["location"],
@@ -167,6 +163,7 @@ def analyze_log(file_path: Path, known: dict) -> dict | None:
         "label": label,
         "link": "",
     }
+
 
 
 # === 5) Analýza priečinka s logmi =======================================
