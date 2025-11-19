@@ -1,0 +1,118 @@
+2025-11-17 07:15:24,091 - ispa_next.main - DEBUG - ISPA Next attempt (1 / 5)
+2025-11-17 07:15:24,098 - overlays.client - INFO - Connected to overlay manager pipe
+2025-11-17 07:15:44,455 - ispa_next.app_start.functions - DEBUG - handle_update_available
+2025-11-17 07:15:58,998 - ispa_next.app_start.functions - DEBUG - has_ispa_errors
+2025-11-17 07:16:16,675 - ispa_next.app_start.functions - DEBUG - authenticate_user
+2025-11-17 07:16:47,891 - ispa_next.app_start.main - DEBUG - Login successful
+2025-11-17 07:17:15,017 - ispa_next.appointments.functions - DEBUG - order_appointments_grid_by_created_at
+2025-11-17 07:17:18,202 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 07:17:19,758 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 346
+2025-11-17 07:17:19,760 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 119
+2025-11-17 07:17:22,990 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 112
+2025-11-17 07:17:22,991 - ispa_next.appointments.functions - DEBUG - recover_or_exit_IPS_error
+2025-11-17 07:17:22,991 - ispa_next.appointments.functions - DEBUG - check_appointments_grid_for_IPS_error
+2025-11-17 07:17:24,514 - ispa_next.appointments.functions - DEBUG - check_appointments_grid_for_IPS_error
+2025-11-17 07:17:25,982 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 07:17:46,783 - ispa_next.appointments.models - DEBUG - Appointment Faktor 4 Architekten, HEG NE-UH 865 WMWZH71070TY03391 ohne Termin.
+2025-11-17 07:17:46,804 - ispa_next.appointments.models - DEBUG - Skipping appointment without VIN
+2025-11-17 07:17:46,864 - ispa_next.appointments.models - DEBUG - Appointment Manuel Hermann Jaeger-Lenne GV-MJ 1989 WBAJG11030ED57177 ohne Termin.
+2025-11-17 07:17:46,883 - ispa_next.appointments.models - DEBUG - Appointment Armaturen Vertrieb Alms GmbH ME-AA 340E WBY71AW020FT62013 ohne Termin.
+2025-11-17 07:17:46,891 - ispa_next.appointments.models - DEBUG - Appointment   WBA11FZ090FR60998 ohne Termin.
+2025-11-17 07:17:46,902 - ispa_next.appointments.models - DEBUG - Appointment Bianca Prins VIE-PE 881 WBA11AW010FL84234 ohne Termin.
+2025-11-17 07:17:46,910 - ispa_next.appointments.models - DEBUG - Appointment Oliver Berndsen NE-JO 288E WBY31FK070CR63503 ohne Termin.
+2025-11-17 07:17:46,924 - ispa_next.main - DEBUG - Found 2 out of 25 appointments to process (configured limit: 15).
+2025-11-17 07:17:46,924 - ispa_next.main - DEBUG - Processing 2 fresh appointments.
+2025-11-17 07:17:46,924 - ispa_next.main - DEBUG - All appointments: F-S685E, NE-RK 63
+2025-11-17 07:17:46,926 - ispa_next.main - DEBUG - 
+
+
+
+2025-11-17 07:17:46,926 - ispa_next.main - DEBUG - starting with process 1 (F-S685E) of 2
+2025-11-17 07:17:46,929 - ispa_next.appointment_loop.helpers - DEBUG - Checking for potential OIDC Login dialog
+2025-11-17 07:17:48,353 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 07:17:50,013 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 346
+2025-11-17 07:17:50,014 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 112
+2025-11-17 07:17:51,702 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 1
+2025-11-17 07:17:51,703 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 07:18:33,915 - ispa_next.appointment_loop.main - DEBUG - Appointment failed: Traceback (most recent call last):
+  File "C:\Users\azureuser\AppData\Local\automizor\runner\ispa_next\appointment_loop\main.py", line 41, in process_appointment
+    handle_briefing_screen(element=app)
+  File "C:\Users\azureuser\AppData\Local\automizor\runner\ispa_next\appointments\functions.py", line 156, in handle_briefing_screen
+    raise AppointmentNotSynchronized(
+ispa_next.exceptions.AppointmentNotSynchronized: Appointment is not properly synchronized with DMS, proceed with the next one.
+
+2025-11-17 07:18:34,015 - ispa_next.appointment_loop.main - DEBUG - Closing appointment 1.
+2025-11-17 07:18:34,020 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 07:18:34,745 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 346
+2025-11-17 07:18:34,747 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 1
+2025-11-17 07:18:38,169 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 119
+2025-11-17 07:18:38,169 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 07:18:39,292 - ispa_next.appointments.models - DEBUG - Appointment   WBA1A11040J904916 ohne Termin.
+2025-11-17 07:18:39,302 - ispa_next.appointments.models - DEBUG - Appointment Faktor 4 Architekten, HEG NE-UH 865 WMWZH71070TY03391 ohne Termin.
+2025-11-17 07:18:39,307 - ispa_next.main - DEBUG - 
+
+
+
+2025-11-17 07:18:39,307 - ispa_next.main - DEBUG - starting with process 2 (NE-RK 63) of 2
+2025-11-17 07:18:39,311 - ispa_next.appointment_loop.helpers - DEBUG - Checking for potential OIDC Login dialog
+2025-11-17 07:18:40,798 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 07:18:42,531 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 346
+2025-11-17 07:18:42,532 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 119
+2025-11-17 07:18:44,340 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 1
+2025-11-17 07:18:44,342 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 07:19:11,504 - ispa_next.rkr_manager.main - DEBUG - RemoteKeyReadManager initialized
+2025-11-17 07:19:22,129 - ispa_next.functions - DEBUG - get_cart_contents
+2025-11-17 07:19:24,163 - ispa_next.functions - DEBUG - check_and_verify_hu_date
+2025-11-17 07:19:24,164 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Kunden & Fahrzeug
+2025-11-17 07:19:24,279 - ispa_next.common.shared - DEBUG - ISPA tab Kunden & Fahrzeug is already open
+2025-11-17 07:19:24,534 - ispa_next.functions - DEBUG - check_potential_workshop_test
+2025-11-17 07:19:24,538 - ispa_next.functions - DEBUG - check_vehicle_age_for_service_plus
+2025-11-17 07:19:27,460 - ispa_next.rkr_manager.main - DEBUG - running RemoteKeyReadManager
+2025-11-17 07:19:27,462 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Wartung
+2025-11-17 07:19:27,756 - ispa_next.common.shared - ERROR - Error opening ISPA tab: Wartung
+2025-11-17 07:19:28,215 - ispa_next.appointment_loop.main - DEBUG - Appointment failed: Traceback (most recent call last):
+  File "C:\Users\azureuser\AppData\Local\automizor\runner\ispa_next\common\shared.py", line 50, in open_ispa_tab
+    target_tab = tab_control.find_first(C.name(name), C.control_type_name("Text"))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\azureuser\AppData\Local\robocorp\holotree\84e04c8_5a1fac3_9fcd2534\Lib\site-packages\pyfenster\decorators\null_control.py", line 23, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\azureuser\AppData\Local\robocorp\holotree\84e04c8_5a1fac3_9fcd2534\Lib\site-packages\pyfenster\query\mixins.py", line 186, in find_first
+    found = m.find_first(
+            ^^^^^^^^^^^^^
+  File "C:\Users\azureuser\AppData\Local\robocorp\holotree\84e04c8_5a1fac3_9fcd2534\Lib\site-packages\pyfenster\query\methods.py", line 87, in find_first
+    raise_error(msg)
+  File "C:\Users\azureuser\AppData\Local\robocorp\holotree\84e04c8_5a1fac3_9fcd2534\Lib\site-packages\pyfenster\query\methods.py", line 78, in raise_error
+    raise ElementNotFoundError(msg)
+pyfenster.exceptions.ElementNotFoundError: 'FindFirst' failed: name = 'Wartung'
+AND
+control_type = '50020'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\azureuser\AppData\Local\automizor\runner\ispa_next\appointment_loop\main.py", line 72, in process_appointment
+    remote_keyread_manager.run(waiting=False)
+  File "C:\Users\azureuser\AppData\Local\automizor\runner\ispa_next\rkr_manager\main.py", line 61, in run
+    self.ui_helper.open_tab(base_element=self.base_element, name="Wartung")
+  File "C:\Users\azureuser\AppData\Local\automizor\runner\ispa_next\rkr_manager\helper.py", line 272, in open_tab
+    opened = open_ispa_tab(base_element=base_element, name=name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\azureuser\AppData\Local\automizor\runner\ispa_next\common\shared.py", line 73, in open_ispa_tab
+    raise ElementNotFoundError(error_msg) from exc
+pyfenster.exceptions.ElementNotFoundError: Error opening ISPA tab: Wartung
+
+2025-11-17 07:19:28,239 - ispa_next.appointment_ending - DEBUG - entered complete process
+2025-11-17 07:19:28,239 - ispa_next.appointment_loop.helpers - DEBUG - Checking for potential OIDC Login dialog
+2025-11-17 07:19:29,066 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Abschluss
+2025-11-17 07:19:29,784 - ispa_next.common.shared - DEBUG - Successfully opened ISPA tab: Abschluss
+2025-11-17 07:19:29,785 - ispa_next.appointment_ending - DEBUG - complete_process exists early.
+2025-11-17 07:19:29,810 - ispa_next.appointment_ending - DEBUG - attempt to close process with save: False
+2025-11-17 07:19:33,014 - ispa_next.appointment_loop.main - DEBUG - Closing appointment 2.
+2025-11-17 07:19:33,017 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 07:19:33,577 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 346
+2025-11-17 07:19:33,578 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 1
+2025-11-17 07:19:37,649 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 119
+2025-11-17 07:19:37,649 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 07:19:38,910 - ispa_next.appointments.models - DEBUG - Appointment   WBA1A11040J904916 ohne Termin.
+2025-11-17 07:19:38,918 - ispa_next.appointments.models - DEBUG - Appointment Faktor 4 Architekten, HEG NE-UH 865 WMWZH71070TY03391 ohne Termin.

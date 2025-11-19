@@ -9,27 +9,34 @@ from pathlib import Path
 from datetime import datetime
 from email.message import EmailMessage
 
+
 import requests
 from requests.auth import HTTPBasicAuth
 
 from loginerror import load_known_entities, parse_filename, analyze_log
 
+from dotenv import load_dotenv
+load_dotenv()
+
 
 
 # =============================
-# ENV variables (GitHub Secrets)
+# ENV variables in .env
 # =============================
 
-NEXTCLOUD_PUBLIC_URL   = os.environ["NEXTCLOUD_PUBLIC_URL"]
-NEXTCLOUD_PUBLIC_TOKEN = os.environ["NEXTCLOUD_PUBLIC_TOKEN"]
-NEXTCLOUD_PUBLIC_PASS  = os.environ.get("NEXTCLOUD_PUBLIC_PASSWORD", "")
-VERIFY_SSL             = os.environ.get("NEXTCLOUD_VERIFY_SSL", "true").lower() == "true"
+NEXTCLOUD_PUBLIC_URL   = os.getenv("NEXTCLOUD_PUBLIC_URL")
+NEXTCLOUD_PUBLIC_TOKEN = os.getenv("NEXTCLOUD_PUBLIC_TOKEN")
+NEXTCLOUD_PUBLIC_PASS  = os.getenv("NEXTCLOUD_PUBLIC_PASSWORD")
+VERIFY_SSL             = os.getenv("NEXTCLOUD_VERIFY_SSL", "true").lower() == "true"
 
-SMTP_SERVER = os.environ["SMTP_SERVER"]
-SMTP_PORT = int(os.environ.get("SMTP_PORT") or 587)
-SMTP_USER   = os.environ["SMTP_USER"]
-SMTP_PASS   = os.environ["SMTP_PASS"]
-MAIL_TO = ["21a847ec.aubexGmbH.onmicrosoft.com@emea.teams.ms"]
+SMTP_SERVER = os.getenv("SMTP_SERVER")
+SMTP_PORT   = int(os.getenv("SMTP_PORT", "587"))
+SMTP_USER   = os.getenv("SMTP_USER")
+SMTP_PASS   = os.getenv("SMTP_PASS")
+MAIL_TO = ["8234732e.aubexGmbH.onmicrosoft.com@emea.teams.ms"]
+# 21a847ec.aubexGmbH.onmicrosoft.com@emea.teams.ms Monitoring bmw
+# 8234732e.aubexGmbH.onmicrosoft.com@emea.teams.ms Monitoring Test
+# für meherere emails MAIL_TO = [x.strip() for x in os.getenv("MAIL_TO", "").split(";") if x.strip()]
 
 START_HOUR = 5
 END_HOUR = 22

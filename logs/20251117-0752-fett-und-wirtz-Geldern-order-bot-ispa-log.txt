@@ -1,0 +1,575 @@
+2025-11-17 07:52:10,631 - ispa_next.main - DEBUG - ISPA Next attempt (1 / 5)
+2025-11-17 07:52:10,638 - overlays.client - INFO - Connected to overlay manager pipe
+2025-11-17 07:52:21,708 - ispa_next.app_start.functions - DEBUG - handle_update_available
+2025-11-17 07:52:32,794 - ispa_next.app_start.functions - DEBUG - has_ispa_errors
+2025-11-17 07:52:48,309 - ispa_next.app_start.functions - DEBUG - authenticate_user
+2025-11-17 07:53:12,358 - ispa_next.app_start.main - DEBUG - Login successful
+2025-11-17 07:53:31,751 - ispa_next.appointments.functions - DEBUG - order_appointments_grid_by_created_at
+2025-11-17 07:53:34,031 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 07:53:35,070 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 315
+2025-11-17 07:53:35,071 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 218
+2025-11-17 07:53:37,249 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 218
+2025-11-17 07:53:37,250 - ispa_next.appointments.functions - DEBUG - recover_or_exit_IPS_error
+2025-11-17 07:53:37,251 - ispa_next.appointments.functions - DEBUG - check_appointments_grid_for_IPS_error
+2025-11-17 07:53:38,348 - ispa_next.appointments.functions - DEBUG - check_appointments_grid_for_IPS_error
+2025-11-17 07:53:39,441 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 07:54:10,000 - ispa_next.appointments.models - DEBUG - Appointment Le-Laden KLE-MY 369 WBATB410409E68337 ohne Termin.
+2025-11-17 07:54:10,009 - ispa_next.appointments.models - DEBUG - Appointment Benjamin Wienkamp KLE-W 1982 WBY71EG0905194432 ohne Termin.
+2025-11-17 07:54:10,018 - ispa_next.appointments.models - DEBUG - Appointment Klaus-Peter Strechel KLE-PR 281 WBA3A11080J281468 ohne Termin.
+2025-11-17 07:54:10,027 - ispa_next.appointments.models - DEBUG - Appointment Dieter Schiller KLE-CS 99 WBAJG110X03G82050 ohne Termin.
+2025-11-17 07:54:10,035 - ispa_next.appointments.models - DEBUG - Appointment Heinz Theo Fürtjes GEL-F 198E WBY71AW020FR87494 ohne Termin.
+2025-11-17 07:54:10,043 - ispa_next.appointments.models - DEBUG - Appointment Margarete Hildegard Karla Fischer GEL-F 323E WBY8P210407K09904 ohne Termin.
+2025-11-17 07:54:10,051 - ispa_next.appointments.models - DEBUG - Appointment Schloots GEL-RS 30 WBA8H91070A722054 ohne Termin.
+2025-11-17 07:54:10,060 - ispa_next.appointments.models - DEBUG - Appointment Anastasia Huwald KLE-A 1413 WBA1V710805N01313 ohne Termin.
+2025-11-17 07:54:10,068 - ispa_next.appointments.models - DEBUG - Appointment Samir Mougawaz KLE-JS 813 WBA2D710105C40715 ohne Termin.
+2025-11-17 07:54:10,084 - ispa_next.appointments.models - DEBUG - Skipping appointment without VIN
+2025-11-17 07:54:10,092 - ispa_next.appointments.models - DEBUG - Skipping appointment without VIN
+2025-11-17 07:54:10,140 - ispa_next.appointments.models - DEBUG - Appointment Jürgen Franz Tönnessen KLE-JT 304 WBA3A11000J283456 ohne Termin.
+2025-11-17 07:54:10,150 - ispa_next.appointments.models - DEBUG - Appointment Daria Kamila Kolodziej KLE-QR 734 WBA8L71060K555733 ohne Termin.
+2025-11-17 07:54:10,169 - ispa_next.appointments.models - DEBUG - Appointment Oliver Christian Wiegand MH-WI 1001 WMWZM31040T035812 ohne Termin.
+2025-11-17 07:54:10,178 - ispa_next.appointments.models - DEBUG - Appointment Rabiullah Arash GEL-NK 786 WBAWZ510800M35552 ohne Termin.
+2025-11-17 07:54:10,179 - ispa_next.appointments.models - DEBUG - Skipping appointment without VIN
+2025-11-17 07:54:10,180 - ispa_next.appointments.models - DEBUG - Skipping appointment without VIN
+2025-11-17 07:54:10,193 - ispa_next.main - DEBUG - Found 13 out of 38 appointments to process (configured limit: 15).
+2025-11-17 07:54:10,194 - ispa_next.main - DEBUG - Processing 13 fresh appointments.
+2025-11-17 07:54:10,194 - ispa_next.main - DEBUG - All appointments: K YL 248, LÖWN93, KLE F 404, KLE S 7711, GEL RG111, M-D-3722, KR-SW7373, GEL VW 25, Kle-FM-44e, KLE-UP-14, GEL P 706, KK-B 602, GEL BL777
+2025-11-17 07:54:10,196 - ispa_next.main - DEBUG - 
+
+
+
+2025-11-17 07:54:10,196 - ispa_next.main - DEBUG - starting with process 1 (K YL 248) of 13
+2025-11-17 07:54:10,199 - ispa_next.appointment_loop.helpers - DEBUG - Checking for potential OIDC Login dialog
+2025-11-17 07:54:11,376 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 07:54:12,484 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 315
+2025-11-17 07:54:12,484 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 218
+2025-11-17 07:54:13,750 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 1
+2025-11-17 07:54:13,751 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 07:54:59,202 - ispa_next.appointment_loop.main - DEBUG - Appointment failed: Traceback (most recent call last):
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointment_loop\main.py", line 41, in process_appointment
+    handle_briefing_screen(element=app)
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointments\functions.py", line 156, in handle_briefing_screen
+    raise AppointmentNotSynchronized(
+ispa_next.exceptions.AppointmentNotSynchronized: Appointment is not properly synchronized with DMS, proceed with the next one.
+
+2025-11-17 07:54:59,275 - ispa_next.appointment_loop.main - DEBUG - Closing appointment 1.
+2025-11-17 07:54:59,279 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 07:54:59,792 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 315
+2025-11-17 07:54:59,793 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 1
+2025-11-17 07:55:02,027 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 218
+2025-11-17 07:55:02,027 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 07:55:02,741 - ispa_next.appointments.models - DEBUG - Appointment Le-Laden KLE-MY 369 WBATB410409E68337 ohne Termin.
+2025-11-17 07:55:02,749 - ispa_next.appointments.models - DEBUG - Appointment Benjamin Wienkamp KLE-W 1982 WBY71EG0905194432 ohne Termin.
+2025-11-17 07:55:02,757 - ispa_next.appointments.models - DEBUG - Appointment Klaus-Peter Strechel KLE-PR 281 WBA3A11080J281468 ohne Termin.
+2025-11-17 07:55:02,763 - ispa_next.appointments.models - DEBUG - Appointment Dieter Schiller KLE-CS 99 WBAJG110X03G82050 ohne Termin.
+2025-11-17 07:55:02,769 - ispa_next.appointments.models - DEBUG - Appointment Heinz Theo Fürtjes GEL-F 198E WBY71AW020FR87494 ohne Termin.
+2025-11-17 07:55:02,775 - ispa_next.appointments.models - DEBUG - Appointment Margarete Hildegard Karla Fischer GEL-F 323E WBY8P210407K09904 ohne Termin.
+2025-11-17 07:55:02,780 - ispa_next.appointments.models - DEBUG - Appointment Schloots GEL-RS 30 WBA8H91070A722054 ohne Termin.
+2025-11-17 07:55:02,785 - ispa_next.appointments.models - DEBUG - Appointment Anastasia Huwald KLE-A 1413 WBA1V710805N01313 ohne Termin.
+2025-11-17 07:55:02,792 - ispa_next.appointments.models - DEBUG - Appointment Samir Mougawaz KLE-JS 813 WBA2D710105C40715 ohne Termin.
+2025-11-17 07:55:02,797 - ispa_next.main - DEBUG - 
+
+
+
+2025-11-17 07:55:02,797 - ispa_next.main - DEBUG - starting with process 2 (LÖWN93) of 13
+2025-11-17 07:55:02,800 - ispa_next.appointment_loop.helpers - DEBUG - Checking for potential OIDC Login dialog
+2025-11-17 07:55:03,922 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 07:55:05,240 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 315
+2025-11-17 07:55:05,242 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 218
+2025-11-17 07:55:06,572 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 1
+2025-11-17 07:55:06,573 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 07:55:37,277 - ispa_next.appointment_loop.main - DEBUG - Appointment failed: Traceback (most recent call last):
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointment_loop\main.py", line 41, in process_appointment
+    handle_briefing_screen(element=app)
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointments\functions.py", line 156, in handle_briefing_screen
+    raise AppointmentNotSynchronized(
+ispa_next.exceptions.AppointmentNotSynchronized: Appointment is not properly synchronized with DMS, proceed with the next one.
+
+2025-11-17 07:55:37,287 - ispa_next.appointment_loop.main - DEBUG - Closing appointment 2.
+2025-11-17 07:55:37,291 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 07:55:37,730 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 315
+2025-11-17 07:55:37,730 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 1
+2025-11-17 07:55:40,078 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 218
+2025-11-17 07:55:40,078 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 07:55:40,842 - ispa_next.appointments.models - DEBUG - Appointment Le-Laden KLE-MY 369 WBATB410409E68337 ohne Termin.
+2025-11-17 07:55:40,848 - ispa_next.appointments.models - DEBUG - Appointment Benjamin Wienkamp KLE-W 1982 WBY71EG0905194432 ohne Termin.
+2025-11-17 07:55:40,855 - ispa_next.appointments.models - DEBUG - Appointment Klaus-Peter Strechel KLE-PR 281 WBA3A11080J281468 ohne Termin.
+2025-11-17 07:55:40,862 - ispa_next.appointments.models - DEBUG - Appointment Dieter Schiller KLE-CS 99 WBAJG110X03G82050 ohne Termin.
+2025-11-17 07:55:40,869 - ispa_next.appointments.models - DEBUG - Appointment Heinz Theo Fürtjes GEL-F 198E WBY71AW020FR87494 ohne Termin.
+2025-11-17 07:55:40,876 - ispa_next.appointments.models - DEBUG - Appointment Margarete Hildegard Karla Fischer GEL-F 323E WBY8P210407K09904 ohne Termin.
+2025-11-17 07:55:40,883 - ispa_next.appointments.models - DEBUG - Appointment Schloots GEL-RS 30 WBA8H91070A722054 ohne Termin.
+2025-11-17 07:55:40,888 - ispa_next.appointments.models - DEBUG - Appointment Anastasia Huwald KLE-A 1413 WBA1V710805N01313 ohne Termin.
+2025-11-17 07:55:40,894 - ispa_next.appointments.models - DEBUG - Appointment Samir Mougawaz KLE-JS 813 WBA2D710105C40715 ohne Termin.
+2025-11-17 07:55:40,897 - ispa_next.main - DEBUG - 
+
+
+
+2025-11-17 07:55:40,897 - ispa_next.main - DEBUG - starting with process 3 (KLE F 404) of 13
+2025-11-17 07:55:40,902 - ispa_next.appointment_loop.helpers - DEBUG - Checking for potential OIDC Login dialog
+2025-11-17 07:55:41,924 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 07:55:42,856 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 315
+2025-11-17 07:55:42,859 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 218
+2025-11-17 07:55:44,179 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 1
+2025-11-17 07:55:44,180 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 07:56:24,089 - ispa_next.appointment_loop.main - DEBUG - Appointment failed: Traceback (most recent call last):
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointment_loop\main.py", line 41, in process_appointment
+    handle_briefing_screen(element=app)
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointments\functions.py", line 156, in handle_briefing_screen
+    raise AppointmentNotSynchronized(
+ispa_next.exceptions.AppointmentNotSynchronized: Appointment is not properly synchronized with DMS, proceed with the next one.
+
+2025-11-17 07:56:24,098 - ispa_next.appointment_loop.main - DEBUG - Closing appointment 3.
+2025-11-17 07:56:24,102 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 07:56:24,616 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 315
+2025-11-17 07:56:24,616 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 1
+2025-11-17 07:56:27,137 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 218
+2025-11-17 07:56:27,138 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 07:56:27,861 - ispa_next.appointments.models - DEBUG - Appointment Le-Laden KLE-MY 369 WBATB410409E68337 ohne Termin.
+2025-11-17 07:56:27,868 - ispa_next.appointments.models - DEBUG - Appointment Benjamin Wienkamp KLE-W 1982 WBY71EG0905194432 ohne Termin.
+2025-11-17 07:56:27,875 - ispa_next.appointments.models - DEBUG - Appointment Klaus-Peter Strechel KLE-PR 281 WBA3A11080J281468 ohne Termin.
+2025-11-17 07:56:27,881 - ispa_next.appointments.models - DEBUG - Appointment Dieter Schiller KLE-CS 99 WBAJG110X03G82050 ohne Termin.
+2025-11-17 07:56:27,887 - ispa_next.appointments.models - DEBUG - Appointment Heinz Theo Fürtjes GEL-F 198E WBY71AW020FR87494 ohne Termin.
+2025-11-17 07:56:27,893 - ispa_next.appointments.models - DEBUG - Appointment Margarete Hildegard Karla Fischer GEL-F 323E WBY8P210407K09904 ohne Termin.
+2025-11-17 07:56:27,898 - ispa_next.appointments.models - DEBUG - Appointment Schloots GEL-RS 30 WBA8H91070A722054 ohne Termin.
+2025-11-17 07:56:27,908 - ispa_next.appointments.models - DEBUG - Appointment Anastasia Huwald KLE-A 1413 WBA1V710805N01313 ohne Termin.
+2025-11-17 07:56:27,916 - ispa_next.appointments.models - DEBUG - Appointment Samir Mougawaz KLE-JS 813 WBA2D710105C40715 ohne Termin.
+2025-11-17 07:56:27,928 - ispa_next.main - DEBUG - 
+
+
+
+2025-11-17 07:56:27,928 - ispa_next.main - DEBUG - starting with process 4 (KLE S 7711) of 13
+2025-11-17 07:56:27,931 - ispa_next.appointment_loop.helpers - DEBUG - Checking for potential OIDC Login dialog
+2025-11-17 07:56:29,098 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 07:56:30,250 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 315
+2025-11-17 07:56:30,252 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 218
+2025-11-17 07:56:31,606 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 1
+2025-11-17 07:56:31,607 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 07:57:02,153 - ispa_next.appointment_loop.main - DEBUG - Appointment failed: Traceback (most recent call last):
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointment_loop\main.py", line 41, in process_appointment
+    handle_briefing_screen(element=app)
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointments\functions.py", line 156, in handle_briefing_screen
+    raise AppointmentNotSynchronized(
+ispa_next.exceptions.AppointmentNotSynchronized: Appointment is not properly synchronized with DMS, proceed with the next one.
+
+2025-11-17 07:57:02,163 - ispa_next.appointment_loop.main - DEBUG - Closing appointment 4.
+2025-11-17 07:57:02,165 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 07:57:02,615 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 315
+2025-11-17 07:57:02,615 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 1
+2025-11-17 07:57:04,965 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 218
+2025-11-17 07:57:04,965 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 07:57:05,772 - ispa_next.appointments.models - DEBUG - Appointment Le-Laden KLE-MY 369 WBATB410409E68337 ohne Termin.
+2025-11-17 07:57:05,778 - ispa_next.appointments.models - DEBUG - Appointment Benjamin Wienkamp KLE-W 1982 WBY71EG0905194432 ohne Termin.
+2025-11-17 07:57:05,785 - ispa_next.appointments.models - DEBUG - Appointment Klaus-Peter Strechel KLE-PR 281 WBA3A11080J281468 ohne Termin.
+2025-11-17 07:57:05,792 - ispa_next.appointments.models - DEBUG - Appointment Dieter Schiller KLE-CS 99 WBAJG110X03G82050 ohne Termin.
+2025-11-17 07:57:05,797 - ispa_next.appointments.models - DEBUG - Appointment Heinz Theo Fürtjes GEL-F 198E WBY71AW020FR87494 ohne Termin.
+2025-11-17 07:57:05,804 - ispa_next.appointments.models - DEBUG - Appointment Margarete Hildegard Karla Fischer GEL-F 323E WBY8P210407K09904 ohne Termin.
+2025-11-17 07:57:05,811 - ispa_next.appointments.models - DEBUG - Appointment Schloots GEL-RS 30 WBA8H91070A722054 ohne Termin.
+2025-11-17 07:57:05,818 - ispa_next.appointments.models - DEBUG - Appointment Anastasia Huwald KLE-A 1413 WBA1V710805N01313 ohne Termin.
+2025-11-17 07:57:05,825 - ispa_next.appointments.models - DEBUG - Appointment Samir Mougawaz KLE-JS 813 WBA2D710105C40715 ohne Termin.
+2025-11-17 07:57:05,827 - ispa_next.main - DEBUG - 
+
+
+
+2025-11-17 07:57:05,827 - ispa_next.main - DEBUG - starting with process 5 (GEL RG111) of 13
+2025-11-17 07:57:05,830 - ispa_next.appointment_loop.helpers - DEBUG - Checking for potential OIDC Login dialog
+2025-11-17 07:57:06,942 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 07:57:08,098 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 315
+2025-11-17 07:57:08,099 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 218
+2025-11-17 07:57:09,430 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 1
+2025-11-17 07:57:09,431 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 07:57:39,968 - ispa_next.appointment_loop.main - DEBUG - Appointment failed: Traceback (most recent call last):
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointment_loop\main.py", line 41, in process_appointment
+    handle_briefing_screen(element=app)
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointments\functions.py", line 156, in handle_briefing_screen
+    raise AppointmentNotSynchronized(
+ispa_next.exceptions.AppointmentNotSynchronized: Appointment is not properly synchronized with DMS, proceed with the next one.
+
+2025-11-17 07:57:39,977 - ispa_next.appointment_loop.main - DEBUG - Closing appointment 5.
+2025-11-17 07:57:39,981 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 07:57:40,490 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 315
+2025-11-17 07:57:40,492 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 1
+2025-11-17 07:57:43,244 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 218
+2025-11-17 07:57:43,245 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 07:57:44,039 - ispa_next.appointments.models - DEBUG - Appointment Le-Laden KLE-MY 369 WBATB410409E68337 ohne Termin.
+2025-11-17 07:57:44,045 - ispa_next.appointments.models - DEBUG - Appointment Benjamin Wienkamp KLE-W 1982 WBY71EG0905194432 ohne Termin.
+2025-11-17 07:57:44,052 - ispa_next.appointments.models - DEBUG - Appointment Klaus-Peter Strechel KLE-PR 281 WBA3A11080J281468 ohne Termin.
+2025-11-17 07:57:44,059 - ispa_next.appointments.models - DEBUG - Appointment Dieter Schiller KLE-CS 99 WBAJG110X03G82050 ohne Termin.
+2025-11-17 07:57:44,065 - ispa_next.appointments.models - DEBUG - Appointment Heinz Theo Fürtjes GEL-F 198E WBY71AW020FR87494 ohne Termin.
+2025-11-17 07:57:44,071 - ispa_next.appointments.models - DEBUG - Appointment Margarete Hildegard Karla Fischer GEL-F 323E WBY8P210407K09904 ohne Termin.
+2025-11-17 07:57:44,077 - ispa_next.appointments.models - DEBUG - Appointment Schloots GEL-RS 30 WBA8H91070A722054 ohne Termin.
+2025-11-17 07:57:44,085 - ispa_next.appointments.models - DEBUG - Appointment Anastasia Huwald KLE-A 1413 WBA1V710805N01313 ohne Termin.
+2025-11-17 07:57:44,093 - ispa_next.appointments.models - DEBUG - Appointment Samir Mougawaz KLE-JS 813 WBA2D710105C40715 ohne Termin.
+2025-11-17 07:57:44,096 - ispa_next.main - DEBUG - 
+
+
+
+2025-11-17 07:57:44,096 - ispa_next.main - DEBUG - starting with process 6 (M-D-3722) of 13
+2025-11-17 07:57:44,099 - ispa_next.appointment_loop.helpers - DEBUG - Checking for potential OIDC Login dialog
+2025-11-17 07:57:45,221 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 07:57:46,450 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 315
+2025-11-17 07:57:46,451 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 218
+2025-11-17 07:57:47,916 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 1
+2025-11-17 07:57:47,916 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 07:58:18,552 - ispa_next.appointment_loop.main - DEBUG - Appointment failed: Traceback (most recent call last):
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointment_loop\main.py", line 41, in process_appointment
+    handle_briefing_screen(element=app)
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointments\functions.py", line 156, in handle_briefing_screen
+    raise AppointmentNotSynchronized(
+ispa_next.exceptions.AppointmentNotSynchronized: Appointment is not properly synchronized with DMS, proceed with the next one.
+
+2025-11-17 07:58:18,561 - ispa_next.appointment_loop.main - DEBUG - Closing appointment 6.
+2025-11-17 07:58:18,564 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 07:58:19,024 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 315
+2025-11-17 07:58:19,026 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 1
+2025-11-17 07:58:21,362 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 218
+2025-11-17 07:58:21,362 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 07:58:22,069 - ispa_next.appointments.models - DEBUG - Appointment Le-Laden KLE-MY 369 WBATB410409E68337 ohne Termin.
+2025-11-17 07:58:22,074 - ispa_next.appointments.models - DEBUG - Appointment Benjamin Wienkamp KLE-W 1982 WBY71EG0905194432 ohne Termin.
+2025-11-17 07:58:22,081 - ispa_next.appointments.models - DEBUG - Appointment Klaus-Peter Strechel KLE-PR 281 WBA3A11080J281468 ohne Termin.
+2025-11-17 07:58:22,088 - ispa_next.appointments.models - DEBUG - Appointment Dieter Schiller KLE-CS 99 WBAJG110X03G82050 ohne Termin.
+2025-11-17 07:58:22,095 - ispa_next.appointments.models - DEBUG - Appointment Heinz Theo Fürtjes GEL-F 198E WBY71AW020FR87494 ohne Termin.
+2025-11-17 07:58:22,101 - ispa_next.appointments.models - DEBUG - Appointment Margarete Hildegard Karla Fischer GEL-F 323E WBY8P210407K09904 ohne Termin.
+2025-11-17 07:58:22,112 - ispa_next.appointments.models - DEBUG - Appointment Schloots GEL-RS 30 WBA8H91070A722054 ohne Termin.
+2025-11-17 07:58:22,118 - ispa_next.appointments.models - DEBUG - Appointment Anastasia Huwald KLE-A 1413 WBA1V710805N01313 ohne Termin.
+2025-11-17 07:58:22,135 - ispa_next.appointments.models - DEBUG - Appointment Samir Mougawaz KLE-JS 813 WBA2D710105C40715 ohne Termin.
+2025-11-17 07:58:22,137 - ispa_next.main - DEBUG - 
+
+
+
+2025-11-17 07:58:22,137 - ispa_next.main - DEBUG - starting with process 7 (KR-SW7373) of 13
+2025-11-17 07:58:22,140 - ispa_next.appointment_loop.helpers - DEBUG - Checking for potential OIDC Login dialog
+2025-11-17 07:58:23,198 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 07:58:24,259 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 315
+2025-11-17 07:58:24,259 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 218
+2025-11-17 07:58:25,538 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 1
+2025-11-17 07:58:25,539 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 07:58:56,315 - ispa_next.appointment_loop.main - DEBUG - Appointment failed: Traceback (most recent call last):
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointment_loop\main.py", line 41, in process_appointment
+    handle_briefing_screen(element=app)
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointments\functions.py", line 156, in handle_briefing_screen
+    raise AppointmentNotSynchronized(
+ispa_next.exceptions.AppointmentNotSynchronized: Appointment is not properly synchronized with DMS, proceed with the next one.
+
+2025-11-17 07:58:56,322 - ispa_next.appointment_loop.main - DEBUG - Closing appointment 7.
+2025-11-17 07:58:56,324 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 07:58:56,759 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 315
+2025-11-17 07:58:56,760 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 1
+2025-11-17 07:58:59,134 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 218
+2025-11-17 07:58:59,135 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 07:58:59,941 - ispa_next.appointments.models - DEBUG - Appointment Le-Laden KLE-MY 369 WBATB410409E68337 ohne Termin.
+2025-11-17 07:58:59,947 - ispa_next.appointments.models - DEBUG - Appointment Benjamin Wienkamp KLE-W 1982 WBY71EG0905194432 ohne Termin.
+2025-11-17 07:58:59,953 - ispa_next.appointments.models - DEBUG - Appointment Klaus-Peter Strechel KLE-PR 281 WBA3A11080J281468 ohne Termin.
+2025-11-17 07:58:59,958 - ispa_next.appointments.models - DEBUG - Appointment Dieter Schiller KLE-CS 99 WBAJG110X03G82050 ohne Termin.
+2025-11-17 07:58:59,968 - ispa_next.appointments.models - DEBUG - Appointment Heinz Theo Fürtjes GEL-F 198E WBY71AW020FR87494 ohne Termin.
+2025-11-17 07:58:59,975 - ispa_next.appointments.models - DEBUG - Appointment Margarete Hildegard Karla Fischer GEL-F 323E WBY8P210407K09904 ohne Termin.
+2025-11-17 07:58:59,981 - ispa_next.appointments.models - DEBUG - Appointment Schloots GEL-RS 30 WBA8H91070A722054 ohne Termin.
+2025-11-17 07:58:59,988 - ispa_next.appointments.models - DEBUG - Appointment Anastasia Huwald KLE-A 1413 WBA1V710805N01313 ohne Termin.
+2025-11-17 07:58:59,994 - ispa_next.appointments.models - DEBUG - Appointment Samir Mougawaz KLE-JS 813 WBA2D710105C40715 ohne Termin.
+2025-11-17 07:58:59,997 - ispa_next.main - DEBUG - 
+
+
+
+2025-11-17 07:58:59,997 - ispa_next.main - DEBUG - starting with process 8 (GEL VW 25) of 13
+2025-11-17 07:59:00,017 - ispa_next.appointment_loop.helpers - DEBUG - Checking for potential OIDC Login dialog
+2025-11-17 07:59:01,197 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 07:59:02,472 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 315
+2025-11-17 07:59:02,473 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 218
+2025-11-17 07:59:03,894 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 1
+2025-11-17 07:59:03,895 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 07:59:33,178 - ispa_next.appointment_loop.main - DEBUG - Appointment failed: Traceback (most recent call last):
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointment_loop\main.py", line 41, in process_appointment
+    handle_briefing_screen(element=app)
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointments\functions.py", line 156, in handle_briefing_screen
+    raise AppointmentNotSynchronized(
+ispa_next.exceptions.AppointmentNotSynchronized: Appointment is not properly synchronized with DMS, proceed with the next one.
+
+2025-11-17 07:59:33,186 - ispa_next.appointment_loop.main - DEBUG - Closing appointment 8.
+2025-11-17 07:59:33,190 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 07:59:33,696 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 315
+2025-11-17 07:59:33,701 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 1
+2025-11-17 07:59:36,019 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 218
+2025-11-17 07:59:36,020 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 07:59:36,746 - ispa_next.appointments.models - DEBUG - Appointment Le-Laden KLE-MY 369 WBATB410409E68337 ohne Termin.
+2025-11-17 07:59:36,753 - ispa_next.appointments.models - DEBUG - Appointment Benjamin Wienkamp KLE-W 1982 WBY71EG0905194432 ohne Termin.
+2025-11-17 07:59:36,759 - ispa_next.appointments.models - DEBUG - Appointment Klaus-Peter Strechel KLE-PR 281 WBA3A11080J281468 ohne Termin.
+2025-11-17 07:59:36,764 - ispa_next.appointments.models - DEBUG - Appointment Dieter Schiller KLE-CS 99 WBAJG110X03G82050 ohne Termin.
+2025-11-17 07:59:36,770 - ispa_next.appointments.models - DEBUG - Appointment Heinz Theo Fürtjes GEL-F 198E WBY71AW020FR87494 ohne Termin.
+2025-11-17 07:59:36,777 - ispa_next.appointments.models - DEBUG - Appointment Margarete Hildegard Karla Fischer GEL-F 323E WBY8P210407K09904 ohne Termin.
+2025-11-17 07:59:36,784 - ispa_next.appointments.models - DEBUG - Appointment Schloots GEL-RS 30 WBA8H91070A722054 ohne Termin.
+2025-11-17 07:59:36,791 - ispa_next.appointments.models - DEBUG - Appointment Anastasia Huwald KLE-A 1413 WBA1V710805N01313 ohne Termin.
+2025-11-17 07:59:36,798 - ispa_next.appointments.models - DEBUG - Appointment Samir Mougawaz KLE-JS 813 WBA2D710105C40715 ohne Termin.
+2025-11-17 07:59:36,802 - ispa_next.main - DEBUG - 
+
+
+
+2025-11-17 07:59:36,802 - ispa_next.main - DEBUG - starting with process 9 (Kle-FM-44e) of 13
+2025-11-17 07:59:36,805 - ispa_next.appointment_loop.helpers - DEBUG - Checking for potential OIDC Login dialog
+2025-11-17 07:59:38,051 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 07:59:39,164 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 315
+2025-11-17 07:59:39,172 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 218
+2025-11-17 07:59:40,471 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 1
+2025-11-17 07:59:40,473 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 08:00:11,769 - ispa_next.appointment_loop.main - DEBUG - Appointment failed: Traceback (most recent call last):
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointment_loop\main.py", line 41, in process_appointment
+    handle_briefing_screen(element=app)
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointments\functions.py", line 156, in handle_briefing_screen
+    raise AppointmentNotSynchronized(
+ispa_next.exceptions.AppointmentNotSynchronized: Appointment is not properly synchronized with DMS, proceed with the next one.
+
+2025-11-17 08:00:11,777 - ispa_next.appointment_loop.main - DEBUG - Closing appointment 9.
+2025-11-17 08:00:11,781 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 08:00:12,259 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 315
+2025-11-17 08:00:12,259 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 1
+2025-11-17 08:00:14,802 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 218
+2025-11-17 08:00:14,802 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 08:00:15,572 - ispa_next.appointments.models - DEBUG - Appointment Le-Laden KLE-MY 369 WBATB410409E68337 ohne Termin.
+2025-11-17 08:00:15,578 - ispa_next.appointments.models - DEBUG - Appointment Benjamin Wienkamp KLE-W 1982 WBY71EG0905194432 ohne Termin.
+2025-11-17 08:00:15,584 - ispa_next.appointments.models - DEBUG - Appointment Klaus-Peter Strechel KLE-PR 281 WBA3A11080J281468 ohne Termin.
+2025-11-17 08:00:15,591 - ispa_next.appointments.models - DEBUG - Appointment Dieter Schiller KLE-CS 99 WBAJG110X03G82050 ohne Termin.
+2025-11-17 08:00:15,598 - ispa_next.appointments.models - DEBUG - Appointment Heinz Theo Fürtjes GEL-F 198E WBY71AW020FR87494 ohne Termin.
+2025-11-17 08:00:15,604 - ispa_next.appointments.models - DEBUG - Appointment Margarete Hildegard Karla Fischer GEL-F 323E WBY8P210407K09904 ohne Termin.
+2025-11-17 08:00:15,611 - ispa_next.appointments.models - DEBUG - Appointment Schloots GEL-RS 30 WBA8H91070A722054 ohne Termin.
+2025-11-17 08:00:15,617 - ispa_next.appointments.models - DEBUG - Appointment Anastasia Huwald KLE-A 1413 WBA1V710805N01313 ohne Termin.
+2025-11-17 08:00:15,624 - ispa_next.appointments.models - DEBUG - Appointment Samir Mougawaz KLE-JS 813 WBA2D710105C40715 ohne Termin.
+2025-11-17 08:00:15,627 - ispa_next.main - DEBUG - 
+
+
+
+2025-11-17 08:00:15,627 - ispa_next.main - DEBUG - starting with process 10 (KLE-UP-14) of 13
+2025-11-17 08:00:15,630 - ispa_next.appointment_loop.helpers - DEBUG - Checking for potential OIDC Login dialog
+2025-11-17 08:00:16,737 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 08:00:18,050 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 315
+2025-11-17 08:00:18,052 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 218
+2025-11-17 08:00:19,348 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 1
+2025-11-17 08:00:19,349 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 08:00:47,890 - ispa_next.appointment_loop.main - DEBUG - Appointment failed: Traceback (most recent call last):
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointment_loop\main.py", line 41, in process_appointment
+    handle_briefing_screen(element=app)
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointments\functions.py", line 156, in handle_briefing_screen
+    raise AppointmentNotSynchronized(
+ispa_next.exceptions.AppointmentNotSynchronized: Appointment is not properly synchronized with DMS, proceed with the next one.
+
+2025-11-17 08:00:47,898 - ispa_next.appointment_loop.main - DEBUG - Closing appointment 10.
+2025-11-17 08:00:47,900 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 08:00:48,336 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 315
+2025-11-17 08:00:48,336 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 1
+2025-11-17 08:00:50,726 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 218
+2025-11-17 08:00:50,726 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 08:00:51,536 - ispa_next.appointments.models - DEBUG - Appointment Le-Laden KLE-MY 369 WBATB410409E68337 ohne Termin.
+2025-11-17 08:00:51,543 - ispa_next.appointments.models - DEBUG - Appointment Benjamin Wienkamp KLE-W 1982 WBY71EG0905194432 ohne Termin.
+2025-11-17 08:00:51,549 - ispa_next.appointments.models - DEBUG - Appointment Klaus-Peter Strechel KLE-PR 281 WBA3A11080J281468 ohne Termin.
+2025-11-17 08:00:51,557 - ispa_next.appointments.models - DEBUG - Appointment Dieter Schiller KLE-CS 99 WBAJG110X03G82050 ohne Termin.
+2025-11-17 08:00:51,563 - ispa_next.appointments.models - DEBUG - Appointment Heinz Theo Fürtjes GEL-F 198E WBY71AW020FR87494 ohne Termin.
+2025-11-17 08:00:51,569 - ispa_next.appointments.models - DEBUG - Appointment Margarete Hildegard Karla Fischer GEL-F 323E WBY8P210407K09904 ohne Termin.
+2025-11-17 08:00:51,577 - ispa_next.appointments.models - DEBUG - Appointment Schloots GEL-RS 30 WBA8H91070A722054 ohne Termin.
+2025-11-17 08:00:51,583 - ispa_next.appointments.models - DEBUG - Appointment Anastasia Huwald KLE-A 1413 WBA1V710805N01313 ohne Termin.
+2025-11-17 08:00:51,591 - ispa_next.appointments.models - DEBUG - Appointment Samir Mougawaz KLE-JS 813 WBA2D710105C40715 ohne Termin.
+2025-11-17 08:00:51,594 - ispa_next.main - DEBUG - 
+
+
+
+2025-11-17 08:00:51,594 - ispa_next.main - DEBUG - starting with process 11 (GEL P 706) of 13
+2025-11-17 08:00:51,596 - ispa_next.appointment_loop.helpers - DEBUG - Checking for potential OIDC Login dialog
+2025-11-17 08:00:52,793 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 08:00:54,007 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 315
+2025-11-17 08:00:54,008 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 218
+2025-11-17 08:00:55,392 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 1
+2025-11-17 08:00:55,394 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 08:01:24,614 - ispa_next.appointment_loop.main - DEBUG - Appointment failed: Traceback (most recent call last):
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointment_loop\main.py", line 41, in process_appointment
+    handle_briefing_screen(element=app)
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointments\functions.py", line 156, in handle_briefing_screen
+    raise AppointmentNotSynchronized(
+ispa_next.exceptions.AppointmentNotSynchronized: Appointment is not properly synchronized with DMS, proceed with the next one.
+
+2025-11-17 08:01:24,622 - ispa_next.appointment_loop.main - DEBUG - Closing appointment 11.
+2025-11-17 08:01:24,626 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 08:01:25,040 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 315
+2025-11-17 08:01:25,042 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 1
+2025-11-17 08:01:27,316 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 218
+2025-11-17 08:01:27,317 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 08:01:28,068 - ispa_next.appointments.models - DEBUG - Appointment Le-Laden KLE-MY 369 WBATB410409E68337 ohne Termin.
+2025-11-17 08:01:28,073 - ispa_next.appointments.models - DEBUG - Appointment Benjamin Wienkamp KLE-W 1982 WBY71EG0905194432 ohne Termin.
+2025-11-17 08:01:28,078 - ispa_next.appointments.models - DEBUG - Appointment Klaus-Peter Strechel KLE-PR 281 WBA3A11080J281468 ohne Termin.
+2025-11-17 08:01:28,089 - ispa_next.appointments.models - DEBUG - Appointment Dieter Schiller KLE-CS 99 WBAJG110X03G82050 ohne Termin.
+2025-11-17 08:01:28,097 - ispa_next.appointments.models - DEBUG - Appointment Heinz Theo Fürtjes GEL-F 198E WBY71AW020FR87494 ohne Termin.
+2025-11-17 08:01:28,104 - ispa_next.appointments.models - DEBUG - Appointment Margarete Hildegard Karla Fischer GEL-F 323E WBY8P210407K09904 ohne Termin.
+2025-11-17 08:01:28,112 - ispa_next.appointments.models - DEBUG - Appointment Schloots GEL-RS 30 WBA8H91070A722054 ohne Termin.
+2025-11-17 08:01:28,121 - ispa_next.appointments.models - DEBUG - Appointment Anastasia Huwald KLE-A 1413 WBA1V710805N01313 ohne Termin.
+2025-11-17 08:01:28,127 - ispa_next.appointments.models - DEBUG - Appointment Samir Mougawaz KLE-JS 813 WBA2D710105C40715 ohne Termin.
+2025-11-17 08:01:28,130 - ispa_next.main - DEBUG - 
+
+
+
+2025-11-17 08:01:28,130 - ispa_next.main - DEBUG - starting with process 12 (KK-B 602) of 13
+2025-11-17 08:01:28,133 - ispa_next.appointment_loop.helpers - DEBUG - Checking for potential OIDC Login dialog
+2025-11-17 08:01:29,248 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 08:01:30,429 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 315
+2025-11-17 08:01:30,430 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 218
+2025-11-17 08:01:31,822 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 1
+2025-11-17 08:01:31,822 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 08:01:54,709 - ispa_next.rkr_manager.main - DEBUG - RemoteKeyReadManager initialized
+2025-11-17 08:02:05,267 - ispa_next.functions - DEBUG - get_cart_contents
+2025-11-17 08:02:14,270 - ispa_next.functions - DEBUG - check_and_verify_hu_date
+2025-11-17 08:02:14,271 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Kunden & Fahrzeug
+2025-11-17 08:02:14,440 - ispa_next.common.shared - DEBUG - ISPA tab Kunden & Fahrzeug is already open
+2025-11-17 08:02:14,632 - ispa_next.functions - DEBUG - check_potential_workshop_test
+2025-11-17 08:02:14,634 - ispa_next.functions - DEBUG - check_vehicle_age_for_service_plus
+2025-11-17 08:02:14,634 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Kunden & Fahrzeug
+2025-11-17 08:02:14,798 - ispa_next.common.shared - DEBUG - ISPA tab Kunden & Fahrzeug is already open
+2025-11-17 08:02:18,051 - ispa_next.rkr_manager.main - DEBUG - running RemoteKeyReadManager
+2025-11-17 08:02:18,053 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Wartung
+2025-11-17 08:02:18,978 - ispa_next.common.shared - DEBUG - Successfully opened ISPA tab: Wartung
+2025-11-17 08:02:20,982 - ispa_next.rkr_manager.state - DEBUG - Entering initial state
+2025-11-17 08:02:21,070 - ispa_next.rkr_manager.state - DEBUG - Checking customer consent
+2025-11-17 08:02:21,197 - ispa_next.rkr_manager.state - DEBUG - Checking data freshness
+2025-11-17 08:02:21,268 - ispa_next.rkr_manager.state - DEBUG - Getting cart and advice list contents
+2025-11-17 08:02:21,268 - ispa_next.rkr_manager.state - DEBUG - Triggering remote key read
+2025-11-17 08:02:32,793 - ispa_next.rkr_manager.state - DEBUG - State machine completed with reason: non_blocking_wait
+2025-11-17 08:02:33,802 - ispa_next.functions - DEBUG - handle_data_privacy_consent
+2025-11-17 08:02:33,808 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Kunden & Fahrzeug
+2025-11-17 08:02:34,342 - ispa_next.common.shared - DEBUG - Successfully opened ISPA tab: Kunden & Fahrzeug
+2025-11-17 08:02:46,389 - ispa_next.functions - DEBUG - DSE icon is yellow
+2025-11-17 08:02:54,108 - ispa_next.functions - DEBUG - transfer_customer_data_to_appointment
+2025-11-17 08:02:54,110 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Kunden & Fahrzeug
+2025-11-17 08:02:54,179 - ispa_next.common.shared - DEBUG - ISPA tab Kunden & Fahrzeug is already open
+2025-11-17 08:02:54,179 - ispa_next.functions - DEBUG - fetch_customer_data
+2025-11-17 08:02:54,220 - ispa_next.functions - DEBUG - fetch_customer_data_from_bmw_id
+2025-11-17 08:02:55,499 - ispa_next.functions - DEBUG - fetch_customer_data_from_dms
+2025-11-17 08:02:56,694 - ispa_next.functions - DEBUG - All data found, skipping remaining sources
+2025-11-17 08:02:56,969 - ispa_next.functions - DEBUG - copy_customer_data_to_appointment
+2025-11-17 08:03:00,054 - ispa_next.functions - DEBUG - Updated appointment (AA00073898) customer contact data.
+2025-11-17 08:03:00,967 - ispa_next.functions - DEBUG - check_for_alpina_vehicle
+2025-11-17 08:03:00,979 - ispa_next.functions - DEBUG - check_bmw_id_add_to_list
+2025-11-17 08:03:01,804 - ispa_next.functions - DEBUG - check_home_dealer_add_to_list
+2025-11-17 08:03:01,804 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Fahrzeugzustand
+2025-11-17 08:03:02,556 - ispa_next.common.shared - DEBUG - Successfully opened ISPA tab: Fahrzeugzustand
+2025-11-17 08:03:06,164 - ispa_next.rkr_manager.main - DEBUG - running RemoteKeyReadManager
+2025-11-17 08:03:06,166 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Wartung
+2025-11-17 08:03:06,641 - ispa_next.common.shared - DEBUG - Successfully opened ISPA tab: Wartung
+2025-11-17 08:03:08,645 - ispa_next.rkr_manager.state - DEBUG - Entering initial state
+2025-11-17 08:03:08,766 - ispa_next.rkr_manager.state - DEBUG - Checking customer consent
+2025-11-17 08:03:08,872 - ispa_next.rkr_manager.state - DEBUG - Checking data freshness
+2025-11-17 08:03:08,945 - ispa_next.rkr_manager.state - DEBUG - Getting cart and advice list contents
+2025-11-17 08:03:08,945 - ispa_next.rkr_manager.state - DEBUG - Triggering remote key read
+2025-11-17 08:03:20,348 - ispa_next.rkr_manager.helper - DEBUG - Found button 'Schlüsseldaten überschreiben und öffnen (Empfohlen)' in nested popup
+2025-11-17 08:03:27,577 - ispa_next.rkr_manager.state - DEBUG - Checking cart items after successfull RKR
+2025-11-17 08:03:27,577 - ispa_next.rkr_manager.state - DEBUG - Checking color in CBS positions
+2025-11-17 08:03:31,757 - ispa_next.rkr_manager.state - DEBUG - State machine completed with reason: success
+2025-11-17 08:03:32,764 - ispa_next.functions - DEBUG - generate_attachments
+2025-11-17 08:03:32,766 - ispa_next.wipers - DEBUG - handle_wiper_service_contracts
+2025-11-17 08:03:32,766 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Wartung
+2025-11-17 08:03:32,833 - ispa_next.common.shared - DEBUG - ISPA tab Wartung is already open
+2025-11-17 08:03:38,447 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Kunden & Fahrzeug
+2025-11-17 08:03:38,955 - ispa_next.common.shared - DEBUG - Successfully opened ISPA tab: Kunden & Fahrzeug
+2025-11-17 08:03:38,957 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Wartung
+2025-11-17 08:03:39,635 - ispa_next.common.shared - DEBUG - Successfully opened ISPA tab: Wartung
+2025-11-17 08:03:39,637 - ispa_next.package_manager.main - DEBUG - updating cart content
+2025-11-17 08:03:47,211 - ispa_next.package_manager.main - DEBUG - updating advice list content
+2025-11-17 08:03:47,213 - ispa_next.package_manager.helper - DEBUG - get_advice_list_contents
+2025-11-17 08:03:48,237 - ispa_next.package_manager.main - DEBUG - determining package movements
+2025-11-17 08:03:48,239 - ispa_next.package_manager.main - DEBUG - determining packages to place
+2025-11-17 08:03:48,242 - ispa_next.package_manager.main - DEBUG - found packages to cart: {Package(name=Fahrzeug maschinell waschen/aussaugen (kostenlos), source=from_tab, target=cart)}
+2025-11-17 08:03:48,244 - ispa_next.package_manager.main - DEBUG - determining packages to place
+2025-11-17 08:03:48,246 - ispa_next.package_manager.main - DEBUG - Cannot place Ladewunsch und Ladezustand: not present in source
+2025-11-17 08:03:48,248 - ispa_next.package_manager.main - DEBUG - found packages to advice_list: set()
+2025-11-17 08:03:48,248 - ispa_next.package_manager.main - DEBUG - determining package to delete
+2025-11-17 08:03:48,252 - ispa_next.package_manager.main - DEBUG - found packages to delete: set()
+2025-11-17 08:03:48,254 - ispa_next.package_manager.main - DEBUG - determining package to update
+2025-11-17 08:03:48,257 - ispa_next.package_manager.main - DEBUG - found packages to update: set()
+2025-11-17 08:03:48,263 - ispa_next.package_manager.helper - DEBUG - add_to_cart called
+2025-11-17 08:03:48,980 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Marketing
+2025-11-17 08:03:49,582 - ispa_next.common.shared - DEBUG - Successfully opened ISPA tab: Marketing
+2025-11-17 08:03:56,341 - ispa_next.package_manager.helper - DEBUG - _add_to_container_manual
+2025-11-17 08:03:56,343 - ispa_next.functions - DEBUG - verify_cart_packages_additional_texts
+2025-11-17 08:03:56,345 - ispa_next.functions - DEBUG - check_cart_for_additional_text_packages
+2025-11-17 08:03:56,346 - ispa_next.functions - DEBUG - get_cart_contents
+2025-11-17 08:04:05,596 - ispa_next.functions - DEBUG - handle_mobility_replacement
+2025-11-17 08:04:05,597 - ispa_next.functions - DEBUG - verify_battery_in_motoroil_package
+2025-11-17 08:04:05,599 - ispa_next.functions - DEBUG - get_cart_contents
+2025-11-17 08:04:14,900 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Wartung
+2025-11-17 08:04:15,359 - ispa_next.common.shared - DEBUG - Successfully opened ISPA tab: Wartung
+2025-11-17 08:04:26,910 - ispa_next.functions - DEBUG - get_cart_contents
+2025-11-17 08:04:45,859 - ispa_next.functions - DEBUG - verify_breaks_in_break_package
+2025-11-17 08:04:45,861 - ispa_next.functions - DEBUG - process_check_control
+2025-11-17 08:04:45,862 - ispa_next.functions - DEBUG - trying add_material_to_package
+2025-11-17 08:04:45,877 - ispa_next.functions - DEBUG - get_cart_contents
+2025-11-17 08:04:55,364 - ispa_next.functions - DEBUG - adding material to item=Package(name=Motoröl, source=cart, target=unkown)
+2025-11-17 08:05:04,349 - ispa_next.functions - DEBUG - notify_aw_increase_to_service_advisor
+2025-11-17 08:05:17,741 - ispa_next.functions - DEBUG - check_cart_packages_for_parts_service_and_parts_availability
+2025-11-17 08:05:18,433 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Abschluss
+2025-11-17 08:05:19,149 - ispa_next.common.shared - DEBUG - Successfully opened ISPA tab: Abschluss
+2025-11-17 08:05:19,282 - ispa_next.functions - DEBUG - get_cart_contents
+2025-11-17 08:05:29,874 - ispa_next.common.utils - DEBUG - Attempt 1/6: Condition 'job_details_view_exists' for retry_ui_action 'open_job_details_view' not satisfied
+2025-11-17 08:05:29,874 - ispa_next.common.utils - DEBUG - Attempt 1/6: Retrying action 'open_job_details_view' with condition 'job_details_view_exists' with delay: 1.0s
+2025-11-17 08:05:32,200 - ispa_next.common.utils - DEBUG - Attempt 2/6: Condition 'job_details_view_exists' for retry_ui_action 'open_job_details_view' not satisfied
+2025-11-17 08:05:32,200 - ispa_next.common.utils - DEBUG - Attempt 2/6: Retrying action 'open_job_details_view' with condition 'job_details_view_exists' with delay: 2.0s
+2025-11-17 08:05:35,608 - ispa_next.common.utils - DEBUG - Attempt 3/6: Condition 'job_details_view_exists' for retry_ui_action 'open_job_details_view' not satisfied
+2025-11-17 08:05:35,608 - ispa_next.common.utils - DEBUG - Attempt 3/6: Retrying action 'open_job_details_view' with condition 'job_details_view_exists' with delay: 4.0s
+2025-11-17 08:05:40,993 - ispa_next.common.utils - DEBUG - Attempt 4/6: Condition 'job_details_view_exists' for retry_ui_action 'open_job_details_view' not satisfied
+2025-11-17 08:05:40,993 - ispa_next.common.utils - DEBUG - Attempt 4/6: Retrying action 'open_job_details_view' with condition 'job_details_view_exists' with delay: 8.0s
+2025-11-17 08:05:50,274 - ispa_next.common.utils - DEBUG - Attempt 5/6: Condition 'job_details_view_exists' for retry_ui_action 'open_job_details_view' not satisfied
+2025-11-17 08:05:50,274 - ispa_next.common.utils - DEBUG - Attempt 5/6: Retrying action 'open_job_details_view' with condition 'job_details_view_exists' with delay: 16.0s
+2025-11-17 08:06:07,594 - ispa_next.common.utils - DEBUG - Attempt 6/6: Condition 'job_details_view_exists' for retry_ui_action 'open_job_details_view' not satisfied
+2025-11-17 08:06:07,907 - ispa_next.appointment_loop.main - DEBUG - Appointment failed: Traceback (most recent call last):
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointment_loop\main.py", line 126, in process_appointment
+    f.check_cart_packages_for_parts_service_and_parts_availability(app, appointment, state)
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\functions.py", line 390, in check_cart_packages_for_parts_service_and_parts_availability
+    retry_ui_action(open_job_details_view, condition=job_details_view_exists, base_delay=1.0)
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\common\utils.py", line 254, in retry_ui_action
+    raise RetryUiActionError(f"UI action failed after {max_attempts} attempts: Condition never satisfied")
+ispa_next.exceptions.RetryUiActionError: UI action failed after 6 attempts: Condition never satisfied
+
+2025-11-17 08:06:07,919 - ispa_next.appointment_ending - DEBUG - entered complete process
+2025-11-17 08:06:07,920 - ispa_next.appointment_loop.helpers - DEBUG - Checking for potential OIDC Login dialog
+2025-11-17 08:06:08,575 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Abschluss
+2025-11-17 08:06:08,643 - ispa_next.common.shared - DEBUG - ISPA tab Abschluss is already open
+2025-11-17 08:06:08,644 - ispa_next.appointment_ending - DEBUG - complete_process exists early.
+2025-11-17 08:06:08,666 - ispa_next.appointment_ending - DEBUG - attempt to close process with save: False
+2025-11-17 08:06:11,983 - ispa_next.appointment_loop.main - DEBUG - Closing appointment 12.
+2025-11-17 08:06:11,987 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 08:06:12,455 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 316
+2025-11-17 08:06:12,455 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 1
+2025-11-17 08:06:15,451 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 218
+2025-11-17 08:06:15,452 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 08:06:16,256 - ispa_next.appointments.models - DEBUG - Appointment Le-Laden KLE-MY 369 WBATB410409E68337 ohne Termin.
+2025-11-17 08:06:16,263 - ispa_next.appointments.models - DEBUG - Appointment Benjamin Wienkamp KLE-W 1982 WBY71EG0905194432 ohne Termin.
+2025-11-17 08:06:16,270 - ispa_next.appointments.models - DEBUG - Appointment Klaus-Peter Strechel KLE-PR 281 WBA3A11080J281468 ohne Termin.
+2025-11-17 08:06:16,277 - ispa_next.appointments.models - DEBUG - Appointment Dieter Schiller KLE-CS 99 WBAJG110X03G82050 ohne Termin.
+2025-11-17 08:06:16,283 - ispa_next.appointments.models - DEBUG - Appointment Heinz Theo Fürtjes GEL-F 198E WBY71AW020FR87494 ohne Termin.
+2025-11-17 08:06:16,290 - ispa_next.appointments.models - DEBUG - Appointment Margarete Hildegard Karla Fischer GEL-F 323E WBY8P210407K09904 ohne Termin.
+2025-11-17 08:06:16,296 - ispa_next.appointments.models - DEBUG - Appointment Schloots GEL-RS 30 WBA8H91070A722054 ohne Termin.
+2025-11-17 08:06:16,302 - ispa_next.appointments.models - DEBUG - Appointment Anastasia Huwald KLE-A 1413 WBA1V710805N01313 ohne Termin.
+2025-11-17 08:06:16,310 - ispa_next.appointments.models - DEBUG - Appointment Samir Mougawaz KLE-JS 813 WBA2D710105C40715 ohne Termin.
+2025-11-17 08:06:16,313 - ispa_next.main - DEBUG - 
+
+
+
+2025-11-17 08:06:16,313 - ispa_next.main - DEBUG - starting with process 13 (GEL BL777) of 13
+2025-11-17 08:06:16,316 - ispa_next.appointment_loop.helpers - DEBUG - Checking for potential OIDC Login dialog
+2025-11-17 08:06:17,570 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 08:06:18,557 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 316
+2025-11-17 08:06:18,559 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 218
+2025-11-17 08:06:20,100 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 1
+2025-11-17 08:06:20,101 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 08:06:53,450 - ispa_next.appointment_loop.main - DEBUG - Appointment failed: Traceback (most recent call last):
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointment_loop\main.py", line 41, in process_appointment
+    handle_briefing_screen(element=app)
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointments\functions.py", line 156, in handle_briefing_screen
+    raise AppointmentNotSynchronized(
+ispa_next.exceptions.AppointmentNotSynchronized: Appointment is not properly synchronized with DMS, proceed with the next one.
+
+2025-11-17 08:06:53,460 - ispa_next.appointment_loop.main - DEBUG - Closing appointment 13.
+2025-11-17 08:06:53,464 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 08:06:53,894 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 316
+2025-11-17 08:06:53,894 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 1
+2025-11-17 08:06:56,582 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 218
+2025-11-17 08:06:56,583 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 08:06:57,356 - ispa_next.appointments.models - DEBUG - Appointment Le-Laden KLE-MY 369 WBATB410409E68337 ohne Termin.
+2025-11-17 08:06:57,362 - ispa_next.appointments.models - DEBUG - Appointment Benjamin Wienkamp KLE-W 1982 WBY71EG0905194432 ohne Termin.
+2025-11-17 08:06:57,367 - ispa_next.appointments.models - DEBUG - Appointment Klaus-Peter Strechel KLE-PR 281 WBA3A11080J281468 ohne Termin.
+2025-11-17 08:06:57,378 - ispa_next.appointments.models - DEBUG - Appointment Dieter Schiller KLE-CS 99 WBAJG110X03G82050 ohne Termin.
+2025-11-17 08:06:57,386 - ispa_next.appointments.models - DEBUG - Appointment Heinz Theo Fürtjes GEL-F 198E WBY71AW020FR87494 ohne Termin.
+2025-11-17 08:06:57,392 - ispa_next.appointments.models - DEBUG - Appointment Margarete Hildegard Karla Fischer GEL-F 323E WBY8P210407K09904 ohne Termin.
+2025-11-17 08:06:57,399 - ispa_next.appointments.models - DEBUG - Appointment Schloots GEL-RS 30 WBA8H91070A722054 ohne Termin.
+2025-11-17 08:06:57,405 - ispa_next.appointments.models - DEBUG - Appointment Anastasia Huwald KLE-A 1413 WBA1V710805N01313 ohne Termin.
+2025-11-17 08:06:57,412 - ispa_next.appointments.models - DEBUG - Appointment Samir Mougawaz KLE-JS 813 WBA2D710105C40715 ohne Termin.

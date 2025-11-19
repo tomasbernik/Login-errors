@@ -1,0 +1,53 @@
+2025-11-17 05:28:34,330 - ispa_next.main - DEBUG - ISPA Next attempt (1 / 5)
+2025-11-17 05:28:34,378 - overlays.client - INFO - Connected to overlay manager pipe
+2025-11-17 05:28:45,941 - ispa_next.app_start.functions - DEBUG - handle_update_available
+2025-11-17 05:28:56,593 - ispa_next.app_start.functions - DEBUG - has_ispa_errors
+2025-11-17 05:29:12,083 - ispa_next.app_start.functions - DEBUG - authenticate_user
+2025-11-17 05:29:41,644 - ispa_next.app_start.main - DEBUG - Login successful
+2025-11-17 05:29:57,272 - ispa_next.appointments.functions - DEBUG - order_appointments_grid_by_created_at
+2025-11-17 05:29:59,511 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 05:30:00,285 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 748
+2025-11-17 05:30:00,287 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 12
+2025-11-17 05:30:01,619 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 9
+2025-11-17 05:30:01,621 - ispa_next.appointments.functions - DEBUG - recover_or_exit_IPS_error
+2025-11-17 05:30:01,621 - ispa_next.appointments.functions - DEBUG - check_appointments_grid_for_IPS_error
+2025-11-17 05:30:02,428 - ispa_next.appointments.functions - DEBUG - check_appointments_grid_for_IPS_error
+2025-11-17 05:30:03,189 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 05:30:04,001 - ispa_next.appointments.models - DEBUG - Couldn't parse Appointment Florian Wolf M-WO-292 (VORHER: A- WBA11AJ020CF67802, 1 validation error for Appointment
+Kennzeichen
+  Value error, 'Kennzeichen' includes unallowed special characters. [type=value_error, input_value='M-WO-292 (VORHER: A-', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/value_error
+2025-11-17 05:30:04,011 - ispa_next.appointments.models - DEBUG - Appointment Jessica Sälzer M-J 6144E WBY61EF0205W44595 ohne Termin.
+2025-11-17 05:30:04,014 - ispa_next.main - DEBUG - Found 1 out of 6 appointments to process (configured limit: 15).
+2025-11-17 05:30:04,015 - ispa_next.main - DEBUG - Processing 1 fresh appointments.
+2025-11-17 05:30:04,015 - ispa_next.main - DEBUG - All appointments: M-MI18E
+2025-11-17 05:30:04,017 - ispa_next.main - DEBUG - 
+
+
+
+2025-11-17 05:30:04,017 - ispa_next.main - DEBUG - starting with process 1 (M-MI18E) of 1
+2025-11-17 05:30:04,020 - ispa_next.appointment_loop.helpers - DEBUG - Checking for potential OIDC Login dialog
+2025-11-17 05:30:04,716 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 05:30:05,537 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 748
+2025-11-17 05:30:05,539 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 9
+2025-11-17 05:30:06,671 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 1
+2025-11-17 05:30:06,672 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 05:30:39,796 - ispa_next.appointment_loop.main - DEBUG - Appointment failed: Traceback (most recent call last):
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointment_loop\main.py", line 41, in process_appointment
+    handle_briefing_screen(element=app)
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointments\functions.py", line 156, in handle_briefing_screen
+    raise AppointmentNotSynchronized(
+ispa_next.exceptions.AppointmentNotSynchronized: Appointment is not properly synchronized with DMS, proceed with the next one.
+
+2025-11-17 05:30:39,889 - ispa_next.appointment_loop.main - DEBUG - Closing appointment 1.
+2025-11-17 05:30:39,892 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 05:30:40,349 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 748
+2025-11-17 05:30:40,349 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 1
+2025-11-17 05:30:42,110 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 12
+2025-11-17 05:30:42,111 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 05:30:42,890 - ispa_next.appointments.models - DEBUG - Couldn't parse Appointment Florian Wolf M-WO-292 (VORHER: A- WBA11AJ020CF67802, 1 validation error for Appointment
+Kennzeichen
+  Value error, 'Kennzeichen' includes unallowed special characters. [type=value_error, input_value='M-WO-292 (VORHER: A-', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/value_error
+2025-11-17 05:30:42,897 - ispa_next.appointments.models - DEBUG - Appointment Jessica Sälzer M-J 6144E WBY61EF0205W44595 ohne Termin.
+2025-11-17 05:30:42,903 - ispa_next.appointments.models - DEBUG - Appointment Hana Kozljak M-HK 9777 WBA1C31040J537411 ohne Termin.

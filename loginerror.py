@@ -17,6 +17,8 @@ import argparse
 from pathlib import Path
 from datetime import datetime
 import urllib.parse
+from dotenv import load_dotenv
+load_dotenv()
 
 # === Konštanty / vzory chýb ==============================================
 

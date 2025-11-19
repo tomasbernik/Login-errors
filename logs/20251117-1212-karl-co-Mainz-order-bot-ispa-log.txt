@@ -1,0 +1,382 @@
+2025-11-17 12:12:51,365 - ispa_next.main - DEBUG - ISPA Next attempt (1 / 5)
+2025-11-17 12:12:51,372 - overlays.client - INFO - Connected to overlay manager pipe
+2025-11-17 12:13:04,318 - ispa_next.app_start.functions - DEBUG - handle_update_available
+2025-11-17 12:13:15,457 - ispa_next.app_start.functions - DEBUG - has_ispa_errors
+2025-11-17 12:13:30,989 - ispa_next.app_start.functions - DEBUG - authenticate_user
+2025-11-17 12:15:29,193 - ispa_next.app_start.main - DEBUG - Operation already took 106.89 seconds (more than 80 seconds)
+2025-11-17 12:15:31,273 - pytesseract - DEBUG - ['tesseract', 'C:\\Users\\Bot\\AppData\\Local\\robocorp\\temp\\71759a74d79dd90b\\tess_wu73huji_input.PNG', 'C:\\Users\\Bot\\AppData\\Local\\robocorp\\temp\\71759a74d79dd90b\\tess_wu73huji', 'txt']
+2025-11-17 12:15:31,594 - ispa_next.app_start.main - DEBUG - Unknown error
+2025-11-17 12:15:31,599 - ispa_next.app_start.main - DEBUG - Exception occurred: Unknown error during authentication
+2025-11-17 12:15:31,600 - ispa_next.app_start.functions - DEBUG - authenticate_user
+2025-11-17 12:15:56,120 - ispa_next.app_start.main - DEBUG - Login successful
+2025-11-17 12:16:10,575 - ispa_next.appointments.functions - DEBUG - order_appointments_grid_by_created_at
+2025-11-17 12:16:13,756 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 12:16:15,120 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 1533
+2025-11-17 12:16:15,122 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 411
+2025-11-17 12:16:17,230 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 169
+2025-11-17 12:16:17,230 - ispa_next.appointments.functions - DEBUG - recover_or_exit_IPS_error
+2025-11-17 12:16:17,231 - ispa_next.appointments.functions - DEBUG - check_appointments_grid_for_IPS_error
+2025-11-17 12:16:18,268 - ispa_next.appointments.functions - DEBUG - check_appointments_grid_for_IPS_error
+2025-11-17 12:16:19,211 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 12:16:42,738 - ispa_next.appointments.models - DEBUG - Appointment Firma Favorite Parkhotel GmbH MZ-FP 420 WBA11DT0909S93216 ohne Termin.
+2025-11-17 12:16:42,773 - ispa_next.appointments.models - DEBUG - Appointment Firma HagMaler GmbH MZ-L 6612 WBAJT31010BJ17485 ohne Termin.
+2025-11-17 12:16:42,782 - ispa_next.appointments.models - DEBUG - Skipping appointment without VIN
+2025-11-17 12:16:42,804 - ispa_next.appointments.models - DEBUG - Appointment Hatidzhe Dhevdzhet Chaylyak GG-HI 889 WBAVJ11040LF60481 ohne Termin.
+2025-11-17 12:16:42,817 - ispa_next.appointments.models - DEBUG - Appointment Ulas Korkmaz  WBAJM710X0B068176 ohne Termin.
+2025-11-17 12:16:42,825 - ispa_next.appointments.models - DEBUG - Appointment Florian Goertz RPL 11-3 WBA2D310505C65769 ohne Termin.
+2025-11-17 12:16:42,849 - ispa_next.main - DEBUG - Found 8 out of 63 appointments to process (configured limit: 15).
+2025-11-17 12:16:42,849 - ispa_next.main - DEBUG - Processing 8 fresh appointments.
+2025-11-17 12:16:42,849 - ispa_next.main - DEBUG - All appointments: WI JF 719, WI FI 246, 0, MZ - AW 77E, KI-KI 0815, 0, KI-KI 0815, MZ MV 279
+2025-11-17 12:16:42,851 - ispa_next.main - DEBUG - 
+
+
+
+2025-11-17 12:16:42,851 - ispa_next.main - DEBUG - starting with process 1 (WI JF 719) of 8
+2025-11-17 12:16:42,855 - ispa_next.appointment_loop.helpers - DEBUG - Checking for potential OIDC Login dialog
+2025-11-17 12:16:43,740 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 12:16:44,635 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 1533
+2025-11-17 12:16:44,636 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 169
+2025-11-17 12:16:46,037 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 1
+2025-11-17 12:16:46,038 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 12:17:01,539 - ispa_next.appointment_loop.main - DEBUG - Appointment failed: Traceback (most recent call last):
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointment_loop\main.py", line 41, in process_appointment
+    handle_briefing_screen(element=app)
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointments\functions.py", line 155, in handle_briefing_screen
+    raise AppointmentWithoutDMS("Appointment has no DMS data, proceed with the next one.")
+ispa_next.exceptions.AppointmentWithoutDMS: Appointment has no DMS data, proceed with the next one.
+
+2025-11-17 12:17:01,640 - ispa_next.appointment_loop.main - DEBUG - Closing appointment 1.
+2025-11-17 12:17:01,643 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 12:17:02,111 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 1533
+2025-11-17 12:17:02,112 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 1
+2025-11-17 12:17:04,305 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 411
+2025-11-17 12:17:04,306 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 12:17:05,003 - ispa_next.appointments.models - DEBUG - Appointment Firma LG Electronics Deutschland GmbH MTK-LG 353 WBA11GW080CW12430 ohne Termin.
+2025-11-17 12:17:05,010 - ispa_next.appointments.models - DEBUG - Appointment Alexander Wilhelm Loos MZ-ML 872E WBY71EG0505492220 ohne Termin.
+2025-11-17 12:17:05,016 - ispa_next.appointments.models - DEBUG - Appointment Stephanie Wocker MZ-MS 744 WBAJP31010CD36030 ohne Termin.
+2025-11-17 12:17:05,022 - ispa_next.appointments.models - DEBUG - Appointment Oliver Schlicht MZ-LS 2007 WMWWJ510X03M44775 ohne Termin.
+2025-11-17 12:17:05,029 - ispa_next.appointments.models - DEBUG - Appointment Firma H. G. Oswald Sanitär Heizung GmbH AZ-O 922 WBA31GV010CV82097 ohne Termin.
+2025-11-17 12:17:05,033 - ispa_next.main - DEBUG - 
+
+
+
+2025-11-17 12:17:05,033 - ispa_next.main - DEBUG - starting with process 2 (WI FI 246) of 8
+2025-11-17 12:17:05,038 - ispa_next.appointment_loop.helpers - DEBUG - Checking for potential OIDC Login dialog
+2025-11-17 12:17:06,004 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 12:17:06,835 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 1533
+2025-11-17 12:17:06,836 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 411
+2025-11-17 12:17:08,395 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 1
+2025-11-17 12:17:08,397 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 12:17:23,680 - ispa_next.appointment_loop.main - DEBUG - Appointment failed: Traceback (most recent call last):
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointment_loop\main.py", line 41, in process_appointment
+    handle_briefing_screen(element=app)
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointments\functions.py", line 155, in handle_briefing_screen
+    raise AppointmentWithoutDMS("Appointment has no DMS data, proceed with the next one.")
+ispa_next.exceptions.AppointmentWithoutDMS: Appointment has no DMS data, proceed with the next one.
+
+2025-11-17 12:17:23,688 - ispa_next.appointment_loop.main - DEBUG - Closing appointment 2.
+2025-11-17 12:17:23,692 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 12:17:24,320 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 1533
+2025-11-17 12:17:24,321 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 1
+2025-11-17 12:17:27,316 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 411
+2025-11-17 12:17:27,317 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 12:17:28,201 - ispa_next.appointments.models - DEBUG - Appointment Firma LG Electronics Deutschland GmbH MTK-LG 353 WBA11GW080CW12430 ohne Termin.
+2025-11-17 12:17:28,208 - ispa_next.appointments.models - DEBUG - Appointment Alexander Wilhelm Loos MZ-ML 872E WBY71EG0505492220 ohne Termin.
+2025-11-17 12:17:28,220 - ispa_next.appointments.models - DEBUG - Appointment Stephanie Wocker MZ-MS 744 WBAJP31010CD36030 ohne Termin.
+2025-11-17 12:17:28,229 - ispa_next.appointments.models - DEBUG - Appointment Oliver Schlicht MZ-LS 2007 WMWWJ510X03M44775 ohne Termin.
+2025-11-17 12:17:28,237 - ispa_next.appointments.models - DEBUG - Appointment Firma H. G. Oswald Sanitär Heizung GmbH AZ-O 922 WBA31GV010CV82097 ohne Termin.
+2025-11-17 12:17:28,242 - ispa_next.main - DEBUG - 
+
+
+
+2025-11-17 12:17:28,242 - ispa_next.main - DEBUG - starting with process 3 (0) of 8
+2025-11-17 12:17:28,246 - ispa_next.appointment_loop.helpers - DEBUG - Checking for potential OIDC Login dialog
+2025-11-17 12:17:29,439 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 12:17:30,892 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 1533
+2025-11-17 12:17:30,893 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 411
+2025-11-17 12:17:32,508 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 1
+2025-11-17 12:17:32,509 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 12:17:55,819 - ispa_next.appointment_loop.main - DEBUG - Appointment failed: Traceback (most recent call last):
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointment_loop\main.py", line 41, in process_appointment
+    handle_briefing_screen(element=app)
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointments\functions.py", line 173, in handle_briefing_screen
+    raise ViewTransitionError("Couldn't open 'Terminvereinbarung', proceed with next appointment")
+ispa_next.exceptions.ViewTransitionError: Couldn't open 'Terminvereinbarung', proceed with next appointment
+
+2025-11-17 12:17:55,830 - ispa_next.appointment_loop.main - DEBUG - Closing appointment 3.
+2025-11-17 12:17:55,834 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 12:17:56,435 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 1533
+2025-11-17 12:17:56,436 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 1
+2025-11-17 12:17:59,050 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 411
+2025-11-17 12:17:59,051 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 12:17:59,897 - ispa_next.appointments.models - DEBUG - Appointment Firma LG Electronics Deutschland GmbH MTK-LG 353 WBA11GW080CW12430 ohne Termin.
+2025-11-17 12:17:59,905 - ispa_next.appointments.models - DEBUG - Appointment Alexander Wilhelm Loos MZ-ML 872E WBY71EG0505492220 ohne Termin.
+2025-11-17 12:17:59,937 - ispa_next.appointments.models - DEBUG - Appointment Stephanie Wocker MZ-MS 744 WBAJP31010CD36030 ohne Termin.
+2025-11-17 12:17:59,985 - ispa_next.appointments.models - DEBUG - Appointment Oliver Schlicht MZ-LS 2007 WMWWJ510X03M44775 ohne Termin.
+2025-11-17 12:17:59,997 - ispa_next.appointments.models - DEBUG - Appointment Firma H. G. Oswald Sanitär Heizung GmbH AZ-O 922 WBA31GV010CV82097 ohne Termin.
+2025-11-17 12:18:00,021 - ispa_next.main - DEBUG - 
+
+
+
+2025-11-17 12:18:00,021 - ispa_next.main - DEBUG - starting with process 4 (MZ - AW 77E) of 8
+2025-11-17 12:18:00,042 - ispa_next.appointment_loop.helpers - DEBUG - Checking for potential OIDC Login dialog
+2025-11-17 12:18:01,378 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 12:18:02,721 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 1533
+2025-11-17 12:18:02,723 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 411
+2025-11-17 12:18:04,328 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 1
+2025-11-17 12:18:04,329 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 12:18:18,368 - ispa_next.appointment_loop.main - DEBUG - Appointment failed: Traceback (most recent call last):
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointment_loop\main.py", line 41, in process_appointment
+    handle_briefing_screen(element=app)
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointments\functions.py", line 155, in handle_briefing_screen
+    raise AppointmentWithoutDMS("Appointment has no DMS data, proceed with the next one.")
+ispa_next.exceptions.AppointmentWithoutDMS: Appointment has no DMS data, proceed with the next one.
+
+2025-11-17 12:18:18,376 - ispa_next.appointment_loop.main - DEBUG - Closing appointment 4.
+2025-11-17 12:18:18,381 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 12:18:19,078 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 1533
+2025-11-17 12:18:19,079 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 1
+2025-11-17 12:18:22,063 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 411
+2025-11-17 12:18:22,064 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 12:18:22,871 - ispa_next.appointments.models - DEBUG - Appointment Firma LG Electronics Deutschland GmbH MTK-LG 353 WBA11GW080CW12430 ohne Termin.
+2025-11-17 12:18:22,878 - ispa_next.appointments.models - DEBUG - Appointment Alexander Wilhelm Loos MZ-ML 872E WBY71EG0505492220 ohne Termin.
+2025-11-17 12:18:22,884 - ispa_next.appointments.models - DEBUG - Appointment Stephanie Wocker MZ-MS 744 WBAJP31010CD36030 ohne Termin.
+2025-11-17 12:18:22,893 - ispa_next.appointments.models - DEBUG - Appointment Oliver Schlicht MZ-LS 2007 WMWWJ510X03M44775 ohne Termin.
+2025-11-17 12:18:22,905 - ispa_next.appointments.models - DEBUG - Appointment Firma H. G. Oswald Sanitär Heizung GmbH AZ-O 922 WBA31GV010CV82097 ohne Termin.
+2025-11-17 12:18:22,910 - ispa_next.main - DEBUG - 
+
+
+
+2025-11-17 12:18:22,910 - ispa_next.main - DEBUG - starting with process 5 (KI-KI 0815) of 8
+2025-11-17 12:18:22,913 - ispa_next.appointment_loop.helpers - DEBUG - Checking for potential OIDC Login dialog
+2025-11-17 12:18:24,199 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 12:18:25,634 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 1533
+2025-11-17 12:18:25,634 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 411
+2025-11-17 12:18:27,244 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 1
+2025-11-17 12:18:27,246 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 12:18:50,752 - ispa_next.appointment_loop.main - DEBUG - Appointment failed: Traceback (most recent call last):
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointment_loop\main.py", line 41, in process_appointment
+    handle_briefing_screen(element=app)
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointments\functions.py", line 173, in handle_briefing_screen
+    raise ViewTransitionError("Couldn't open 'Terminvereinbarung', proceed with next appointment")
+ispa_next.exceptions.ViewTransitionError: Couldn't open 'Terminvereinbarung', proceed with next appointment
+
+2025-11-17 12:18:50,763 - ispa_next.appointment_loop.main - DEBUG - Closing appointment 5.
+2025-11-17 12:18:50,767 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 12:18:51,437 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 1533
+2025-11-17 12:18:51,438 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 1
+2025-11-17 12:18:54,199 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 411
+2025-11-17 12:18:54,200 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 12:18:55,144 - ispa_next.appointments.models - DEBUG - Appointment Firma LG Electronics Deutschland GmbH MTK-LG 353 WBA11GW080CW12430 ohne Termin.
+2025-11-17 12:18:55,154 - ispa_next.appointments.models - DEBUG - Appointment Alexander Wilhelm Loos MZ-ML 872E WBY71EG0505492220 ohne Termin.
+2025-11-17 12:18:55,161 - ispa_next.appointments.models - DEBUG - Appointment Stephanie Wocker MZ-MS 744 WBAJP31010CD36030 ohne Termin.
+2025-11-17 12:18:55,171 - ispa_next.appointments.models - DEBUG - Appointment Oliver Schlicht MZ-LS 2007 WMWWJ510X03M44775 ohne Termin.
+2025-11-17 12:18:55,179 - ispa_next.appointments.models - DEBUG - Appointment Firma H. G. Oswald Sanitär Heizung GmbH AZ-O 922 WBA31GV010CV82097 ohne Termin.
+2025-11-17 12:18:55,185 - ispa_next.main - DEBUG - 
+
+
+
+2025-11-17 12:18:55,185 - ispa_next.main - DEBUG - starting with process 6 (0) of 8
+2025-11-17 12:18:55,188 - ispa_next.appointment_loop.helpers - DEBUG - Checking for potential OIDC Login dialog
+2025-11-17 12:18:56,433 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 12:18:57,733 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 1533
+2025-11-17 12:18:57,735 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 411
+2025-11-17 12:18:59,363 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 1
+2025-11-17 12:18:59,364 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 12:19:22,658 - ispa_next.appointment_loop.main - DEBUG - Appointment failed: Traceback (most recent call last):
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointment_loop\main.py", line 41, in process_appointment
+    handle_briefing_screen(element=app)
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointments\functions.py", line 173, in handle_briefing_screen
+    raise ViewTransitionError("Couldn't open 'Terminvereinbarung', proceed with next appointment")
+ispa_next.exceptions.ViewTransitionError: Couldn't open 'Terminvereinbarung', proceed with next appointment
+
+2025-11-17 12:19:22,669 - ispa_next.appointment_loop.main - DEBUG - Closing appointment 6.
+2025-11-17 12:19:22,672 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 12:19:23,251 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 1533
+2025-11-17 12:19:23,253 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 1
+2025-11-17 12:19:26,084 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 411
+2025-11-17 12:19:26,085 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 12:19:27,027 - ispa_next.appointments.models - DEBUG - Appointment Firma LG Electronics Deutschland GmbH MTK-LG 353 WBA11GW080CW12430 ohne Termin.
+2025-11-17 12:19:27,037 - ispa_next.appointments.models - DEBUG - Appointment Alexander Wilhelm Loos MZ-ML 872E WBY71EG0505492220 ohne Termin.
+2025-11-17 12:19:27,045 - ispa_next.appointments.models - DEBUG - Appointment Stephanie Wocker MZ-MS 744 WBAJP31010CD36030 ohne Termin.
+2025-11-17 12:19:27,058 - ispa_next.appointments.models - DEBUG - Appointment Oliver Schlicht MZ-LS 2007 WMWWJ510X03M44775 ohne Termin.
+2025-11-17 12:19:27,067 - ispa_next.appointments.models - DEBUG - Appointment Firma H. G. Oswald Sanitär Heizung GmbH AZ-O 922 WBA31GV010CV82097 ohne Termin.
+2025-11-17 12:19:27,072 - ispa_next.main - DEBUG - 
+
+
+
+2025-11-17 12:19:27,072 - ispa_next.main - DEBUG - starting with process 7 (KI-KI 0815) of 8
+2025-11-17 12:19:27,076 - ispa_next.appointment_loop.helpers - DEBUG - Checking for potential OIDC Login dialog
+2025-11-17 12:19:28,272 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 12:19:29,447 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 1533
+2025-11-17 12:19:29,448 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 411
+2025-11-17 12:19:30,841 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 1
+2025-11-17 12:19:30,842 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 12:19:53,473 - ispa_next.appointment_loop.main - DEBUG - Appointment failed: Traceback (most recent call last):
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointment_loop\main.py", line 41, in process_appointment
+    handle_briefing_screen(element=app)
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointments\functions.py", line 173, in handle_briefing_screen
+    raise ViewTransitionError("Couldn't open 'Terminvereinbarung', proceed with next appointment")
+ispa_next.exceptions.ViewTransitionError: Couldn't open 'Terminvereinbarung', proceed with next appointment
+
+2025-11-17 12:19:53,482 - ispa_next.appointment_loop.main - DEBUG - Closing appointment 7.
+2025-11-17 12:19:53,486 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 12:19:54,093 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 1533
+2025-11-17 12:19:54,095 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 1
+2025-11-17 12:19:56,959 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 411
+2025-11-17 12:19:56,960 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 12:19:57,991 - ispa_next.appointments.models - DEBUG - Appointment Firma LG Electronics Deutschland GmbH MTK-LG 353 WBA11GW080CW12430 ohne Termin.
+2025-11-17 12:19:58,000 - ispa_next.appointments.models - DEBUG - Appointment Alexander Wilhelm Loos MZ-ML 872E WBY71EG0505492220 ohne Termin.
+2025-11-17 12:19:58,009 - ispa_next.appointments.models - DEBUG - Appointment Stephanie Wocker MZ-MS 744 WBAJP31010CD36030 ohne Termin.
+2025-11-17 12:19:58,019 - ispa_next.appointments.models - DEBUG - Appointment Oliver Schlicht MZ-LS 2007 WMWWJ510X03M44775 ohne Termin.
+2025-11-17 12:19:58,028 - ispa_next.appointments.models - DEBUG - Appointment Firma H. G. Oswald Sanitär Heizung GmbH AZ-O 922 WBA31GV010CV82097 ohne Termin.
+2025-11-17 12:19:58,034 - ispa_next.main - DEBUG - 
+
+
+
+2025-11-17 12:19:58,035 - ispa_next.main - DEBUG - starting with process 8 (MZ MV 279) of 8
+2025-11-17 12:19:58,040 - ispa_next.appointment_loop.helpers - DEBUG - Checking for potential OIDC Login dialog
+2025-11-17 12:19:59,455 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 12:20:00,872 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 1533
+2025-11-17 12:20:00,873 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 411
+2025-11-17 12:20:02,473 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 1
+2025-11-17 12:20:02,474 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 12:20:33,722 - ispa_next.rkr_manager.main - DEBUG - RemoteKeyReadManager initialized
+2025-11-17 12:20:44,410 - ispa_next.functions - DEBUG - get_cart_contents
+2025-11-17 12:20:51,006 - ispa_next.functions - DEBUG - check_and_verify_hu_date
+2025-11-17 12:20:51,007 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Kunden & Fahrzeug
+2025-11-17 12:20:51,085 - ispa_next.common.shared - DEBUG - ISPA tab Kunden & Fahrzeug is already open
+2025-11-17 12:20:51,296 - ispa_next.functions - DEBUG - HU date is not available.
+2025-11-17 12:20:58,755 - ispa_next.functions - DEBUG - check_potential_workshop_test
+2025-11-17 12:20:58,757 - ispa_next.functions - DEBUG - check_vehicle_age_for_service_plus
+2025-11-17 12:21:01,584 - ispa_next.rkr_manager.main - DEBUG - running RemoteKeyReadManager
+2025-11-17 12:21:01,586 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Wartung
+2025-11-17 12:21:02,846 - ispa_next.common.shared - DEBUG - Successfully opened ISPA tab: Wartung
+2025-11-17 12:21:04,850 - ispa_next.rkr_manager.state - DEBUG - Entering initial state
+2025-11-17 12:21:04,956 - ispa_next.rkr_manager.state - DEBUG - Checking customer consent
+2025-11-17 12:21:05,099 - ispa_next.rkr_manager.state - DEBUG - Checking data freshness
+2025-11-17 12:21:05,186 - ispa_next.rkr_manager.state - DEBUG - Getting cart and advice list contents
+2025-11-17 12:21:05,188 - ispa_next.functions - DEBUG - get_cart_contents
+2025-11-17 12:21:12,012 - ispa_next.rkr_manager.state - DEBUG - Triggering remote key read
+2025-11-17 12:21:23,717 - ispa_next.rkr_manager.state - DEBUG - State machine completed with reason: non_blocking_wait
+2025-11-17 12:21:24,721 - ispa_next.functions - DEBUG - handle_data_privacy_consent
+2025-11-17 12:21:24,722 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Kunden & Fahrzeug
+2025-11-17 12:21:25,199 - ispa_next.common.shared - DEBUG - Successfully opened ISPA tab: Kunden & Fahrzeug
+2025-11-17 12:21:38,905 - ispa_next.functions - DEBUG - DSE icon is red
+2025-11-17 12:21:46,303 - ispa_next.functions - DEBUG - transfer_customer_data_to_appointment
+2025-11-17 12:21:46,305 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Kunden & Fahrzeug
+2025-11-17 12:21:46,416 - ispa_next.common.shared - DEBUG - ISPA tab Kunden & Fahrzeug is already open
+2025-11-17 12:21:46,417 - ispa_next.functions - DEBUG - fetch_customer_data
+2025-11-17 12:21:46,452 - ispa_next.functions - DEBUG - fetch_customer_data_from_bmw_id
+2025-11-17 12:21:47,693 - ispa_next.functions - DEBUG - fetch_customer_data_from_dms
+2025-11-17 12:21:48,942 - ispa_next.functions - DEBUG - All data found, skipping remaining sources
+2025-11-17 12:21:49,263 - ispa_next.functions - DEBUG - copy_customer_data_to_appointment
+2025-11-17 12:21:53,648 - ispa_next.functions - DEBUG - Updated appointment (AX00011872) customer contact data.
+2025-11-17 12:21:54,590 - ispa_next.functions - DEBUG - check_for_alpina_vehicle
+2025-11-17 12:21:54,592 - ispa_next.functions - DEBUG - check_bmw_id_add_to_list
+2025-11-17 12:21:55,563 - ispa_next.functions - DEBUG - check_home_dealer_add_to_list
+2025-11-17 12:21:55,565 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Fahrzeugzustand
+2025-11-17 12:21:56,320 - ispa_next.common.shared - DEBUG - Successfully opened ISPA tab: Fahrzeugzustand
+2025-11-17 12:22:00,783 - ispa_next.rkr_manager.main - DEBUG - running RemoteKeyReadManager
+2025-11-17 12:22:00,784 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Wartung
+2025-11-17 12:22:01,285 - ispa_next.common.shared - DEBUG - Successfully opened ISPA tab: Wartung
+2025-11-17 12:22:03,313 - ispa_next.rkr_manager.state - DEBUG - Entering initial state
+2025-11-17 12:22:03,439 - ispa_next.rkr_manager.state - DEBUG - Checking customer consent
+2025-11-17 12:22:03,523 - ispa_next.rkr_manager.state - DEBUG - Checking data freshness
+2025-11-17 12:22:03,652 - ispa_next.rkr_manager.state - DEBUG - Getting cart and advice list contents
+2025-11-17 12:22:03,653 - ispa_next.functions - DEBUG - get_cart_contents
+2025-11-17 12:22:11,213 - ispa_next.rkr_manager.state - DEBUG - Triggering remote key read
+2025-11-17 12:22:22,836 - ispa_next.rkr_manager.helper - DEBUG - Found button 'Schlüsseldaten überschreiben und öffnen (Empfohlen)' in nested popup
+2025-11-17 12:22:30,234 - ispa_next.rkr_manager.state - DEBUG - Checking cart items after successfull RKR
+2025-11-17 12:22:30,236 - ispa_next.functions - DEBUG - get_cart_contents
+2025-11-17 12:22:37,772 - ispa_next.rkr_manager.state - DEBUG - Checking color in CBS positions
+2025-11-17 12:22:41,937 - ispa_next.rkr_manager.state - DEBUG - State machine completed with reason: success
+2025-11-17 12:22:42,943 - ispa_next.functions - DEBUG - generate_attachments
+2025-11-17 12:22:42,958 - ispa_next.functions - DEBUG - check_service_requirement
+2025-11-17 12:22:42,958 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Wartung
+2025-11-17 12:22:43,048 - ispa_next.common.shared - DEBUG - ISPA tab Wartung is already open
+2025-11-17 12:22:47,188 - ispa_next.functions - DEBUG - check_service_requirement result: pdf_needed =True
+2025-11-17 12:22:48,187 - ispa_next.functions - DEBUG - generate_appointment_pdfs
+2025-11-17 12:23:01,518 - ispa_next.wipers - DEBUG - handle_wiper_service_contracts
+2025-11-17 12:23:01,519 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Wartung
+2025-11-17 12:23:01,612 - ispa_next.common.shared - DEBUG - ISPA tab Wartung is already open
+2025-11-17 12:23:16,999 - ispa_next.wipers - DEBUG - valid contract found: BMW Bank
+2025-11-17 12:23:27,368 - ispa_next.wipers - DEBUG - wipers found to add.
+2025-11-17 12:23:27,598 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Kunden & Fahrzeug
+2025-11-17 12:23:28,289 - ispa_next.common.shared - DEBUG - Successfully opened ISPA tab: Kunden & Fahrzeug
+2025-11-17 12:23:28,289 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Wartung
+2025-11-17 12:23:29,225 - ispa_next.common.shared - DEBUG - Successfully opened ISPA tab: Wartung
+2025-11-17 12:23:29,226 - ispa_next.package_manager.main - DEBUG - updating cart content
+2025-11-17 12:23:35,797 - ispa_next.package_manager.main - DEBUG - updating advice list content
+2025-11-17 12:23:35,800 - ispa_next.package_manager.helper - DEBUG - get_advice_list_contents
+2025-11-17 12:23:37,476 - ispa_next.package_manager.main - DEBUG - determining package movements
+2025-11-17 12:23:37,481 - ispa_next.package_manager.main - DEBUG - determining packages to place
+2025-11-17 12:23:37,485 - ispa_next.package_manager.main - DEBUG - Cannot place Auswuchten der Räder: placement requirements not met
+2025-11-17 12:23:37,487 - ispa_next.package_manager.main - DEBUG - found packages to cart: {Package(name=FAHRZEUGAUßENWÄSCHE BASIS, source=from_tab, target=cart), Package(name=Wischerblatt links und rechts ersetzen, source=from_aw_package, target=cart)}
+2025-11-17 12:23:37,489 - ispa_next.package_manager.main - DEBUG - determining packages to place
+2025-11-17 12:23:37,490 - ispa_next.package_manager.main - DEBUG - Cannot place Ladewunsch und Ladezustand: not present in source
+2025-11-17 12:23:37,492 - ispa_next.package_manager.main - DEBUG - found packages to advice_list: set()
+2025-11-17 12:23:37,494 - ispa_next.package_manager.main - DEBUG - determining package to delete
+2025-11-17 12:23:37,496 - ispa_next.package_manager.main - DEBUG - found packages to delete: set()
+2025-11-17 12:23:37,498 - ispa_next.package_manager.main - DEBUG - determining package to update
+2025-11-17 12:23:37,499 - ispa_next.package_manager.main - DEBUG - found packages to update: set()
+2025-11-17 12:23:37,501 - ispa_next.package_manager.helper - DEBUG - add_to_cart called
+2025-11-17 12:23:38,288 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Marketing
+2025-11-17 12:23:39,310 - ispa_next.common.shared - DEBUG - Successfully opened ISPA tab: Marketing
+2025-11-17 12:24:15,348 - ispa_next.package_manager.helper - DEBUG - _add_to_container_manual
+2025-11-17 12:24:15,359 - ispa_next.package_manager.helper - DEBUG - add_appointment_note in package_manager
+2025-11-17 12:24:23,889 - ispa_next.functions - DEBUG - verify_cart_packages_additional_texts
+2025-11-17 12:24:23,892 - ispa_next.functions - DEBUG - check_cart_for_additional_text_packages
+2025-11-17 12:24:23,892 - ispa_next.functions - DEBUG - get_cart_contents
+2025-11-17 12:24:32,692 - ispa_next.functions - DEBUG - handle_mobility_replacement
+2025-11-17 12:24:32,694 - ispa_next.functions - DEBUG - verify_battery_in_motoroil_package
+2025-11-17 12:24:32,695 - ispa_next.functions - DEBUG - verify_breaks_in_break_package
+2025-11-17 12:24:32,697 - ispa_next.functions - DEBUG - process_check_control
+2025-11-17 12:24:32,698 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Beanstandungen
+2025-11-17 12:24:33,358 - ispa_next.common.shared - DEBUG - Successfully opened ISPA tab: Beanstandungen
+2025-11-17 12:24:33,613 - ispa_next.functions - DEBUG - get_cart_contents
+2025-11-17 12:24:51,489 - ispa_next.functions - DEBUG - trying add_material_to_package
+2025-11-17 12:24:51,491 - ispa_next.functions - DEBUG - get_cart_contents
+2025-11-17 12:25:00,411 - ispa_next.functions - DEBUG - notify_aw_increase_to_service_advisor
+2025-11-17 12:25:17,062 - ispa_next.functions - DEBUG - check_cart_packages_for_parts_service_and_parts_availability
+2025-11-17 12:25:17,627 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Abschluss
+2025-11-17 12:25:18,254 - ispa_next.common.shared - DEBUG - Successfully opened ISPA tab: Abschluss
+2025-11-17 12:25:18,517 - ispa_next.functions - DEBUG - get_cart_contents
+2025-11-17 12:26:42,431 - ispa_next.common.utils - DEBUG - Attempt 1/6: Condition 'job_details_view_exists' for retry_ui_action 'open_job_details_view' not satisfied
+2025-11-17 12:26:42,431 - ispa_next.common.utils - DEBUG - Attempt 1/6: Retrying action 'open_job_details_view' with condition 'job_details_view_exists' with delay: 1.0s
+2025-11-17 12:26:45,446 - ispa_next.common.utils - DEBUG - Attempt 2/6: Condition 'job_details_view_exists' for retry_ui_action 'open_job_details_view' not satisfied
+2025-11-17 12:26:45,446 - ispa_next.common.utils - DEBUG - Attempt 2/6: Retrying action 'open_job_details_view' with condition 'job_details_view_exists' with delay: 2.0s
+2025-11-17 12:26:49,439 - ispa_next.common.utils - DEBUG - Attempt 3/6: Condition 'job_details_view_exists' for retry_ui_action 'open_job_details_view' not satisfied
+2025-11-17 12:26:49,439 - ispa_next.common.utils - DEBUG - Attempt 3/6: Retrying action 'open_job_details_view' with condition 'job_details_view_exists' with delay: 4.0s
+2025-11-17 12:26:55,417 - ispa_next.common.utils - DEBUG - Attempt 4/6: Condition 'job_details_view_exists' for retry_ui_action 'open_job_details_view' not satisfied
+2025-11-17 12:26:55,417 - ispa_next.common.utils - DEBUG - Attempt 4/6: Retrying action 'open_job_details_view' with condition 'job_details_view_exists' with delay: 8.0s
+2025-11-17 12:27:05,405 - ispa_next.common.utils - DEBUG - Attempt 5/6: Condition 'job_details_view_exists' for retry_ui_action 'open_job_details_view' not satisfied
+2025-11-17 12:27:05,405 - ispa_next.common.utils - DEBUG - Attempt 5/6: Retrying action 'open_job_details_view' with condition 'job_details_view_exists' with delay: 16.0s
+2025-11-17 12:27:23,095 - ispa_next.common.utils - DEBUG - Attempt 6/6: Condition 'job_details_view_exists' for retry_ui_action 'open_job_details_view' not satisfied
+2025-11-17 12:27:23,408 - ispa_next.appointment_loop.main - DEBUG - Appointment failed: Traceback (most recent call last):
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointment_loop\main.py", line 126, in process_appointment
+    f.check_cart_packages_for_parts_service_and_parts_availability(app, appointment, state)
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\functions.py", line 390, in check_cart_packages_for_parts_service_and_parts_availability
+    retry_ui_action(open_job_details_view, condition=job_details_view_exists, base_delay=1.0)
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\common\utils.py", line 254, in retry_ui_action
+    raise RetryUiActionError(f"UI action failed after {max_attempts} attempts: Condition never satisfied")
+ispa_next.exceptions.RetryUiActionError: UI action failed after 6 attempts: Condition never satisfied
+
+2025-11-17 12:27:23,420 - ispa_next.appointment_ending - DEBUG - entered complete process
+2025-11-17 12:27:23,421 - ispa_next.appointment_loop.helpers - DEBUG - Checking for potential OIDC Login dialog
+2025-11-17 12:27:24,348 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Abschluss
+2025-11-17 12:27:24,453 - ispa_next.common.shared - DEBUG - ISPA tab Abschluss is already open
+2025-11-17 12:27:24,454 - ispa_next.appointment_ending - DEBUG - complete_process exists early.
+2025-11-17 12:27:24,480 - ispa_next.appointment_ending - DEBUG - attempt to close process with save: False
+2025-11-17 12:27:31,730 - ispa_next.appointment_loop.main - DEBUG - Closing appointment 8.
+2025-11-17 12:27:31,733 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 12:27:32,421 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 1534
+2025-11-17 12:27:32,423 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 1
+2025-11-17 12:27:37,197 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 412
+2025-11-17 12:27:37,198 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 12:27:38,525 - ispa_next.appointments.models - DEBUG - Appointment Klaus-Karl Becker MZ-KN 84 WBATH410609F53744 ohne Termin.
+2025-11-17 12:27:38,536 - ispa_next.appointments.models - DEBUG - Appointment Firma LG Electronics Deutschland GmbH MTK-LG 353 WBA11GW080CW12430 ohne Termin.
+2025-11-17 12:27:38,547 - ispa_next.appointments.models - DEBUG - Appointment Alexander Wilhelm Loos MZ-ML 872E WBY71EG0505492220 ohne Termin.
+2025-11-17 12:27:38,559 - ispa_next.appointments.models - DEBUG - Appointment Stephanie Wocker MZ-MS 744 WBAJP31010CD36030 ohne Termin.
+2025-11-17 12:27:38,569 - ispa_next.appointments.models - DEBUG - Appointment Oliver Schlicht MZ-LS 2007 WMWWJ510X03M44775 ohne Termin.
+2025-11-17 12:27:38,579 - ispa_next.appointments.models - DEBUG - Appointment Firma H. G. Oswald Sanitär Heizung GmbH AZ-O 922 WBA31GV010CV82097 ohne Termin.

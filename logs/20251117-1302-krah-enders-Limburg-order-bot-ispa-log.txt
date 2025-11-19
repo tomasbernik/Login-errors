@@ -1,0 +1,304 @@
+2025-11-17 13:16:51,095 - ispa_next.main - DEBUG - ISPA Next attempt (1 / 5)
+2025-11-17 13:16:51,102 - overlays.client - INFO - Connected to overlay manager pipe
+2025-11-17 13:17:00,815 - ispa_next.app_start.functions - DEBUG - handle_update_available
+2025-11-17 13:17:11,171 - ispa_next.app_start.functions - DEBUG - has_ispa_errors
+2025-11-17 13:17:26,905 - ispa_next.app_start.functions - DEBUG - authenticate_user
+2025-11-17 13:17:50,843 - ispa_next.app_start.main - DEBUG - Login successful
+2025-11-17 13:18:03,135 - ispa_next.appointments.functions - DEBUG - order_appointments_grid_by_created_at
+2025-11-17 13:18:05,522 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 13:18:06,402 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 547
+2025-11-17 13:18:06,404 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 137
+2025-11-17 13:18:08,241 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 106
+2025-11-17 13:18:08,242 - ispa_next.appointments.functions - DEBUG - recover_or_exit_IPS_error
+2025-11-17 13:18:08,242 - ispa_next.appointments.functions - DEBUG - check_appointments_grid_for_IPS_error
+2025-11-17 13:18:09,037 - ispa_next.appointments.functions - DEBUG - check_appointments_grid_for_IPS_error
+2025-11-17 13:18:09,855 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 13:18:23,873 - ispa_next.appointments.models - DEBUG - Skipping appointment without VIN
+2025-11-17 13:18:23,875 - ispa_next.appointments.models - DEBUG - Skipping appointment without VIN
+2025-11-17 13:18:23,875 - ispa_next.appointments.models - DEBUG - Skipping appointment without VIN
+2025-11-17 13:18:23,876 - ispa_next.appointments.models - DEBUG - Skipping appointment without VIN
+2025-11-17 13:18:23,876 - ispa_next.appointments.models - DEBUG - Skipping appointment without VIN
+2025-11-17 13:18:23,876 - ispa_next.appointments.models - DEBUG - Skipping appointment without VIN
+2025-11-17 13:18:23,894 - ispa_next.appointments.models - DEBUG - Skipping appointment without VIN
+2025-11-17 13:18:23,920 - ispa_next.main - DEBUG - Found 2 out of 29 appointments to process (configured limit: 15).
+2025-11-17 13:18:23,920 - ispa_next.main - DEBUG - Processing 2 fresh appointments.
+2025-11-17 13:18:23,920 - ispa_next.main - DEBUG - All appointments: EMS-UW 123, LM-CH 650
+2025-11-17 13:18:23,924 - ispa_next.main - DEBUG - 
+
+
+
+2025-11-17 13:18:23,924 - ispa_next.main - DEBUG - starting with process 1 (EMS-UW 123) of 2
+2025-11-17 13:18:23,928 - ispa_next.appointment_loop.helpers - DEBUG - Checking for potential OIDC Login dialog
+2025-11-17 13:18:25,103 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 13:18:26,307 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 547
+2025-11-17 13:18:26,308 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 106
+2025-11-17 13:18:27,785 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 1
+2025-11-17 13:18:27,786 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 13:18:56,051 - ispa_next.rkr_manager.main - DEBUG - RemoteKeyReadManager initialized
+2025-11-17 13:19:06,105 - ispa_next.functions - DEBUG - get_cart_contents
+2025-11-17 13:19:08,047 - ispa_next.functions - DEBUG - check_and_verify_hu_date
+2025-11-17 13:19:08,048 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Kunden & Fahrzeug
+2025-11-17 13:19:08,133 - ispa_next.common.shared - DEBUG - ISPA tab Kunden & Fahrzeug is already open
+2025-11-17 13:19:08,409 - ispa_next.functions - DEBUG - check_potential_workshop_test
+2025-11-17 13:19:08,412 - ispa_next.functions - DEBUG - check_vehicle_age_for_service_plus
+2025-11-17 13:19:08,413 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Kunden & Fahrzeug
+2025-11-17 13:19:08,495 - ispa_next.common.shared - DEBUG - ISPA tab Kunden & Fahrzeug is already open
+2025-11-17 13:19:11,434 - ispa_next.rkr_manager.main - DEBUG - running RemoteKeyReadManager
+2025-11-17 13:19:11,436 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Wartung
+2025-11-17 13:19:12,406 - ispa_next.common.shared - DEBUG - Successfully opened ISPA tab: Wartung
+2025-11-17 13:19:14,412 - ispa_next.rkr_manager.state - DEBUG - Entering initial state
+2025-11-17 13:19:14,513 - ispa_next.rkr_manager.state - DEBUG - Checking customer consent
+2025-11-17 13:19:17,784 - ispa_next.rkr_manager.state - DEBUG - Checking data freshness
+2025-11-17 13:19:17,852 - ispa_next.rkr_manager.state - DEBUG - Getting cart and advice list contents
+2025-11-17 13:19:17,852 - ispa_next.rkr_manager.state - DEBUG - Triggering remote key read
+2025-11-17 13:19:29,055 - ispa_next.rkr_manager.state - DEBUG - State machine completed with reason: non_blocking_wait
+2025-11-17 13:19:30,059 - ispa_next.functions - DEBUG - handle_data_privacy_consent
+2025-11-17 13:19:30,059 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Kunden & Fahrzeug
+2025-11-17 13:19:30,622 - ispa_next.common.shared - DEBUG - Successfully opened ISPA tab: Kunden & Fahrzeug
+2025-11-17 13:19:40,009 - ispa_next.functions - DEBUG - DSE icon is green
+2025-11-17 13:19:47,909 - ispa_next.functions - DEBUG - transfer_customer_data_to_appointment
+2025-11-17 13:19:47,917 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Kunden & Fahrzeug
+2025-11-17 13:19:47,994 - ispa_next.common.shared - DEBUG - ISPA tab Kunden & Fahrzeug is already open
+2025-11-17 13:19:47,996 - ispa_next.functions - DEBUG - fetch_customer_data
+2025-11-17 13:19:48,032 - ispa_next.functions - DEBUG - fetch_customer_data_from_bmw_id
+2025-11-17 13:19:48,119 - ispa_next.functions - DEBUG - fetch_customer_data_from_dms
+2025-11-17 13:19:49,287 - ispa_next.functions - DEBUG - All data found, skipping remaining sources
+2025-11-17 13:19:49,516 - ispa_next.functions - DEBUG - copy_customer_data_to_appointment
+2025-11-17 13:19:53,162 - ispa_next.functions - DEBUG - Updated appointment (AB00018893) customer contact data.
+2025-11-17 13:19:54,066 - ispa_next.functions - DEBUG - check_for_alpina_vehicle
+2025-11-17 13:19:54,068 - ispa_next.functions - DEBUG - check_bmw_id_add_to_list
+2025-11-17 13:19:54,259 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Fahrzeugzustand
+2025-11-17 13:19:54,987 - ispa_next.common.shared - DEBUG - Successfully opened ISPA tab: Fahrzeugzustand
+2025-11-17 13:19:56,471 - ispa_next.functions - DEBUG - check_home_dealer_add_to_list
+2025-11-17 13:19:56,471 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Fahrzeugzustand
+2025-11-17 13:19:56,574 - ispa_next.common.shared - DEBUG - ISPA tab Fahrzeugzustand is already open
+2025-11-17 13:20:00,201 - ispa_next.rkr_manager.main - DEBUG - running RemoteKeyReadManager
+2025-11-17 13:20:00,203 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Wartung
+2025-11-17 13:20:00,683 - ispa_next.common.shared - DEBUG - Successfully opened ISPA tab: Wartung
+2025-11-17 13:20:02,685 - ispa_next.rkr_manager.state - DEBUG - Entering initial state
+2025-11-17 13:20:02,830 - ispa_next.rkr_manager.state - DEBUG - Checking customer consent
+2025-11-17 13:20:02,929 - ispa_next.rkr_manager.state - DEBUG - Checking data freshness
+2025-11-17 13:20:02,990 - ispa_next.rkr_manager.state - DEBUG - Getting cart and advice list contents
+2025-11-17 13:20:02,991 - ispa_next.rkr_manager.state - DEBUG - Triggering remote key read
+2025-11-17 13:20:14,233 - ispa_next.rkr_manager.helper - DEBUG - Found button 'Schlüsseldaten überschreiben und öffnen (Empfohlen)' in nested popup
+2025-11-17 13:20:21,417 - ispa_next.rkr_manager.state - DEBUG - Checking cart items after successfull RKR
+2025-11-17 13:20:21,417 - ispa_next.rkr_manager.state - DEBUG - Checking color in CBS positions
+2025-11-17 13:20:25,645 - ispa_next.rkr_manager.state - DEBUG - State machine completed with reason: success
+2025-11-17 13:20:26,652 - ispa_next.functions - DEBUG - generate_attachments
+2025-11-17 13:20:26,653 - ispa_next.functions - DEBUG - check_service_requirement
+2025-11-17 13:20:26,654 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Wartung
+2025-11-17 13:20:26,785 - ispa_next.common.shared - DEBUG - ISPA tab Wartung is already open
+2025-11-17 13:20:30,950 - ispa_next.functions - DEBUG - check_service_requirement result: pdf_needed =True
+2025-11-17 13:20:31,579 - ispa_next.functions - DEBUG - generate_appointment_pdfs
+2025-11-17 13:20:42,622 - ispa_next.wipers - DEBUG - handle_wiper_service_contracts
+2025-11-17 13:20:42,623 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Wartung
+2025-11-17 13:20:42,766 - ispa_next.common.shared - DEBUG - ISPA tab Wartung is already open
+2025-11-17 13:20:43,212 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Kunden & Fahrzeug
+2025-11-17 13:20:43,780 - ispa_next.common.shared - DEBUG - Successfully opened ISPA tab: Kunden & Fahrzeug
+2025-11-17 13:20:43,781 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Wartung
+2025-11-17 13:20:44,616 - ispa_next.common.shared - DEBUG - Successfully opened ISPA tab: Wartung
+2025-11-17 13:20:44,617 - ispa_next.package_manager.main - DEBUG - updating cart content
+2025-11-17 13:20:46,548 - ispa_next.package_manager.main - DEBUG - updating advice list content
+2025-11-17 13:20:46,557 - ispa_next.package_manager.helper - DEBUG - get_advice_list_contents
+2025-11-17 13:20:48,406 - ispa_next.package_manager.main - DEBUG - determining package movements
+2025-11-17 13:20:48,407 - ispa_next.package_manager.main - DEBUG - determining packages to place
+2025-11-17 13:20:48,410 - ispa_next.package_manager.main - DEBUG - found packages to cart: {Package(name=FAHRZEUGWÄSCHE BASIS, source=from_tab, target=cart), Package(name=Fahrzeug Innenraum saugen, source=from_tab, target=cart)}
+2025-11-17 13:20:48,411 - ispa_next.package_manager.main - DEBUG - determining packages to place
+2025-11-17 13:20:48,413 - ispa_next.package_manager.main - DEBUG - Cannot place Ladewunsch und Ladezustand: not present in source
+2025-11-17 13:20:48,415 - ispa_next.package_manager.main - DEBUG - Cannot place 10061270900 (SW)- G6x G7x G9x Kabelbaum Cockpit ne: not present in source
+2025-11-17 13:20:48,416 - ispa_next.package_manager.main - DEBUG - found packages to advice_list: set()
+2025-11-17 13:20:48,417 - ispa_next.package_manager.main - DEBUG - determining package to delete
+2025-11-17 13:20:48,430 - ispa_next.package_manager.main - DEBUG - found packages to delete: set()
+2025-11-17 13:20:48,433 - ispa_next.package_manager.main - DEBUG - determining package to update
+2025-11-17 13:20:48,435 - ispa_next.package_manager.main - DEBUG - found packages to update: set()
+2025-11-17 13:20:48,438 - ispa_next.package_manager.helper - DEBUG - add_to_cart called
+2025-11-17 13:20:49,172 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Marketing
+2025-11-17 13:20:50,109 - ispa_next.common.shared - DEBUG - Successfully opened ISPA tab: Marketing
+2025-11-17 13:21:04,657 - ispa_next.package_manager.helper - DEBUG - _add_to_container_manual
+2025-11-17 13:21:04,659 - ispa_next.functions - DEBUG - verify_cart_packages_additional_texts
+2025-11-17 13:21:04,660 - ispa_next.functions - DEBUG - check_cart_for_additional_text_packages
+2025-11-17 13:21:04,660 - ispa_next.functions - DEBUG - get_cart_contents
+2025-11-17 13:21:07,249 - ispa_next.functions - DEBUG - Adding additional texts to cart items
+2025-11-17 13:21:11,456 - ispa_next.functions - DEBUG - handle_mobility_replacement
+2025-11-17 13:21:11,550 - ispa_next.functions - DEBUG - verify_battery_in_motoroil_package
+2025-11-17 13:21:11,564 - ispa_next.functions - DEBUG - get_cart_contents
+2025-11-17 13:21:14,299 - ispa_next.functions - DEBUG - verify_breaks_in_break_package
+2025-11-17 13:21:14,302 - ispa_next.functions - DEBUG - process_check_control
+2025-11-17 13:21:14,303 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Beanstandungen
+2025-11-17 13:21:14,996 - ispa_next.common.shared - DEBUG - Successfully opened ISPA tab: Beanstandungen
+2025-11-17 13:21:15,266 - ispa_next.functions - DEBUG - get_cart_contents
+2025-11-17 13:21:25,222 - ispa_next.functions - DEBUG - trying add_material_to_package
+2025-11-17 13:21:25,225 - ispa_next.functions - DEBUG - get_cart_contents
+2025-11-17 13:21:27,867 - ispa_next.functions - DEBUG - notify_aw_increase_to_service_advisor
+2025-11-17 13:21:43,435 - ispa_next.functions - DEBUG - check_cart_packages_for_parts_service_and_parts_availability
+2025-11-17 13:21:44,095 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Abschluss
+2025-11-17 13:21:44,701 - ispa_next.common.shared - DEBUG - Successfully opened ISPA tab: Abschluss
+2025-11-17 13:21:44,929 - ispa_next.functions - DEBUG - get_cart_contents
+2025-11-17 13:21:52,718 - ispa_next.functions - DEBUG - Sucessfully closed JobDetailsView.
+2025-11-17 13:21:58,520 - ispa_next.functions - DEBUG - Sucessfully closed JobDetailsView.
+2025-11-17 13:22:04,992 - ispa_next.appointment_ending - DEBUG - entered complete process
+2025-11-17 13:22:04,993 - ispa_next.appointment_loop.helpers - DEBUG - Checking for potential OIDC Login dialog
+2025-11-17 13:22:05,729 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Abschluss
+2025-11-17 13:22:05,855 - ispa_next.common.shared - DEBUG - ISPA tab Abschluss is already open
+2025-11-17 13:22:05,857 - ispa_next.appointment_ending - DEBUG - complete_process isn't exiting early.
+2025-11-17 13:22:10,104 - ispa_next.appointment_ending - DEBUG - Service parts target assigned before process exit.
+2025-11-17 13:22:22,978 - ispa_next.appointment_ending - DEBUG - return from complete process straight to process_list with saving without error_dialog.
+2025-11-17 13:22:23,343 - ispa_next.appointment_loop.main - DEBUG - Closing appointment 1.
+2025-11-17 13:22:25,060 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 13:22:25,883 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 547
+2025-11-17 13:22:25,885 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 1
+2025-11-17 13:22:29,966 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 137
+2025-11-17 13:22:29,967 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 13:22:30,885 - ispa_next.appointments.models - DEBUG - Appointment Ekrem Avdulla WW-EA 350 WBAJP51090CD41097 ohne Termin.
+2025-11-17 13:22:30,890 - ispa_next.main - DEBUG - 
+
+
+
+2025-11-17 13:22:30,890 - ispa_next.main - DEBUG - starting with process 2 (LM-CH 650) of 2
+2025-11-17 13:22:30,894 - ispa_next.appointment_loop.helpers - DEBUG - Checking for potential OIDC Login dialog
+2025-11-17 13:22:32,091 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 13:22:33,445 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 547
+2025-11-17 13:22:33,459 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 137
+2025-11-17 13:22:35,141 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 1
+2025-11-17 13:22:35,142 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 13:23:18,899 - ispa_next.rkr_manager.main - DEBUG - RemoteKeyReadManager initialized
+2025-11-17 13:23:30,073 - ispa_next.functions - DEBUG - get_cart_contents
+2025-11-17 13:23:35,381 - ispa_next.functions - DEBUG - check_and_verify_hu_date
+2025-11-17 13:23:35,382 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Kunden & Fahrzeug
+2025-11-17 13:23:35,465 - ispa_next.common.shared - DEBUG - ISPA tab Kunden & Fahrzeug is already open
+2025-11-17 13:23:35,847 - ispa_next.functions - DEBUG - check_potential_workshop_test
+2025-11-17 13:23:35,850 - ispa_next.functions - DEBUG - check_vehicle_age_for_service_plus
+2025-11-17 13:23:35,851 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Kunden & Fahrzeug
+2025-11-17 13:23:35,991 - ispa_next.common.shared - DEBUG - ISPA tab Kunden & Fahrzeug is already open
+2025-11-17 13:23:39,653 - ispa_next.rkr_manager.main - DEBUG - running RemoteKeyReadManager
+2025-11-17 13:23:39,655 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Wartung
+2025-11-17 13:23:40,894 - ispa_next.common.shared - DEBUG - Successfully opened ISPA tab: Wartung
+2025-11-17 13:23:42,898 - ispa_next.rkr_manager.state - DEBUG - Entering initial state
+2025-11-17 13:23:43,062 - ispa_next.rkr_manager.state - DEBUG - Checking customer consent
+2025-11-17 13:23:46,395 - ispa_next.rkr_manager.state - DEBUG - Checking data freshness
+2025-11-17 13:23:46,542 - ispa_next.rkr_manager.state - DEBUG - Getting cart and advice list contents
+2025-11-17 13:23:46,543 - ispa_next.rkr_manager.state - DEBUG - Triggering remote key read
+2025-11-17 13:23:58,368 - ispa_next.rkr_manager.state - DEBUG - State machine completed with reason: non_blocking_wait
+2025-11-17 13:23:59,387 - ispa_next.functions - DEBUG - handle_data_privacy_consent
+2025-11-17 13:23:59,388 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Kunden & Fahrzeug
+2025-11-17 13:23:59,873 - ispa_next.common.shared - DEBUG - Successfully opened ISPA tab: Kunden & Fahrzeug
+2025-11-17 13:24:12,981 - ispa_next.functions - DEBUG - DSE icon is yellow
+2025-11-17 13:24:21,479 - ispa_next.functions - DEBUG - transfer_customer_data_to_appointment
+2025-11-17 13:24:21,480 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Kunden & Fahrzeug
+2025-11-17 13:24:21,573 - ispa_next.common.shared - DEBUG - ISPA tab Kunden & Fahrzeug is already open
+2025-11-17 13:24:21,573 - ispa_next.functions - DEBUG - fetch_customer_data
+2025-11-17 13:24:21,630 - ispa_next.functions - DEBUG - fetch_customer_data_from_bmw_id
+2025-11-17 13:24:22,969 - ispa_next.functions - DEBUG - All data found, skipping remaining sources
+2025-11-17 13:24:23,180 - ispa_next.functions - DEBUG - copy_customer_data_to_appointment
+2025-11-17 13:24:26,164 - ispa_next.functions - DEBUG - Updated appointment (AF00004756) customer contact data.
+2025-11-17 13:24:27,075 - ispa_next.functions - DEBUG - check_for_alpina_vehicle
+2025-11-17 13:24:27,078 - ispa_next.functions - DEBUG - check_bmw_id_add_to_list
+2025-11-17 13:24:28,569 - ispa_next.functions - DEBUG - check_home_dealer_add_to_list
+2025-11-17 13:24:28,570 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Fahrzeugzustand
+2025-11-17 13:24:29,301 - ispa_next.common.shared - DEBUG - Successfully opened ISPA tab: Fahrzeugzustand
+2025-11-17 13:24:33,822 - ispa_next.rkr_manager.main - DEBUG - running RemoteKeyReadManager
+2025-11-17 13:24:33,824 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Wartung
+2025-11-17 13:24:34,344 - ispa_next.common.shared - DEBUG - Successfully opened ISPA tab: Wartung
+2025-11-17 13:24:36,381 - ispa_next.rkr_manager.state - DEBUG - Entering initial state
+2025-11-17 13:24:36,507 - ispa_next.rkr_manager.state - DEBUG - Checking customer consent
+2025-11-17 13:24:36,657 - ispa_next.rkr_manager.state - DEBUG - Checking data freshness
+2025-11-17 13:24:36,758 - ispa_next.rkr_manager.state - DEBUG - Getting cart and advice list contents
+2025-11-17 13:24:36,759 - ispa_next.rkr_manager.state - DEBUG - Triggering remote key read
+2025-11-17 13:24:47,731 - ispa_next.rkr_manager.helper - DEBUG - Found button 'Schlüsseldaten überschreiben und öffnen (Empfohlen)' in nested popup
+2025-11-17 13:24:55,759 - ispa_next.rkr_manager.state - DEBUG - Checking cart items after successfull RKR
+2025-11-17 13:24:55,759 - ispa_next.rkr_manager.state - DEBUG - Checking color in CBS positions
+2025-11-17 13:24:57,925 - ispa_next.rkr_manager.state - DEBUG - State machine completed with reason: success
+2025-11-17 13:24:58,946 - ispa_next.functions - DEBUG - generate_attachments
+2025-11-17 13:24:58,947 - ispa_next.functions - DEBUG - check_service_requirement
+2025-11-17 13:24:58,947 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Wartung
+2025-11-17 13:24:59,020 - ispa_next.common.shared - DEBUG - ISPA tab Wartung is already open
+2025-11-17 13:25:03,227 - ispa_next.functions - DEBUG - check_service_requirement result: pdf_needed =True
+2025-11-17 13:25:04,419 - ispa_next.functions - DEBUG - generate_appointment_pdfs
+2025-11-17 13:25:14,052 - ispa_next.wipers - DEBUG - handle_wiper_service_contracts
+2025-11-17 13:25:14,054 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Wartung
+2025-11-17 13:25:14,150 - ispa_next.common.shared - DEBUG - ISPA tab Wartung is already open
+2025-11-17 13:25:24,313 - ispa_next.wipers - DEBUG - valid contract found: BMW Bank
+2025-11-17 13:25:30,588 - ispa_next.wipers - DEBUG - wipers found to add.
+2025-11-17 13:25:30,606 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Kunden & Fahrzeug
+2025-11-17 13:25:31,227 - ispa_next.common.shared - DEBUG - Successfully opened ISPA tab: Kunden & Fahrzeug
+2025-11-17 13:25:31,254 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Wartung
+2025-11-17 13:25:32,157 - ispa_next.common.shared - DEBUG - Successfully opened ISPA tab: Wartung
+2025-11-17 13:25:32,159 - ispa_next.package_manager.main - DEBUG - updating cart content
+2025-11-17 13:25:36,990 - ispa_next.package_manager.main - DEBUG - updating advice list content
+2025-11-17 13:25:36,994 - ispa_next.package_manager.helper - DEBUG - get_advice_list_contents
+2025-11-17 13:25:38,779 - ispa_next.package_manager.main - DEBUG - determining package movements
+2025-11-17 13:25:38,780 - ispa_next.package_manager.main - DEBUG - determining packages to place
+2025-11-17 13:25:38,782 - ispa_next.package_manager.main - DEBUG - found packages to cart: {Package(name=Alle Wischerblätter ersetzen, source=from_aw_package, target=cart), Package(name=FAHRZEUGWÄSCHE BASIS, source=from_tab, target=cart), Package(name=Fahrzeug Innenraum saugen, source=from_tab, target=cart)}
+2025-11-17 13:25:38,784 - ispa_next.package_manager.main - DEBUG - determining packages to place
+2025-11-17 13:25:38,786 - ispa_next.package_manager.main - DEBUG - Cannot place Ladewunsch und Ladezustand: not present in source
+2025-11-17 13:25:38,788 - ispa_next.package_manager.main - DEBUG - Cannot place 10061270900 (SW)- G6x G7x G9x Kabelbaum Cockpit ne: not present in source
+2025-11-17 13:25:38,789 - ispa_next.package_manager.main - DEBUG - found packages to advice_list: set()
+2025-11-17 13:25:38,790 - ispa_next.package_manager.main - DEBUG - determining package to delete
+2025-11-17 13:25:38,800 - ispa_next.package_manager.main - DEBUG - found packages to delete: set()
+2025-11-17 13:25:38,803 - ispa_next.package_manager.main - DEBUG - determining package to update
+2025-11-17 13:25:38,807 - ispa_next.package_manager.main - DEBUG - found packages to update: set()
+2025-11-17 13:25:38,813 - ispa_next.package_manager.helper - DEBUG - add_to_cart called
+2025-11-17 13:25:39,544 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Marketing
+2025-11-17 13:25:40,422 - ispa_next.common.shared - DEBUG - Successfully opened ISPA tab: Marketing
+2025-11-17 13:26:16,904 - ispa_next.appointment_loop.main - DEBUG - Appointment failed: Traceback (most recent call last):
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\package_manager\helper.py", line 318, in _add_to_container_from_aw
+    items = aw_dialog.query(
+            ^^^^^^^^^^^^^^^^
+  File "C:\Users\Bot\AppData\Local\robocorp\holotree\220eddf_5a1fac3_9fcd2534\Lib\site-packages\pyfenster\decorators\null_control.py", line 23, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Bot\AppData\Local\robocorp\holotree\220eddf_5a1fac3_9fcd2534\Lib\site-packages\pyfenster\query\mixins.py", line 506, in query
+    found = query(self.control, string)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Bot\AppData\Local\robocorp\holotree\220eddf_5a1fac3_9fcd2534\Lib\site-packages\pyfenster\query\mapper.py", line 194, in query
+    return mapper.run(root, selector)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Bot\AppData\Local\robocorp\holotree\220eddf_5a1fac3_9fcd2534\Lib\site-packages\pyfenster\query\mapper.py", line 138, in run
+    current_root = self.execute(current_root, step)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Bot\AppData\Local\robocorp\holotree\220eddf_5a1fac3_9fcd2534\Lib\site-packages\pyfenster\query\mapper.py", line 165, in execute
+    return self._find_element(element, condition, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Bot\AppData\Local\robocorp\holotree\220eddf_5a1fac3_9fcd2534\Lib\site-packages\pyfenster\query\mapper.py", line 96, in _find_element
+    return find_first(
+           ^^^^^^^^^^^
+  File "C:\Users\Bot\AppData\Local\robocorp\holotree\220eddf_5a1fac3_9fcd2534\Lib\site-packages\pyfenster\query\methods.py", line 87, in find_first
+    raise_error(msg)
+  File "C:\Users\Bot\AppData\Local\robocorp\holotree\220eddf_5a1fac3_9fcd2534\Lib\site-packages\pyfenster\query\methods.py", line 78, in raise_error
+    raise ElementNotFoundError(msg)
+pyfenster.exceptions.ElementNotFoundError: 'FindFirst' failed: control_type = '50023'
+AND
+automation_id = 'infrastructure:TreeGrid_2'
+AND
+class_name = 'TreeView'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointment_loop\main.py", line 110, in process_appointment
+    package_manager.run()
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\package_manager\main.py", line 265, in run
+    self._process_to_cart(self.to_cart)
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\package_manager\main.py", line 228, in _process_to_cart
+    self.ui_helper.add_to_cart(self.base_element, add_to_container)
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\package_manager\helper.py", line 188, in add_to_cart
+    self._add_to_container_from_aw(base_element, from_aw)
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\package_manager\helper.py", line 322, in _add_to_container_from_aw
+    close_on_error(aw_dialog)
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\package_manager\helper.py", line 293, in close_on_error
+    raise ValueError("Catalog items not found.")
+ValueError: Catalog items not found.
+
+2025-11-17 13:26:17,014 - ispa_next.appointment_ending - DEBUG - entered complete process
+2025-11-17 13:26:17,015 - ispa_next.appointment_loop.helpers - DEBUG - Checking for potential OIDC Login dialog
+2025-11-17 13:26:18,371 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Abschluss
+2025-11-17 13:26:19,282 - ispa_next.common.shared - DEBUG - Successfully opened ISPA tab: Abschluss
+2025-11-17 13:26:19,283 - ispa_next.appointment_ending - DEBUG - complete_process exists early.
+2025-11-17 13:26:19,307 - ispa_next.appointment_ending - DEBUG - attempt to close process with save: False
+2025-11-17 13:26:23,494 - ispa_next.appointment_loop.main - DEBUG - Closing appointment 2.
+2025-11-17 13:26:23,497 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 13:26:24,229 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 547
+2025-11-17 13:26:24,230 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 1
+2025-11-17 13:26:28,531 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 137
+2025-11-17 13:26:28,532 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 13:26:29,672 - ispa_next.appointments.models - DEBUG - Appointment Ekrem Avdulla WW-EA 350 WBAJP51090CD41097 ohne Termin.

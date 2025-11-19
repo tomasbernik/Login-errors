@@ -1,0 +1,138 @@
+2025-11-17 05:07:35,307 - ispa_next.main - DEBUG - ISPA Next attempt (1 / 5)
+2025-11-17 05:07:35,313 - overlays.client - INFO - Connected to overlay manager pipe
+2025-11-17 05:07:47,591 - ispa_next.app_start.functions - DEBUG - handle_update_available
+2025-11-17 05:07:58,633 - ispa_next.app_start.functions - DEBUG - has_ispa_errors
+2025-11-17 05:08:14,156 - ispa_next.app_start.functions - DEBUG - authenticate_user
+2025-11-17 05:08:47,033 - ispa_next.app_start.main - DEBUG - Login successful
+2025-11-17 05:08:59,711 - ispa_next.appointments.functions - DEBUG - order_appointments_grid_by_created_at
+2025-11-17 05:09:02,922 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 05:09:04,042 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 614
+2025-11-17 05:09:04,042 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 246
+2025-11-17 05:09:06,652 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 172
+2025-11-17 05:09:06,653 - ispa_next.appointments.functions - DEBUG - recover_or_exit_IPS_error
+2025-11-17 05:09:06,654 - ispa_next.appointments.functions - DEBUG - check_appointments_grid_for_IPS_error
+2025-11-17 05:09:07,728 - ispa_next.appointments.functions - DEBUG - check_appointments_grid_for_IPS_error
+2025-11-17 05:09:08,919 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 05:09:34,262 - ispa_next.appointments.models - DEBUG - Appointment Frau Brigitte Rudloff TÜ-XX 4444 WMWWH910403A88474 ohne Termin.
+2025-11-17 05:09:34,281 - ispa_next.appointments.models - DEBUG - Appointment Herr Gunter Rieger TÜ-DG 1415 WBA5K31070G277653 ohne Termin.
+2025-11-17 05:09:34,292 - ispa_next.appointments.models - DEBUG - Appointment Herr Klaus Friedl TÜ-XX 1226 WBAUS31070A834463 ohne Termin.
+2025-11-17 05:09:34,315 - ispa_next.appointments.models - DEBUG - Skipping appointment without VIN
+2025-11-17 05:09:34,344 - ispa_next.main - DEBUG - Found 3 out of 62 appointments to process (configured limit: 15).
+2025-11-17 05:09:34,345 - ispa_next.main - DEBUG - Processing 3 fresh appointments.
+2025-11-17 05:09:34,345 - ispa_next.main - DEBUG - All appointments: TÜ-RE 2227, TÜ JB 1122, TÜ-E 789 E
+2025-11-17 05:09:34,348 - ispa_next.main - DEBUG - 
+
+
+
+2025-11-17 05:09:34,348 - ispa_next.main - DEBUG - starting with process 1 (TÜ-RE 2227) of 3
+2025-11-17 05:09:34,351 - ispa_next.appointment_loop.helpers - DEBUG - Checking for potential OIDC Login dialog
+2025-11-17 05:09:35,498 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 05:09:36,765 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 614
+2025-11-17 05:09:36,766 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 172
+2025-11-17 05:09:38,435 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 1
+2025-11-17 05:09:38,436 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 05:10:22,946 - ispa_next.appointment_loop.main - DEBUG - Appointment failed: Traceback (most recent call last):
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointment_loop\main.py", line 41, in process_appointment
+    handle_briefing_screen(element=app)
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointments\functions.py", line 156, in handle_briefing_screen
+    raise AppointmentNotSynchronized(
+ispa_next.exceptions.AppointmentNotSynchronized: Appointment is not properly synchronized with DMS, proceed with the next one.
+
+2025-11-17 05:10:23,050 - ispa_next.appointment_loop.main - DEBUG - Closing appointment 1.
+2025-11-17 05:10:23,054 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 05:10:23,596 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 614
+2025-11-17 05:10:23,596 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 1
+2025-11-17 05:10:26,184 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 246
+2025-11-17 05:10:26,185 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 05:10:27,143 - ispa_next.appointments.models - DEBUG - Appointment Frau Christina Benedikta Langer TÜ-L 7766 WMWSW31030T228772 ohne Termin.
+2025-11-17 05:10:27,149 - ispa_next.main - DEBUG - 
+
+
+
+2025-11-17 05:10:27,150 - ispa_next.main - DEBUG - starting with process 2 (TÜ JB 1122) of 3
+2025-11-17 05:10:27,153 - ispa_next.appointment_loop.helpers - DEBUG - Checking for potential OIDC Login dialog
+2025-11-17 05:10:28,391 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 05:10:29,621 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 614
+2025-11-17 05:10:29,623 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 246
+2025-11-17 05:10:31,148 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 1
+2025-11-17 05:10:31,149 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 05:11:02,878 - ispa_next.appointment_loop.main - DEBUG - Appointment failed: Traceback (most recent call last):
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointment_loop\main.py", line 41, in process_appointment
+    handle_briefing_screen(element=app)
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointments\functions.py", line 156, in handle_briefing_screen
+    raise AppointmentNotSynchronized(
+ispa_next.exceptions.AppointmentNotSynchronized: Appointment is not properly synchronized with DMS, proceed with the next one.
+
+2025-11-17 05:11:02,887 - ispa_next.appointment_loop.main - DEBUG - Closing appointment 2.
+2025-11-17 05:11:02,892 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 05:11:03,411 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 614
+2025-11-17 05:11:03,412 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 1
+2025-11-17 05:11:05,992 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 246
+2025-11-17 05:11:05,996 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 05:11:06,832 - ispa_next.appointments.models - DEBUG - Appointment Frau Christina Benedikta Langer TÜ-L 7766 WMWSW31030T228772 ohne Termin.
+2025-11-17 05:11:06,835 - ispa_next.main - DEBUG - 
+
+
+
+2025-11-17 05:11:06,836 - ispa_next.main - DEBUG - starting with process 3 (TÜ-E 789 E) of 3
+2025-11-17 05:11:06,848 - ispa_next.appointment_loop.helpers - DEBUG - Checking for potential OIDC Login dialog
+2025-11-17 05:11:08,112 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 05:11:09,444 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 614
+2025-11-17 05:11:09,445 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 246
+2025-11-17 05:11:11,027 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 1
+2025-11-17 05:11:11,029 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 05:11:31,838 - ispa_next.rkr_manager.main - DEBUG - RemoteKeyReadManager initialized
+2025-11-17 05:11:41,275 - ispa_next.functions - DEBUG - get_cart_contents
+2025-11-17 05:11:45,178 - ispa_next.functions - DEBUG - check_and_verify_hu_date
+2025-11-17 05:11:45,179 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Kunden & Fahrzeug
+2025-11-17 05:11:45,244 - ispa_next.common.shared - DEBUG - ISPA tab Kunden & Fahrzeug is already open
+2025-11-17 05:11:45,463 - ispa_next.functions - DEBUG - check_potential_workshop_test
+2025-11-17 05:11:45,467 - ispa_next.functions - DEBUG - check_vehicle_age_for_service_plus
+2025-11-17 05:11:48,129 - ispa_next.rkr_manager.main - DEBUG - running RemoteKeyReadManager
+2025-11-17 05:11:48,131 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Wartung
+2025-11-17 05:11:48,336 - ispa_next.common.shared - ERROR - Error opening ISPA tab: Wartung
+2025-11-17 05:11:48,676 - ispa_next.appointment_loop.main - DEBUG - Appointment failed: Traceback (most recent call last):
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\common\shared.py", line 50, in open_ispa_tab
+    target_tab = tab_control.find_first(C.name(name), C.control_type_name("Text"))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Bot\AppData\Local\robocorp\holotree\220eddf_5a1fac3_9fcd2534\Lib\site-packages\pyfenster\decorators\null_control.py", line 23, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Bot\AppData\Local\robocorp\holotree\220eddf_5a1fac3_9fcd2534\Lib\site-packages\pyfenster\query\mixins.py", line 186, in find_first
+    found = m.find_first(
+            ^^^^^^^^^^^^^
+  File "C:\Users\Bot\AppData\Local\robocorp\holotree\220eddf_5a1fac3_9fcd2534\Lib\site-packages\pyfenster\query\methods.py", line 87, in find_first
+    raise_error(msg)
+  File "C:\Users\Bot\AppData\Local\robocorp\holotree\220eddf_5a1fac3_9fcd2534\Lib\site-packages\pyfenster\query\methods.py", line 78, in raise_error
+    raise ElementNotFoundError(msg)
+pyfenster.exceptions.ElementNotFoundError: 'FindFirst' failed: name = 'Wartung'
+AND
+control_type = '50020'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\appointment_loop\main.py", line 72, in process_appointment
+    remote_keyread_manager.run(waiting=False)
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\rkr_manager\main.py", line 61, in run
+    self.ui_helper.open_tab(base_element=self.base_element, name="Wartung")
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\rkr_manager\helper.py", line 272, in open_tab
+    opened = open_ispa_tab(base_element=base_element, name=name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Bot\AppData\Local\automizor\runner\ispa_next\common\shared.py", line 73, in open_ispa_tab
+    raise ElementNotFoundError(error_msg) from exc
+pyfenster.exceptions.ElementNotFoundError: Error opening ISPA tab: Wartung
+
+2025-11-17 05:11:48,689 - ispa_next.appointment_ending - DEBUG - entered complete process
+2025-11-17 05:11:48,691 - ispa_next.appointment_loop.helpers - DEBUG - Checking for potential OIDC Login dialog
+2025-11-17 05:11:49,362 - ispa_next.common.shared - DEBUG - Attempting to open ISPA tab: Abschluss
+2025-11-17 05:11:50,018 - ispa_next.common.shared - DEBUG - Successfully opened ISPA tab: Abschluss
+2025-11-17 05:11:50,019 - ispa_next.appointment_ending - DEBUG - complete_process exists early.
+2025-11-17 05:11:50,043 - ispa_next.appointment_ending - DEBUG - attempt to close process with save: False
+2025-11-17 05:11:52,505 - ispa_next.appointment_loop.main - DEBUG - Closing appointment 3.
+2025-11-17 05:11:52,509 - ispa_next.appointments.functions - DEBUG - filter_appointments_grid_by_term
+2025-11-17 05:11:53,348 - ispa_next.appointments.functions - DEBUG - Gross total count for all events at location: 614
+2025-11-17 05:11:53,349 - ispa_next.appointments.functions - DEBUG - Unfiltered total count for 'Terminvereinbarung' events: 1
+2025-11-17 05:11:55,886 - ispa_next.appointments.functions - DEBUG - Filtered by term total count for 'Terminvereinbarung' events: 246
+2025-11-17 05:11:55,886 - ispa_next.appointments.functions - DEBUG - fetch_appointments_from_grid
+2025-11-17 05:11:56,782 - ispa_next.appointments.models - DEBUG - Appointment Frau Christina Benedikta Langer TÜ-L 7766 WMWSW31030T228772 ohne Termin.
