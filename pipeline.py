@@ -189,19 +189,21 @@ def main():
 
         newly.add(f.name)
 
+
         if finding:
-            print(f"      ❗ Nájdená chyba → {meta['company']} | {meta['location']} | {meta['time']}")
-            
-            # pridaj nález do výsledkov
+            print(f"      ➕ Pridávam do emailu: {meta['company']} | {meta['location']} | {meta['time']} | {finding.get('label', '')}")
+
+            # pridaj nález do výsledkov (label môže byť prázdny)
             results.append({
                 "company": meta["company"],
                 "location": meta["location"],
                 "time": meta["time"],
-                "label": finding.get("label", "unknown"),
+                "label": finding.get("label", ""),
                 "link": finding.get("link", "")
             })
         else:
-            print("      ✅ Bez chyby")
+            # finding = None → log bol úspešný → nechceme ho posielať
+            print("      ⏭️ Preskakujem — Login successful")
     # 🔥 Zapíš processed_files.txt
     write_processed(processed.union(newly))
     # 🔥 Ak nie sú žiadne chyby → neodosielať email
